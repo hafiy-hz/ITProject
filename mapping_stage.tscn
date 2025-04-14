@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwi67yt1bjt3j"]
+[gd_scene load_steps=12 format=3 uid="uid://cgei8la02jju7"]
 
 [ext_resource type="Texture2D" uid="uid://dw4bvdwvelu15" path="res://sprites/tilesets/grass.png" id="1_afdoy"]
 [ext_resource type="Texture2D" uid="uid://dwxjr1y3sldtf" path="res://sprites/tilesets/plains.png" id="2_ks3d2"]
