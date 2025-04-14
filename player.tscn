@@ -48,7 +48,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_1jxqw")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Player",
 "speed": 5.0
 }]
 
@@ -58,5 +58,4 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dw050")
-frame = 1
-frame_progress = 0.651164
+animation = &"Player"
