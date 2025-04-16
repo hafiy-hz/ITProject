@@ -430,3 +430,7 @@ position = Vector2(0, 11)
 shape = SubResource("CapsuleShape2D_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = -33
+limit_right = 885
+limit_bottom = 876
