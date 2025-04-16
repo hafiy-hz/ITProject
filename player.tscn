@@ -434,3 +434,6 @@ limit_left = 0
 limit_top = -33
 limit_right = 885
 limit_bottom = 876
+limit_smoothed = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
