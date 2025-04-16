@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://cruj8x2ue0krk"]
+[gd_scene load_steps=27 format=4 uid="uid://cruj8x2ue0krk"]
 
 [ext_resource type="Texture2D" uid="uid://pve06w87bmdl" path="res://sprites/tilesets/grass.png" id="1_cxybx"]
 [ext_resource type="Texture2D" uid="uid://bj7a38f75g0fq" path="res://sprites/tilesets/plains.png" id="2_au0sk"]
@@ -261,10 +261,12 @@ texture = ExtResource("5_fwirk")
 9:8/0 = 0
 9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.61873, -8, 0.179857, 0.359716, -3.23746, 3.77703, -8, 5.2159)
 10:7/0 = 0
+10:7/0/z_index = 2
 10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.25901, 2.33816, 3.23746, 1.25901, 8, 0.359716, 8, 8, -3.23746, 8, -1.43887, 4.49647)
 10:8/0 = 0
 10:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, -3.77703, 8, 0.539576, 1.97845, 0.719435, 1.25901, -2.51802, -3.0576, -2.33816, -3.59718, -8)
 11:7/0 = 0
+11:7/0/z_index = 2
 11:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.539577, 3.59717, 1.07915, 8, -8, 8, -8, 0.899294, -3.77703, 0.719435)
 11:8/0 = 0
 11:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.69788, -8, 3.0576, -3.41732, 1.97845, 0.719435, -8, 0.179859, -8, -8)
@@ -341,22 +343,37 @@ texture = ExtResource("2_au0sk")
 3:3/0 = 0
 0:4/0 = 0
 1:4/0 = 0
+1:4/0/z_index = 2
 2:4/0 = 0
+2:4/0/z_index = 2
 3:4/0 = 0
+3:4/0/z_index = 2
 4:4/0 = 0
+4:4/0/z_index = 2
 5:4/0 = 0
+5:4/0/z_index = 2
 0:5/0 = 0
 1:5/0 = 0
+1:5/0/z_index = 2
 2:5/0 = 0
+2:5/0/z_index = 2
 3:5/0 = 0
+3:5/0/z_index = 2
 4:5/0 = 0
+4:5/0/z_index = 2
 5:5/0 = 0
+5:5/0/z_index = 2
 0:6/0 = 0
 1:6/0 = 0
+1:6/0/z_index = 2
 2:6/0 = 0
+2:6/0/z_index = 2
 3:6/0 = 0
+3:6/0/z_index = 2
 4:6/0 = 0
+4:6/0/z_index = 2
 5:6/0 = 0
+5:6/0/z_index = 2
 0:7/0 = 0
 1:7/0 = 0
 2:7/0 = 0
@@ -475,10 +492,6 @@ sources/2 = SubResource("TileSetAtlasSource_cw6sp")
 sources/3 = SubResource("TileSetAtlasSource_hdngj")
 sources/4 = SubResource("TileSetAtlasSource_txpq7")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au0sk"]
-radius = 2.0
-height = 18.0
-
 [node name="stage" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -495,7 +508,3 @@ tile_set = SubResource("TileSet_6fnqi")
 
 [node name="Player" parent="." instance=ExtResource("7_au0sk")]
 position = Vector2(60, 67)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
-position = Vector2(0, 10)
-shape = SubResource("CapsuleShape2D_au0sk")
