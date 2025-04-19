@@ -22,7 +22,7 @@ offset_bottom = 35.0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Welcome to Torch N Steel"
+text = "What should I call you?"
 horizontal_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
