@@ -1,7 +1,8 @@
-[gd_scene load_steps=56 format=3 uid="uid://dc4lv65ox00uc"]
+[gd_scene load_steps=57 format=3 uid="uid://dc4lv65ox00uc"]
 
 [ext_resource type="Texture2D" uid="uid://biff3k5igtl1t" path="res://art/mystic_woods_free_2.2/sprites/characters/player.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://wwmo4lla48p1" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://wwmo4lla48p1" path="res://character/player/player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://ic52be4033px" path="res://character/player/playercamera.gd" id="3_gtsfv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4flbx"]
 atlas = ExtResource("1_4flbx")
@@ -430,10 +431,8 @@ position = Vector2(0, 11)
 shape = SubResource("CapsuleShape2D_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = -33
-limit_right = 885
-limit_bottom = 876
 limit_smoothed = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+editor_draw_limits = true
+script = ExtResource("3_gtsfv")
