@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c88eryb0qoum5"
-path="res://.godot/imported/lightA01.png-09a77be66bc60a8f307549ae90eae52a.ctex"
+uid="uid://b32y7buvayb4i"
+path="res://.godot/imported/backgrounduser.png-2fa93e33088fa528759481179eaf544f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/RFCastle_1.0/lightA01.png"
-dest_files=["res://.godot/imported/lightA01.png-09a77be66bc60a8f307549ae90eae52a.ctex"]
+source_file="res://Main menu/backgrounduser.png"
+dest_files=["res://.godot/imported/backgrounduser.png-2fa93e33088fa528759481179eaf544f.ctex"]
 
 [params]
 
