@@ -8,7 +8,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="popupmenu" type="MarginContainer" parent="."]
+[node name="popupMenu" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="baseMenuScreen" type="MarginContainer" parent="popupMenu"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/baseMenuScreen"]
+layout_mode = 2

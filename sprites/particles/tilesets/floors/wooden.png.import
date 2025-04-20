@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lalge0enmolp"
-path="res://.godot/imported/decor_16x16.png-2755452cf079d64c7a1aa9cd6c1fb2d7.ctex"
+uid="uid://bnjt5lk0q3ct6"
+path="res://.godot/imported/wooden.png-3276d00a535e9964217d019213e2ba29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilesets/decor_16x16.png"
-dest_files=["res://.godot/imported/decor_16x16.png-2755452cf079d64c7a1aa9cd6c1fb2d7.ctex"]
+source_file="res://sprites/particles/tilesets/floors/wooden.png"
+dest_files=["res://.godot/imported/wooden.png-3276d00a535e9964217d019213e2ba29.ctex"]
 
 [params]
 

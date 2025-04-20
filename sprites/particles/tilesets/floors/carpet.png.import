@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1som1d32x3kj"
-path="res://.godot/imported/water3.png-b253847eafd7fec7821b3afc33775bc3.ctex"
+uid="uid://dosyk4mvj4igu"
+path="res://.godot/imported/carpet.png-363af531e92a6c78fa0b498d5054a22d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilesets/water3.png"
-dest_files=["res://.godot/imported/water3.png-b253847eafd7fec7821b3afc33775bc3.ctex"]
+source_file="res://sprites/particles/tilesets/floors/carpet.png"
+dest_files=["res://.godot/imported/carpet.png-363af531e92a6c78fa0b498d5054a22d.ctex"]
 
 [params]
 

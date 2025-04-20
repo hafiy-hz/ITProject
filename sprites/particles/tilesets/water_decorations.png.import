@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0yg7ai6g2m4p"
-path="res://.godot/imported/water_lillies.png-d204dd661d327a057da8affe4d371b5d.ctex"
+uid="uid://cmq0453gmvtut"
+path="res://.godot/imported/water_decorations.png-47aa8e8e743dd8599764174e0320fff0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilesets/water_lillies.png"
-dest_files=["res://.godot/imported/water_lillies.png-d204dd661d327a057da8affe4d371b5d.ctex"]
+source_file="res://sprites/particles/tilesets/water_decorations.png"
+dest_files=["res://.godot/imported/water_decorations.png-47aa8e8e743dd8599764174e0320fff0.ctex"]
 
 [params]
 
