@@ -15,12 +15,15 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 [autoload]
 
 LevelManagers="*res://00_Globals/LevelManagers.gd"
 global="*res://character/player/global.gd"
 
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 [display]
 
