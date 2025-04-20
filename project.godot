@@ -17,12 +17,16 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelManagers="*res://00_Globals/LevelManagers.gd"
+global="*res://00_Globals/global.gd"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/resizable=false
 window/size/borderless=true
 window/stretch/mode="canvas_items"
+window/stretch/scale=4.0
 
 [input]
 
