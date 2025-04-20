@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://c66bhnma1sv8k"]
+[gd_scene load_steps=52 format=4 uid="uid://c66bhnma1sv8k"]
 
 [ext_resource type="Texture2D" uid="uid://dj5btykqj5ole" path="res://art/RF_Catacombs_v1.0/PSD/decorative.png" id="1_p5lc8"]
 [ext_resource type="Texture2D" uid="uid://cdd1njcx54yt" path="res://art/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7.png" id="1_xni0d"]
@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://yp8v4sl1efd2" path="res://art/RF_Catacombs_v1.0/torch_3.png" id="17_j2ri8"]
 [ext_resource type="Texture2D" uid="uid://dgsbjyq2abhaa" path="res://art/RF_Catacombs_v1.0/torch_4.png" id="18_71ayn"]
 [ext_resource type="Texture2D" uid="uid://d1ak0l0ilsax7" path="res://art/RF_Catacombs_v1.0/candlemerge.png" id="19_2ohh5"]
+[ext_resource type="PackedScene" uid="uid://dc4lv65ox00uc" path="res://character/player/player.tscn" id="21_elist"]
+[ext_resource type="PackedScene" uid="uid://cp7hjku2auqim" path="res://character/enemy/slime/slime.tscn" id="22_lb5ue"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yn4o8"]
 texture = ExtResource("2_elist")
@@ -4097,3 +4099,9 @@ tile_set = SubResource("TileSet_ms3b5")
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAAQAAAAAAAQAAAAAAAUAAAAAAAUAAAABAAQAAAABAAQAAAABAAUAAAABAAUAAAACAAQAAAACAAQAAAACAAUAAAACAAUAAAAbAAgAAAAJAAoAAAAbAAkAAAAJAAsAAAA8ABAAAAAKAAsAAAA8AA8AAAALAAsAAAA7ABAAAAAMAAsAAAA7AA8AAAANAAsAAAA3AOL/AAAAAAoAAAA3AOP/AAAAAAsAAAA4AOL/AAABAAoAAAA4AOP/AAABAAsAAAA5AOL/AAACAAoAAAA5AOP/AAACAAsAAAAXAPL/AAAFAAcAAAAXAPP/AAAFAAgAAAAXAPT/AAAFAAkAAAAYAPL/AAAGAAcAAAAYAPP/AAAGAAgAAAAYAPT/AAAGAAkAAAADAOT/AAAKAAEAAAADAOP/AAALAAEAAAAuAOz/AAALAAEAAAAgAOP/AAALAAEAAAAnAAEAAAALAAEAAAA7AAIAAAALAAEAAAA5AAIAAAAMAAYAAAA6AAIAAAANAAYAAAAmAAMAAAAMAAYAAAAnAAMAAAANAAYAAAAvAO3/AAAMAAYAAAAwAO3/AAANAAYAAAABAO//AAAAAA4AAAABAPD/AAAAAA8AAAACAO//AAABAA4AAAACAPD/AAABAA8AAAADAO//AAACAA4AAAADAPD/AAACAA8AAAATAN//AAAGAAEAAAATAOD/AAAGAAIAAAABACMAAAAFAAQAAAABACQAAAAFAAUAAAABACUAAAAFAAYAAAACACMAAAAGAAQAAAACACQAAAAGAAUAAAACACUAAAAGAAYAAAASADAAAAAMAAYAAHATADAAAAAMAAUAAHAUADAAAAAMAAQAAHASAC8AAAANAAYAAHATAC8AAAANAAUAAHAUAC8AAAANAAQAAHALACgAAgAmAAgAAAALACkAAgAmAAkAAAALACoAAgAmAAoAAAALACsAAgAmAAsAAAAKACgAAgAlAAgAAAAKACkAAgAlAAkAAAAKACoAAgAlAAoAAAAKACsAAgAlAAsAAAA=")
 tile_set = SubResource("TileSet_ks50p")
+
+[node name="Player" parent="." instance=ExtResource("21_elist")]
+position = Vector2(31, 137)
+
+[node name="Slime" parent="." instance=ExtResource("22_lb5ue")]
+position = Vector2(780, 118)
