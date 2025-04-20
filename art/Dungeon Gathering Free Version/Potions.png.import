@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Main menu/backgroundimage.png.import
-uid="uid://c5witwa2wbcm0"
-path="res://.godot/imported/backgroundimage.png-affa7fd5a5155b8a50ade410d0ccec88.ctex"
-========
-uid="uid://r4cw0bgqf2mt"
+uid="uid://btbc3ufd3x5ys"
 path="res://.godot/imported/Potions.png-a51cbb81908135a62ee3ae1960aa53cf.ctex"
->>>>>>>> main:art/Dungeon Gathering Free Version/Potions.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Main menu/backgroundimage.png.import
-source_file="res://Main menu/backgroundimage.png"
-dest_files=["res://.godot/imported/backgroundimage.png-affa7fd5a5155b8a50ade410d0ccec88.ctex"]
-========
 source_file="res://art/Dungeon Gathering Free Version/Potions.png"
 dest_files=["res://.godot/imported/Potions.png-a51cbb81908135a62ee3ae1960aa53cf.ctex"]
->>>>>>>> main:art/Dungeon Gathering Free Version/Potions.png.import
 
 [params]
 

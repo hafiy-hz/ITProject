@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Main menu/button_normal.png.import
-uid="uid://cvno4qyq8oee3"
-path="res://.godot/imported/button_normal.png-ae06977565368e17b516f2da7e0cbcf7.ctex"
-========
-uid="uid://d3elivdf1mmv1"
+uid="uid://cg1akn56derot"
 path="res://.godot/imported/slime.png-7099d0107f8a514a2db16a42bd2347f9.ctex"
->>>>>>>> main:character/enemy/slime/slime.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Main menu/button_normal.png.import
-source_file="res://Main menu/button_normal.png"
-dest_files=["res://.godot/imported/button_normal.png-ae06977565368e17b516f2da7e0cbcf7.ctex"]
-========
 source_file="res://character/enemy/slime/slime.png"
 dest_files=["res://.godot/imported/slime.png-7099d0107f8a514a2db16a42bd2347f9.ctex"]
->>>>>>>> main:character/enemy/slime/slime.png.import
 
 [params]
 

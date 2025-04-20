@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bb4rmy01b6m1u"]
 
 [ext_resource type="Texture2D" uid="uid://b32y7buvayb4i" path="res://Main menu/backgrounduser.png" id="1_x1riw"]
-[ext_resource type="Texture2D" uid="uid://bmomt4fsh3d0f" path="res://Main menu/boardusername.png" id="2_086jd"]
+[ext_resource type="Texture2D" uid="uid://tm7b8rlyf7lg" path="res://Main menu/boardusername.png" id="2_086jd"]
 [ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://Main menu/Kenney Mini Square.ttf" id="3_j00ur"]
 [ext_resource type="FontFile" uid="uid://dsfg1k6fs0aci" path="res://Main menu/Kenney Future Narrow.ttf" id="4_1drwu"]
 
@@ -31,10 +31,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.715
 anchor_bottom = 0.5
-offset_left = 371.0
-offset_top = 257.0
-offset_right = -58.68
-offset_bottom = 62.0
+offset_left = 395.0
+offset_top = 255.0
+offset_right = -77.68
+offset_bottom = 68.0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
