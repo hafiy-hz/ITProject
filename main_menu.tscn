@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://c8oditm46yl86"]
 
-[ext_resource type="Texture2D" uid="uid://cvno4qyq8oee3" path="res://button_normal.png" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://cvno4qyq8oee3" path="res://Main menu/button_normal.png" id="1_fu7sn"]
 [ext_resource type="Script" uid="uid://2o2x7ktgf3mm" path="res://main_menu.gd" id="1_glbon"]
-[ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://button_pressed.png" id="2_jix8l"]
-[ext_resource type="Texture2D" uid="uid://c5witwa2wbcm0" path="res://backgroundimage.png" id="2_qe12f"]
-[ext_resource type="Texture2D" uid="uid://b3gg53uie3l6s" path="res://button_hover.png" id="3_glbon"]
-[ext_resource type="FontFile" uid="uid://du1y0y7uge5vx" path="res://Kenney Pixel.ttf" id="4_jix8l"]
-[ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://Kenney Mini Square.ttf" id="7_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://Main menu/button_pressed.png" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://c5witwa2wbcm0" path="res://Main menu/backgroundimage.png" id="2_qe12f"]
+[ext_resource type="Texture2D" uid="uid://b3gg53uie3l6s" path="res://Main menu/button_hover.png" id="3_glbon"]
+[ext_resource type="FontFile" uid="uid://du1y0y7uge5vx" path="res://Main menu/Kenney Pixel.ttf" id="4_jix8l"]
+[ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://Main menu/Kenney Mini Square.ttf" id="7_8qtwp"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

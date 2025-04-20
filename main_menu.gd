@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_startbutton_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://PlayerUsername.tscn")
 
 
 func _on_options_button_pressed() -> void:
