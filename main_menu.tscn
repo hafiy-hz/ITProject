@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8oditm46yl86"]
+[gd_scene load_steps=8 format=3 uid="uid://cskqumw0d6pbc"]
 
 [ext_resource type="Texture2D" uid="uid://cvno4qyq8oee3" path="res://button_normal.png" id="1_fu7sn"]
-[ext_resource type="Script" uid="uid://2o2x7ktgf3mm" path="res://main_menu.gd" id="1_glbon"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_glbon"]
 [ext_resource type="Texture2D" uid="uid://bulu34dgu4f1p" path="res://button_pressed.png" id="2_jix8l"]
 [ext_resource type="Texture2D" uid="uid://c5witwa2wbcm0" path="res://backgroundimage.png" id="2_qe12f"]
 [ext_resource type="Texture2D" uid="uid://dg3sptd3qslql" path="res://button_hover.png" id="3_glbon"]
@@ -18,9 +18,9 @@ grow_vertical = 2
 script = ExtResource("1_glbon")
 
 [node name="Backgroundimage" type="Sprite2D" parent="."]
-position = Vector2(576.757, 324.099)
+position = Vector2(577, 320)
 rotation = -0.0305912
-scale = Vector2(1.44363, 1.25843)
+scale = Vector2(1.44784, 1.26779)
 texture = ExtResource("2_qe12f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -44,10 +44,10 @@ texture_hover = ExtResource("3_glbon")
 
 [node name="Label" type="Label" parent="VBoxContainer/Startbutton"]
 layout_mode = 0
-offset_left = 78.6837
-offset_top = 56.25
-offset_right = 535.684
-offset_bottom = 241.25
+offset_left = 87.4263
+offset_top = 50.0
+offset_right = 544.427
+offset_bottom = 235.0
 theme_override_fonts/font = ExtResource("4_jix8l")
 theme_override_font_sizes/font_size = 100
 text = "Start
@@ -83,6 +83,7 @@ texture_pressed = ExtResource("2_jix8l")
 texture_hover = ExtResource("3_glbon")
 
 [node name="Label" type="Label" parent="VBoxContainer/Exitbutton"]
+layout_mode = 0
 offset_left = 171.938
 offset_top = 50.625
 offset_right = 448.938
@@ -102,10 +103,10 @@ offset_bottom = 40.0
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.175781
-anchor_top = 0.00771605
-anchor_right = 0.84592
-anchor_bottom = 0.214506
+anchor_left = 0.169705
+anchor_top = 0.0262346
+anchor_right = 0.839844
+anchor_bottom = 0.233025
 offset_left = -51.5
 offset_right = 51.5
 offset_bottom = 23.0
