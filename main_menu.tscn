@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cvno4qyq8oee3" path="res://button_normal.png" id="1_fu7sn"]
 [ext_resource type="Script" uid="uid://2o2x7ktgf3mm" path="res://main_menu.gd" id="1_glbon"]
-[ext_resource type="Texture2D" uid="uid://bulu34dgu4f1p" path="res://button_pressed.png" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://button_pressed.png" id="2_jix8l"]
 [ext_resource type="Texture2D" uid="uid://c5witwa2wbcm0" path="res://backgroundimage.png" id="2_qe12f"]
-[ext_resource type="Texture2D" uid="uid://dg3sptd3qslql" path="res://button_hover.png" id="3_glbon"]
+[ext_resource type="Texture2D" uid="uid://b3gg53uie3l6s" path="res://button_hover.png" id="3_glbon"]
 [ext_resource type="FontFile" uid="uid://du1y0y7uge5vx" path="res://Kenney Pixel.ttf" id="4_jix8l"]
 [ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://Kenney Mini Square.ttf" id="7_8qtwp"]
 
@@ -18,26 +18,21 @@ grow_vertical = 2
 script = ExtResource("1_glbon")
 
 [node name="Backgroundimage" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.627451)
-self_modulate = Color(0.881358, 0.849713, 0.77981, 1)
-position = Vector2(574.119, 319.542)
+position = Vector2(577, 327)
 rotation = -0.0305912
-scale = Vector2(1.44863, 1.27292)
+scale = Vector2(1.44363, 1.25843)
 texture = ExtResource("2_qe12f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -106.0
-offset_top = -81.0
-offset_right = 515.0
-offset_bottom = 725.0
+offset_left = -121.0
+offset_top = 246.0
+offset_right = 500.0
+offset_bottom = 1018.0
 grow_horizontal = 2
-grow_vertical = 2
 scale = Vector2(0.343146, 0.32)
 
 [node name="Startbutton" type="TextureButton" parent="VBoxContainer"]
@@ -107,21 +102,22 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.175781
-anchor_top = 0.00771605
-anchor_right = 0.84592
-anchor_bottom = 0.214506
-offset_left = -51.5
-offset_right = 51.5
-offset_bottom = 23.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -330.0
+offset_right = 425.0
+offset_bottom = -173.0
 grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.827451, 0.443137, 0.129412, 1)
 theme_override_colors/font_shadow_color = Color(0.245087, 0.162854, 0.335585, 1)
 theme_override_fonts/font = ExtResource("7_8qtwp")
 theme_override_font_sizes/font_size = 125
 text = "Torch N Steel"
-metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="VBoxContainer/Startbutton" to="." method="_on_startbutton_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
