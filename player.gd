@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+var enemy_inattack_range = false
+var enemy_attack_cooldown = true
+var health = 100
+var player_alive = true
+
 const speed = 100
 var current_dir = "none"
 
@@ -65,4 +70,12 @@ func play_anim(movement):
 		if movement == 1:
 			anim.play("back_walk")
 		elif movement == 0:
-			anim.play("back_player")			
+			anim.play("back_player")		
+			
+func _on_player_hitbox_body_entered(body):
+	if body.has_method("enemy"):
+		enemy_inattack_range =  true
+		 
+func _on_player_hitbox_body_exited(body):
+	if body.has_method("enemy"):
+		enemy_inattack_range =  false		
