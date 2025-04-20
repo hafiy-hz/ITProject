@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb4rmy01b6m1u"]
+
+[ext_resource type="Texture2D" uid="uid://b32y7buvayb4i" path="res://Main menu/backgrounduser.png" id="1_x1riw"]
+[ext_resource type="Texture2D" uid="uid://tm7b8rlyf7lg" path="res://Main menu/boardusername.png" id="2_086jd"]
+[ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://Main menu/Kenney Mini Square.ttf" id="3_j00ur"]
+[ext_resource type="FontFile" uid="uid://dsfg1k6fs0aci" path="res://Main menu/Kenney Future Narrow.ttf" id="4_1drwu"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backgrounduser" type="Sprite2D" parent="."]
+position = Vector2(573.66, 328.703)
+rotation = -0.0255038
+scale = Vector2(1.46033, 1.32031)
+texture = ExtResource("1_x1riw")
+
+[node name="Boardusername" type="Sprite2D" parent="."]
+position = Vector2(564, 334)
+scale = Vector2(0.355398, 0.19881)
+texture = ExtResource("2_086jd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.715
+anchor_bottom = 0.5
+offset_left = 395.0
+offset_top = 255.0
+offset_right = -77.68
+offset_bottom = 68.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.789337, 0.577971, 0.240242, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_j00ur")
+theme_override_font_sizes/font_size = 25
+text = "What should I call you?"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_1drwu")
+placeholder_text = "Enter your Name"
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_1drwu")
+text = "Confirm?"
