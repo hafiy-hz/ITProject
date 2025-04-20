@@ -44,10 +44,10 @@ texture_hover = ExtResource("3_glbon")
 
 [node name="Label" type="Label" parent="VBoxContainer/Startbutton"]
 layout_mode = 0
-offset_left = 87.4263
-offset_top = 50.0
-offset_right = 544.427
-offset_bottom = 235.0
+offset_left = 90.3406
+offset_top = 56.25
+offset_right = 547.341
+offset_bottom = 241.25
 theme_override_fonts/font = ExtResource("4_jix8l")
 theme_override_font_sizes/font_size = 100
 text = "Start
@@ -103,10 +103,10 @@ offset_bottom = 40.0
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.169705
-anchor_top = 0.0262346
-anchor_right = 0.839844
-anchor_bottom = 0.233025
+anchor_left = 0.114323
+anchor_top = 0.00925926
+anchor_right = 0.516406
+anchor_bottom = 0.15463
 offset_left = -51.5
 offset_right = 51.5
 offset_bottom = 23.0

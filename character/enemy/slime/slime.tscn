@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cp7hjku2auqim"]
+[gd_scene load_steps=32 format=3 uid="uid://cp7hjku2auqim"]
 
 [ext_resource type="Texture2D" uid="uid://bpeewqkogv5ss" path="res://art/mystic_woods_free_2.2/sprites/characters/slime.png" id="1_0s2r0"]
 [ext_resource type="Script" uid="uid://buqe16nq0i6cq" path="res://character/enemy/scripts/slime.gd" id="1_3pl0q"]
@@ -203,6 +203,8 @@ radius = 49.0408
 radius = 5.0
 height = 10.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pl0q"]
+
 [node name="Slime" type="CharacterBody2D"]
 collision_layer = 259
 collision_mask = 2
@@ -211,7 +213,7 @@ script = ExtResource("1_3pl0q")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_seq01")
 animation = &"idle"
-frame_progress = 0.375773
+frame_progress = 0.315453
 offset = Vector2(0, -6)
 
 [node name="detection_area" type="Area2D" parent="."]
@@ -222,6 +224,12 @@ shape = SubResource("CircleShape2D_7xa2y")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_3pl0q")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_3pl0q")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
