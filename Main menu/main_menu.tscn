@@ -1,0 +1,138 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8oditm46yl86"]
+
+[ext_resource type="Script" uid="uid://2o2x7ktgf3mm" path="res://Main menu/main_menu.gd" id="1_skept"]
+[ext_resource type="Texture2D" uid="uid://c5witwa2wbcm0" path="res://Main menu/backgroundimage.png" id="2_jh8tq"]
+[ext_resource type="Texture2D" uid="uid://cvno4qyq8oee3" path="res://Main menu/button_normal.png" id="3_6f8v3"]
+[ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://Main menu/button_pressed.png" id="4_ape7v"]
+[ext_resource type="Texture2D" uid="uid://b3gg53uie3l6s" path="res://Main menu/button_hover.png" id="5_5xekc"]
+[ext_resource type="FontFile" uid="uid://du1y0y7uge5vx" path="res://Main menu/Kenney Pixel.ttf" id="6_f5at7"]
+[ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://Main menu/Kenney Mini Square.ttf" id="7_luq4s"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 4.0
+offset_right = -6.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_skept")
+
+[node name="Backgroundimage" type="Sprite2D" parent="."]
+position = Vector2(576.785, 319.975)
+rotation = -0.0305912
+scale = Vector2(1.44363, 1.28039)
+texture = ExtResource("2_jh8tq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.008
+anchor_bottom = 0.997
+offset_top = 1.0
+offset_right = -14.2001
+offset_bottom = -9.05597
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.495652
+anchor_top = 0.0524691
+anchor_right = 0.495652
+anchor_bottom = 0.0524691
+offset_left = -107.0
+offset_top = 237.0
+offset_right = 514.0
+offset_bottom = 1009.0
+grow_horizontal = 2
+scale = Vector2(0.343146, 0.32)
+metadata/_edit_use_anchors_ = true
+
+[node name="Startbutton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_6f8v3")
+texture_pressed = ExtResource("4_ape7v")
+texture_hover = ExtResource("5_5xekc")
+
+[node name="Label" type="Label" parent="VBoxContainer/Startbutton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.177
+anchor_top = -2.933
+anchor_right = -2.177
+anchor_bottom = -2.933
+offset_left = 1430.6
+offset_top = 801.232
+offset_right = 1887.6
+offset_bottom = 986.232
+theme_override_fonts/font = ExtResource("6_f5at7")
+theme_override_font_sizes/font_size = 100
+text = "Start
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionsButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_6f8v3")
+texture_pressed = ExtResource("4_ape7v")
+texture_hover = ExtResource("5_5xekc")
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsButton"]
+layout_mode = 2
+offset_left = 134.054
+offset_top = 51.875
+offset_right = 501.054
+offset_bottom = 246.875
+theme_override_fonts/font = ExtResource("6_f5at7")
+theme_override_font_sizes/font_size = 100
+text = "Options
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exitbutton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_6f8v3")
+texture_pressed = ExtResource("4_ape7v")
+texture_hover = ExtResource("5_5xekc")
+
+[node name="Label" type="Label" parent="VBoxContainer/Exitbutton"]
+layout_mode = 0
+offset_left = 171.938
+offset_top = 50.625
+offset_right = 448.938
+offset_bottom = 245.625
+theme_override_fonts/font = ExtResource("6_f5at7")
+theme_override_font_sizes/font_size = 100
+text = "Exit
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -437.0
+offset_top = 15.0
+offset_right = 438.0
+offset_bottom = 172.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.836307, 0.616362, 0.300037, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_luq4s")
+theme_override_font_sizes/font_size = 125
+text = "Torch N Steel"
+
+[connection signal="pressed" from="VBoxContainer/Startbutton" to="." method="_on_startbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exitbutton" to="." method="_on_exitbutton_pressed"]
