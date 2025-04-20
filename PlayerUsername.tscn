@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bb4rmy01b6m1u"]
+[gd_scene load_steps=2 format=3 uid="uid://bb4rmy01b6m1u"]
+
+[ext_resource type="Texture2D" uid="uid://hd6f1ot8dxmc" path="res://backgrounduser.png" id="1_x1riw"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,18 +12,31 @@ offset_right = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Backgrounduser" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.627451)
+self_modulate = Color(0.971945, 0.818986, 0.567933, 1)
+position = Vector2(572.749, 322.273)
+rotation = -0.0307877
+scale = Vector2(1.44065, 1.27317)
+texture = ExtResource("1_x1riw")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.715
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 47.0
-offset_top = 20.0
-offset_right = -34.68
-offset_bottom = 35.0
+offset_left = -183.0
+offset_top = -92.0
+offset_right = 206.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 6
 text = "What should I call you?"
 horizontal_alignment = 1
 

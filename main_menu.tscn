@@ -18,21 +18,26 @@ grow_vertical = 2
 script = ExtResource("1_glbon")
 
 [node name="Backgroundimage" type="Sprite2D" parent="."]
-position = Vector2(576.757, 324.099)
+modulate = Color(1, 1, 1, 0.627451)
+self_modulate = Color(0.881358, 0.849713, 0.77981, 1)
+position = Vector2(574.119, 319.542)
 rotation = -0.0305912
-scale = Vector2(1.44363, 1.25843)
+scale = Vector2(1.44863, 1.27292)
 texture = ExtResource("2_qe12f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -143.0
-offset_top = 227.0
-offset_right = 478.0
-offset_bottom = 999.0
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -81.0
+offset_right = 515.0
+offset_bottom = 725.0
 grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.343146, 0.32)
 
 [node name="Startbutton" type="TextureButton" parent="VBoxContainer"]
@@ -83,6 +88,7 @@ texture_pressed = ExtResource("2_jix8l")
 texture_hover = ExtResource("3_glbon")
 
 [node name="Label" type="Label" parent="VBoxContainer/Exitbutton"]
+layout_mode = 0
 offset_left = 171.938
 offset_top = 50.625
 offset_right = 448.938
