@@ -1,9 +1,15 @@
 extends CharacterBody2D
+<<<<<<< Updated upstream:player.gd
 
+var enemy_inattack_range = false
+=======
+ 
 var enemy_in_attack_range = false
+>>>>>>> Stashed changes:character/player/player.gd
 var enemy_attack_cooldown = true
 var health = 200
 var player_alive = true
+
 var attack_ip = false 
 
 const speed = 100
@@ -14,14 +20,17 @@ func _ready():
 
 func _physics_process(delta):
 	player_movement(delta)
+<<<<<<< Updated upstream:player.gd
+=======
 	enemy_attack()
 	attack()
-
+	
 	if health <= 0:
-		player_alive = false
+		player_alive = false # display respawn scne
 		health = 0
-		print("player has been killed")
+		print("player has been kill")
 		self.queue_free()
+>>>>>>> Stashed changes:character/player/player.gd
 
 func player_movement(delta):
 	if Input.is_action_pressed("ui_right"):
@@ -59,64 +68,88 @@ func play_anim(movement):
 		anim.flip_h = false
 		if movement == 1:
 			anim.play("side_walk")
-		elif movement == 0 and not attack_ip:
-			anim.play("side_player")	
-	elif dir == "left":
+		elif movement == 0:
+			if attack_ip == false:
+				anim.play("side_player")	
+	if dir == "left":
 		anim.flip_h = true
 		if movement == 1:
 			anim.play("side_walk")
-		elif movement == 0 and not attack_ip:
-			anim.play("side_player")			
-	elif dir == "down":
+		elif movement == 0:
+			if attack_ip == false:
+				anim.play("side_player")
+			
+	if dir == "down":
 		anim.flip_h = true
 		if movement == 1:
 			anim.play("front_walk")
-		elif movement == 0 and not attack_ip:
-			anim.play("front_player")	
-	elif dir == "up":
+		elif movement == 0:
+			if attack_ip == false:
+				anim.play("front_player")	
+	if dir == "up":
 		anim.flip_h = true
 		if movement == 1:
 			anim.play("back_walk")
-		elif movement == 0 and not attack_ip:
-			anim.play("back_player")			
+		elif movement == 0:
+<<<<<<< Updated upstream:player.gd
+			anim.play("back_player")		
+			
+=======
+			if attack_ip == false:
+				anim.play("back_player")			
 
-# Combat system
+# combat system
+
+func player():
+	pass
+
+>>>>>>> Stashed changes:character/player/player.gd
 func _on_player_hitbox_body_entered(body):
 	if body.has_method("enemy"):
-		enemy_in_attack_range = true
-
+		enemy_inattack_range =  true
+		 
 func _on_player_hitbox_body_exited(body):
 	if body.has_method("enemy"):
+<<<<<<< Updated upstream:player.gd
+		enemy_inattack_range =  false		
+=======
 		enemy_in_attack_range = false
-
+	
 func enemy_attack():
-	if enemy_in_attack_range and enemy_attack_cooldown:
-		health -= 15
+	if enemy_in_attack_range and enemy_attack_cooldown == true:
+		health = health - 15
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
 		print(health)
+
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
 
 func attack():
+	var dir = current_dir
+	
 	if Input.is_action_just_pressed("attack"):
 		global.player_current_attack = true
 		attack_ip = true
-		match current_dir:
-			"right":
-				$AnimatedSprite2D.flip_h = false
-				$AnimatedSprite2D.play("side_attack")
-			"left":
-				$AnimatedSprite2D.flip_h = true
-				$AnimatedSprite2D.play("side_attack")
-			"down":
-				$AnimatedSprite2D.play("front_attack")
-			"up":
-				$AnimatedSprite2D.play("back_attack")
-		$deal_attack_timer.start()
+		if dir == "right":
+			$AnimatedSprite2D.flip_h = false
+			$AnimatedSprite2D.play("side_attack")
+			$deal_attack_timer.start()
+		if dir == "left":
+			$AnimatedSprite2D.flip_h = true
+			$AnimatedSprite2D.play("side_attack")
+			$deal_attack_timer.start()
+		if dir == "down":
+			$AnimatedSprite2D.play("front_attack")
+			$deal_attack_timer.start()
+		if dir == "up":
+			$AnimatedSprite2D.play("back_attack")
+			$deal_attack_timer.start()
 
 func _on_deal_attack_timer_timeout() -> void:
 	$deal_attack_timer.stop()
-	global.player_current_attack = false
+	global.player_current_attack =  false
 	attack_ip = false 
+	
+>>>>>>> Stashed changes:character/player/player.gd
