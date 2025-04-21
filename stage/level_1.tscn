@@ -8,8 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cre2qghmry87b" path="res://art/MP_Dungeon1_v1.0/outside_entrance.png" id="5_uwuon"]
 [ext_resource type="Script" uid="uid://ccq0n0qdb3ecl" path="res://scripts/LevelTilemap.gd" id="6_odr1k"]
 [ext_resource type="Texture2D" uid="uid://b18wq0dlxub4r" path="res://sprites/tilesets/decor_8x8.png" id="7_p8yn5"]
-[ext_resource type="PackedScene" uid="uid://dc4lv65ox00uc" path="res://character/player/player.tscn" id="9_75bhg"]
+[ext_resource type="PackedScene" uid="uid://cc0v47d2bkqd" path="res://character/player/player.tscn" id="9_75bhg"]
 [ext_resource type="PackedScene" uid="uid://bna0wj6v8qryy" path="res://scene/nextlevel.tscn" id="10_2ouwm"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsjsl"]
 texture = ExtResource("1_5b26f")
