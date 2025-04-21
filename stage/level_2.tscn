@@ -1,11 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://c66bhnma1sv8k"]
+[gd_scene load_steps=8 format=4 uid="uid://c66bhnma1sv8k"]
 
 [ext_resource type="Texture2D" uid="uid://cmq1uwe1vv6jx" path="res://art/RF_Catacombs_v1.0/mainlevbuild.png" id="1_f5gnk"]
 [ext_resource type="Texture2D" uid="uid://5dyds03hi2vi" path="res://art/RF_Catacombs_v1.0/decorative.png" id="2_fhvj3"]
-[ext_resource type="Script" uid="uid://ccq0n0qdb3ecl" path="res://scripts/LevelTilemap.gd" id="6_6jkt7"]
+[ext_resource type="Script" uid="uid://ccq0n0qdb3ecl" path="res://stage/LevelTilemap.gd" id="6_6jkt7"]
 [ext_resource type="PackedScene" uid="uid://bna0wj6v8qryy" path="res://scene/nextlevel.tscn" id="6_f5gnk"]
-[ext_resource type="PackedScene" uid="uid://bcbeq2gorcs6" path="res://scene/portal.tscn" id="6_h7lwi"]
-[ext_resource type="PackedScene" uid="uid://c1cgq7xankx27" path="res://character/player/player.tscn" id="9_28bd7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpd13"]
 texture = ExtResource("1_f5gnk")
@@ -1447,29 +1445,6 @@ tile_map_data = PackedByteArray("AAAAAAQAAAAFAAsAAAABAAQAAAAGAAsAAAAAAAUAAAAQAAU
 tile_set = SubResource("TileSet_ru4te")
 script = ExtResource("6_6jkt7")
 
-[node name="Player" parent="." instance=ExtResource("9_28bd7")]
-position = Vector2(142, -216)
-
-[node name="portal" parent="." instance=ExtResource("6_h7lwi")]
-position = Vector2(60, -223)
-
-[node name="DestinationPoint" parent="portal" index="2"]
-position = Vector2(358, 610)
-
-[node name="portal2" parent="." instance=ExtResource("6_h7lwi")]
-position = Vector2(417, 358)
-
-[node name="AnimatedSprite2D" parent="portal2" index="0"]
-position = Vector2(-1, 2)
-
-[node name="CollisionShape2D" parent="portal2" index="1"]
-position = Vector2(0, -1)
-
-[node name="DestinationPoint" parent="portal2" index="2"]
-position = Vector2(-340, -580)
-
 [node name="nextlevel" parent="." instance=ExtResource("6_f5gnk")]
 position = Vector2(378, 549)
-
-[editable path="portal"]
-[editable path="portal2"]
+script = null
