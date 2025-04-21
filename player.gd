@@ -5,6 +5,8 @@ var enemy_attack_cooldown = true
 var health = 100
 var player_alive = true
 
+var attack_ip = false
+
 const speed = 100
 var current_dir = "none"
 
