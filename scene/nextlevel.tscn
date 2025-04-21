@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bna0wj6v8qryy"]
 
-[ext_resource type="Script" uid="uid://r0fqp7kp60rr" path="res://scripts/nextlevel.gd" id="1_8lbxk"]
+[ext_resource type="Script" path="res://scripts/nextlevel.gd" id="1_8lbxk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bcded"]
 radius = 17.0
