@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=4 uid="uid://c66bhnma1sv8k"]
+[gd_scene load_steps=8 format=4 uid="uid://c66bhnma1sv8k"]
 
-[ext_resource type="Script" uid="uid://bn0ytny1aej5k" path="res://00_Globals/LevelManagers.gd" id="1_6wo83"]
 [ext_resource type="Texture2D" uid="uid://cmq1uwe1vv6jx" path="res://art/RF_Catacombs_v1.0/mainlevbuild.png" id="1_f5gnk"]
 [ext_resource type="Texture2D" uid="uid://5dyds03hi2vi" path="res://art/RF_Catacombs_v1.0/decorative.png" id="2_fhvj3"]
 [ext_resource type="PackedScene" uid="uid://cp7hjku2auqim" path="res://character/enemy/slime/slime.tscn" id="5_uig1p"]
@@ -1434,7 +1433,6 @@ sources/0 = SubResource("TileSetAtlasSource_bpd13")
 sources/1 = SubResource("TileSetAtlasSource_qanrg")
 
 [node name="stage2" type="Node2D"]
-script = ExtResource("1_6wo83")
 
 [node name="tile" type="TileMapLayer" parent="."]
 use_parent_material = true
