@@ -23,7 +23,12 @@ global="*res://character/player/global.gd"
 [display]
 
 window/size/borderless=true
+
 window/stretch/mode="viewport"
+
+window/stretch/mode="canvas_items"
+window/stretch/scale=4.0
+
 
 [global_group]
 
@@ -72,3 +77,4 @@ attack={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=1
