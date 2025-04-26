@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://c8oditm46yl86"]
 
-[ext_resource type="Script" uid="uid://2o2x7ktgf3mm" path="res://Main menu/main_menu.gd" id="1_skept"]
-[ext_resource type="Texture2D" uid="uid://dsshy2vhwi0jj" path="res://Main menu/backgroundimage.png" id="2_jh8tq"]
-[ext_resource type="Texture2D" uid="uid://b6xj0jkae86mn" path="res://Main menu/button_normal.png" id="3_6f8v3"]
-[ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://Main menu/button_pressed.png" id="4_ape7v"]
-[ext_resource type="Texture2D" uid="uid://svilqcityuw3" path="res://Main menu/button_hover.png" id="5_5xekc"]
-[ext_resource type="FontFile" uid="uid://du1y0y7uge5vx" path="res://Main menu/Kenney Pixel.ttf" id="6_f5at7"]
-[ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://Main menu/Kenney Mini Square.ttf" id="7_luq4s"]
+[ext_resource type="Script" uid="uid://2o2x7ktgf3mm" path="res://mainmenu/main_menu.gd" id="1_skept"]
+[ext_resource type="Texture2D" uid="uid://dsshy2vhwi0jj" path="res://mainmenu/backgroundimage.png" id="2_jh8tq"]
+[ext_resource type="Texture2D" uid="uid://b6xj0jkae86mn" path="res://mainmenu/button_normal.png" id="3_6f8v3"]
+[ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://mainmenu/button_pressed.png" id="4_ape7v"]
+[ext_resource type="Texture2D" uid="uid://svilqcityuw3" path="res://mainmenu/button_hover.png" id="5_5xekc"]
+[ext_resource type="FontFile" uid="uid://du1y0y7uge5vx" path="res://mainmenu/Kenney Pixel.ttf" id="6_f5at7"]
+[ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://mainmenu/Kenney Mini Square.ttf" id="7_luq4s"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -39,10 +39,10 @@ offset_bottom = -9.05597
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.49913
-anchor_top = 0.0169753
-anchor_right = 0.49913
-anchor_bottom = 0.0169753
+anchor_left = 0.504348
+anchor_top = 0.0570988
+anchor_right = 0.504348
+anchor_bottom = 0.0570988
 offset_left = -107.0
 offset_top = 237.0
 offset_right = 514.0
@@ -121,10 +121,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -437.5
-offset_top = 20.0
-offset_right = 437.5
-offset_bottom = 177.0
+offset_left = -437.0
+offset_top = 45.0
+offset_right = 438.0
+offset_bottom = 202.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.836307, 0.616362, 0.300037, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)

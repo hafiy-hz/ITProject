@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6xj0jkae86mn"
-path="res://.godot/imported/button_normal.png-ae06977565368e17b516f2da7e0cbcf7.ctex"
+uid="uid://c3ipkx0whd3ri"
+path="res://.godot/imported/gold-weapons.png-5525a6b415d6e3ef14fc307b283beb52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main menu/button_normal.png"
-dest_files=["res://.godot/imported/button_normal.png-ae06977565368e17b516f2da7e0cbcf7.ctex"]
+source_file="res://sprites/weapon/gold-weapons.png"
+dest_files=["res://.godot/imported/gold-weapons.png-5525a6b415d6e3ef14fc307b283beb52.ctex"]
 
 [params]
 

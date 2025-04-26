@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b32y7buvayb4i"
-path="res://.godot/imported/backgrounduser.png-2fa93e33088fa528759481179eaf544f.ctex"
+uid="uid://c2t86khn42vad"
+path="res://.godot/imported/steel-weapons.png-4d6ddf6989d443dc8d7255f3264def00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main menu/backgrounduser.png"
-dest_files=["res://.godot/imported/backgrounduser.png-2fa93e33088fa528759481179eaf544f.ctex"]
+source_file="res://sprites/weapon/steel-weapons.png"
+dest_files=["res://.godot/imported/steel-weapons.png-4d6ddf6989d443dc8d7255f3264def00.ctex"]
 
 [params]
 
