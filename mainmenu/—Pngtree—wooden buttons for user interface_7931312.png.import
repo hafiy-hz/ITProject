@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26l03eluciio"
-path="res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"
+uid="uid://vlkalk1sgnvu"
+path="res://.godot/imported/—Pngtree—wooden buttons for user interface_7931312.png-d8f3e3e21ba28a050e4ab0df7004e16c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/candless.png"
-dest_files=["res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"]
+source_file="res://mainmenu/—Pngtree—wooden buttons for user interface_7931312.png"
+dest_files=["res://.godot/imported/—Pngtree—wooden buttons for user interface_7931312.png-d8f3e3e21ba28a050e4ab0df7004e16c.ctex"]
 
 [params]
 

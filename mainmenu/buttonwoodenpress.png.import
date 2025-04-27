@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26l03eluciio"
-path="res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"
+uid="uid://dwa4vnn1m4he4"
+path="res://.godot/imported/buttonwoodenpress.png-cf189f654a58d4a357e2b26f391baf87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/candless.png"
-dest_files=["res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"]
+source_file="res://mainmenu/buttonwoodenpress.png"
+dest_files=["res://.godot/imported/buttonwoodenpress.png-cf189f654a58d4a357e2b26f391baf87.ctex"]
 
 [params]
 
