@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26l03eluciio"
-path="res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"
+uid="uid://vjigxfyhmnbk"
+path="res://.godot/imported/Wooden Signboard in Pixel Art.png-f3f546f3d7ce1e7f37ace08582c960b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/candless.png"
-dest_files=["res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"]
+source_file="res://Wooden Signboard in Pixel Art.png"
+dest_files=["res://.godot/imported/Wooden Signboard in Pixel Art.png-f3f546f3d7ce1e7f37ace08582c960b9.ctex"]
 
 [params]
 

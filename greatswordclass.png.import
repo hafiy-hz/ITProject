@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26l03eluciio"
-path="res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"
+uid="uid://b0i2yofmnbmhm"
+path="res://.godot/imported/greatswordclass.png-6e23d7b01eecbe1310bc4d63f75848eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/candless.png"
-dest_files=["res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"]
+source_file="res://greatswordclass.png"
+dest_files=["res://.godot/imported/greatswordclass.png-6e23d7b01eecbe1310bc4d63f75848eb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26l03eluciio"
-path="res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"
+uid="uid://d10blkakyfdag"
+path="res://.godot/imported/button_hover.png-edba29aa21c375d4c30349573cd0bbf4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/candless.png"
-dest_files=["res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"]
+source_file="res://mainmenu/button_hover.png"
+dest_files=["res://.godot/imported/button_hover.png-edba29aa21c375d4c30349573cd0bbf4.ctex"]
 
 [params]
 

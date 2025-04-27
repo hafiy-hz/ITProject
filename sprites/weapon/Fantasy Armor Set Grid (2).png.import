@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26l03eluciio"
-path="res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"
+uid="uid://bepwvrsbqcc1r"
+path="res://.godot/imported/Fantasy Armor Set Grid (2).png-01c12e11e99a31c3abebd1c9d99d28e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/candless.png"
-dest_files=["res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"]
+source_file="res://sprites/weapon/Fantasy Armor Set Grid (2).png"
+dest_files=["res://.godot/imported/Fantasy Armor Set Grid (2).png-01c12e11e99a31c3abebd1c9d99d28e9.ctex"]
 
 [params]
 

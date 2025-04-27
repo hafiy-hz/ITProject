@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26l03eluciio"
-path="res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"
+uid="uid://tm7b8rlyf7lg"
+path="res://.godot/imported/boardusername.png-d12bae4b209f195ca4c2782ac22a0e84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/candless.png"
-dest_files=["res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"]
+source_file="res://boardusername.png"
+dest_files=["res://.godot/imported/boardusername.png-d12bae4b209f195ca4c2782ac22a0e84.ctex"]
 
 [params]
 

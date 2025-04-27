@@ -1,0 +1,136 @@
+[gd_scene load_steps=6 format=3 uid="uid://d4dqnpqir0388"]
+
+[ext_resource type="Texture2D" uid="uid://dwa4vnn1m4he4" path="res://mainmenu/buttonwoodenpress.png" id="1_2q67v"]
+[ext_resource type="Script" uid="uid://qw1gytbskdqd" path="res://Leaderboard/leaderboardspeedrun.gd" id="1_sa53a"]
+[ext_resource type="Texture2D" uid="uid://vjigxfyhmnbk" path="res://Wooden Signboard in Pixel Art.png" id="2_rmbua"]
+[ext_resource type="Texture2D" uid="uid://d2ecyrs7yfpiv" path="res://Pixel Art Wooden Signboard on Green.png" id="2_wpaec"]
+[ext_resource type="Texture2D" uid="uid://vlkalk1sgnvu" path="res://mainmenu/—Pngtree—wooden buttons for user interface_7931312.png" id="3_rmbua"]
+
+[node name="Leaderboardspeedrun" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sa53a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -614.0
+offset_right = -152.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.28959, 1.5517)
+texture = ExtResource("1_2q67v")
+
+[node name="WoodenSignboardInPixelArt" type="Sprite2D" parent="."]
+position = Vector2(583, 48)
+scale = Vector2(0.686002, 0.123156)
+texture = ExtResource("2_rmbua")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.5
+offset_top = 18.0
+offset_right = 147.5
+offset_bottom = 71.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 38
+text = "LEADERBOARD"
+
+[node name="PixelArtWoodenSignboardOnGreen" type="Sprite2D" parent="."]
+position = Vector2(587, 321)
+scale = Vector2(0.866211, 0.933594)
+texture = ExtResource("2_wpaec")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.5
+offset_top = -126.0
+offset_right = 292.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "1. Alice - 1:25.30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "2. Bob - 1:30.12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "3. Charlie - 1:45.67"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "4. Diana - 2:00.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "5. (You!) - 2:10.45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 391.0
+offset_right = 1483.0
+offset_bottom = 1591.0
+scale = Vector2(0.702398, 0.17988)
+texture_normal = ExtResource("3_rmbua")
+texture_pressed = ExtResource("1_2q67v")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 455.582
+offset_top = 505.892
+offset_right = 734.582
+offset_bottom = 592.892
+scale = Vector2(0.993277, 4.0485)
+theme_override_font_sizes/font_size = 30
+text = "Back to Main menu
+"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

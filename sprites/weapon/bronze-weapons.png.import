@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d26l03eluciio"
-path="res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"
+uid="uid://dlcs6xwv1xyh7"
+path="res://.godot/imported/bronze-weapons.png-0ff1fad5cfc7e3a3d35f831237d80b6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/candless.png"
-dest_files=["res://.godot/imported/candless.png-2fa2b1e38637a1244e65a4649180555e.ctex"]
+source_file="res://sprites/weapon/bronze-weapons.png"
+dest_files=["res://.godot/imported/bronze-weapons.png-0ff1fad5cfc7e3a3d35f831237d80b6d.ctex"]
 
 [params]
 

@@ -11,20 +11,22 @@ config_version=5
 [application]
 
 config/name="Torch N Steel"
+run/main_scene="uid://oqfscqppigqu"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 LevelManagers="*res://00_Globals/LevelManagers.gd"
-InteractionManager="*res://interaction/InteractionManager.tscn"
+global="*res://character/player/global.gd"
+Global="*res://Global.gd"
 
 [display]
 
+window/size/mode=3
 window/size/resizable=false
 window/size/borderless=true
 window/stretch/mode="canvas_items"
-window/stretch/scale=4.0
 
 [global_group]
 

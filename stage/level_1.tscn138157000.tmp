@@ -1,4 +1,8 @@
+
+[gd_scene load_steps=28 format=4 uid="uid://ba08ovywtmchm"]
+
 [gd_scene load_steps=30 format=4 uid="uid://cras6qihtholi"]
+
 
 [ext_resource type="Texture2D" uid="uid://pve06w87bmdl" path="res://sprites/tilesets/grass.png" id="1_5b26f"]
 [ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://LevelTilemapLayer.gd" id="1_uwuon"]
