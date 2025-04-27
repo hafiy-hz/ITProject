@@ -1,6 +1,6 @@
-[gd_scene load_steps=56 format=3 uid="uid://yhu6yav61q2c"]
+[gd_scene load_steps=57 format=3 uid="uid://yhu6yav61q2c"]
 
-[ext_resource type="Script" uid="uid://clm5vamda2cl4" path="res://character/player/player.gd" id="1_8eijk"]
+[ext_resource type="Script" uid="uid://clm5vamda2cl4" path="res://characters/player/player.gd" id="1_8eijk"]
 [ext_resource type="Texture2D" uid="uid://cfqm2q2u5cmo4" path="res://sprites/characters/player.png" id="2_gtsfv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wu8e1"]
@@ -416,8 +416,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_8eijk"]
 radius = 4.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xxgcw"]
+radius = 16.0312
+
 [node name="player" type="CharacterBody2D"]
 y_sort_enabled = true
+collision_layer = 3
 script = ExtResource("1_8eijk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -428,3 +432,18 @@ offset = Vector2(0, -15)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -2)
 shape = SubResource("CircleShape2D_8eijk")
+
+[node name="player_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_xxgcw")
+
+[node name="attack_cooldown" type="Timer" parent="."]
+
+[node name="deal_attack_timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
+[connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
