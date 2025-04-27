@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://oqfscqppigqu"]
 
-[ext_resource type="Texture2D" uid="uid://dsshy2vhwi0jj" path="res://mainmenu/backgroundimage.png" id="1_fgnwx"]
+[ext_resource type="Texture2D" uid="uid://b53a3txhsjsec" path="res://mainmenu/backgroundimage.png" id="1_fgnwx"]
 [ext_resource type="Script" uid="uid://5sgx0xu1ixtr" path="res://mainmenu/options.gd" id="1_rq453"]
 [ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://mainmenu/button_pressed.png" id="3_ndsii"]
-[ext_resource type="Texture2D" uid="uid://svilqcityuw3" path="res://mainmenu/button_hover.png" id="4_hy6qy"]
+[ext_resource type="Texture2D" uid="uid://d10blkakyfdag" path="res://mainmenu/button_hover.png" id="4_hy6qy"]
 [ext_resource type="Texture2D" uid="uid://b6xj0jkae86mn" path="res://mainmenu/button_normal.png" id="4_ndsii"]
 [ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://mainmenu/Kenney Mini Square.ttf" id="5_3pdj0"]
 [ext_resource type="FontFile" uid="uid://d1m1t468j375t" path="res://mainmenu/Kenney Pixel Square.ttf" id="5_hy6qy"]
@@ -89,8 +89,6 @@ vertical_alignment = 1
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer"]
 layout_mode = 2
-max_value = 1.0
-step = 0.01
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -109,6 +107,8 @@ vertical_alignment = 1
 
 [node name="Fullscreen" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Enable Fullsreen"
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="value_changed" from="VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]

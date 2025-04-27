@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://byw01wl62kogm"]
 
-[ext_resource type="Script" uid="uid://by8an5ssoxe5o" path="res://press_start.gd" id="1_8pamh"]
-[ext_resource type="Texture2D" uid="uid://dsshy2vhwi0jj" path="res://mainmenu/backgroundimage.png" id="2_d0nky"]
-[ext_resource type="Texture2D" uid="uid://tm7b8rlyf7lg" path="res://character/player/boardusername.png" id="3_wvchv"]
+[ext_resource type="Script" uid="uid://by8an5ssoxe5o" path="res://mainmenu/press_start.gd" id="1_8pamh"]
+[ext_resource type="Texture2D" uid="uid://b53a3txhsjsec" path="res://mainmenu/backgroundimage.png" id="2_d0nky"]
+[ext_resource type="Texture2D" uid="uid://tm7b8rlyf7lg" path="res://boardusername.png" id="3_wvchv"]
 [ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://mainmenu/Kenney Mini Square.ttf" id="4_k4fr1"]
 
 [node name="PressStart" type="Control"]

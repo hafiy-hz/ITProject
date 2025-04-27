@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:mainmenu/backgroundimage.png.import
-uid="uid://dsshy2vhwi0jj"
+uid="uid://b53a3txhsjsec"
 path="res://.godot/imported/backgroundimage.png-b51a75e84adf91d56107754afaccd4fa.ctex"
-========
-uid="uid://by5o5vf8ib0bh"
-path="res://.godot/imported/Dimensional_Portal.png-165e25bbddd1f40352cfd4e32189072b.ctex"
->>>>>>>> main:art/portals/Dimensional_Portal.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:mainmenu/backgroundimage.png.import
 source_file="res://mainmenu/backgroundimage.png"
 dest_files=["res://.godot/imported/backgroundimage.png-b51a75e84adf91d56107754afaccd4fa.ctex"]
-========
-source_file="res://art/portals/Dimensional_Portal.png"
-dest_files=["res://.godot/imported/Dimensional_Portal.png-165e25bbddd1f40352cfd4e32189072b.ctex"]
->>>>>>>> main:art/portals/Dimensional_Portal.png.import
 
 [params]
 
