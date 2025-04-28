@@ -1,4 +1,9 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
+
+
+
+signal direction_changed(new_direction : Vector2)
+signal interact_pressed
 
 const speed = 100
 var current_dir = "none"
@@ -11,6 +16,7 @@ func _physics_process(delta):
 
 #function to control player
 func player_movement(delta):
+	var previous_dir = current_dir
 	
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
@@ -37,9 +43,24 @@ func player_movement(delta):
 		velocity.x = 0
 		velocity.y = 0
 	
+	
 	move_and_slide()
 	
-	#funcion to play animation for movement 
+	if current_dir != previous_dir:
+		var direction_vector = Vector2.ZERO
+		match current_dir:
+			"right":
+				direction_vector = Vector2.RIGHT
+			"left":
+				direction_vector = Vector2.LEFT
+			"up":
+				direction_vector = Vector2.UP
+			"down":
+				direction_vector = Vector2.DOWN
+		emit_signal("direction_changed", direction_vector)
+
+
+# function to play animation for movement
 func play_anim(movement):
 	var dir = current_dir
 	var anim = $AnimatedSprite2D
@@ -56,7 +77,6 @@ func play_anim(movement):
 			anim.play("side_walk")
 		elif movement == 0:
 			anim.play("side_idle")
-	
 	if dir == "down":
 		anim.flip_h = true
 		if movement == 1:
