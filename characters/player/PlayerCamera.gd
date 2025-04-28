@@ -1,4 +1,4 @@
-class_name PlayerCamera extends Camera2D
+extends Camera2D
 
 
 func _ready():

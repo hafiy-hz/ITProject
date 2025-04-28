@@ -1,4 +1,6 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
+
+signal direction_changed(new_direction: Vector2)
 
 var enemy_inattack_range = false 
 var enemy_attack_cooldown = true 
@@ -26,23 +28,28 @@ func _physics_process(delta):
 
 #function to control player
 func player_movement(delta):
-	
+	var new_direction = Vector2.ZERO
+
 	if Input.is_action_pressed("ui_right"):
+		new_direction = Vector2.RIGHT
 		current_dir = "right"
 		play_anim(1)
 		velocity.x = speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_left"):
+		new_direction = Vector2.LEFT
 		current_dir = "left"
 		play_anim(1)
 		velocity.x = -speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_down"):
+		new_direction = Vector2.DOWN
 		current_dir = "down"
 		play_anim(1)
 		velocity.y = speed
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_up"):
+		new_direction = Vector2.UP
 		current_dir = "up"
 		play_anim(1)
 		velocity.y = -speed
@@ -53,7 +60,10 @@ func player_movement(delta):
 		velocity.y = 0
 	
 	move_and_slide()
-	
+
+	if new_direction != Vector2.ZERO:
+		direction_changed.emit(new_direction)
+
 	#funcion to play player animation
 func play_anim(movement):
 	var dir = current_dir
