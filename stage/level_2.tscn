@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://beq32mxmd8xh" path="res://art/RFCastle_1.0/lightB03.png" id="8_1xbk0"]
 [ext_resource type="Texture2D" uid="uid://d26l03eluciio" path="res://art/candless.png" id="9_o5yw0"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="10_nst33"]
-[ext_resource type="PackedScene" uid="uid://yhu6yav61q2c" path="res://character/player/player.tscn" id="12_0ipus"]
+[ext_resource type="PackedScene" uid="uid://yhu6yav61q2c" path="res://characters/player/player.tscn" id="12_0ipus"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rpf8"]
 texture = ExtResource("1_h7lwi")
