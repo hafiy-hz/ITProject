@@ -105,11 +105,11 @@ func play_anim(movement):
 func player():
 	pass
 
-func _on_player_hitbox_body_entered(body: Node2D) -> void:
+func _on_player_hitbox_body_entered(body):
 	if body.has_method("enemy"):
 		enemy_inattack_range = true
 
-func _on_player_hitbox_body_exited(body: Node2D) -> void:
+func _on_player_hitbox_body_exited(body):
 	if body.has_method("enemy"):
 		enemy_inattack_range = false
 
@@ -120,7 +120,7 @@ func enemy_attack():
 		$attack_cooldown.start()
 		print(health)
 
-func _on_attack_cooldown_timeout() -> void:
+func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
 
 func attack():
