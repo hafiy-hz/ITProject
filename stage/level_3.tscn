@@ -1,11 +1,12 @@
-[gd_scene load_steps=14 format=4 uid="uid://c66bhnma1sv8k"]
+[gd_scene load_steps=29 format=4 uid="uid://c66bhnma1sv8k"]
 
 [ext_resource type="Texture2D" uid="uid://cmq1uwe1vv6jx" path="res://art/RF_Catacombs_v1.0/mainlevbuild.png" id="1_f5gnk"]
 [ext_resource type="Texture2D" uid="uid://5dyds03hi2vi" path="res://art/RF_Catacombs_v1.0/decorative.png" id="2_fhvj3"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="3_470us"]
-[ext_resource type="PackedScene" uid="uid://dv4d1gmtajnol" path="res://stage/dark_wizard/energy_orb.tscn" id="4_i6h3b"]
 [ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://scripts/LevelTilemapLayer.gd" id="4_ikpj5"]
 [ext_resource type="PackedScene" uid="uid://yhu6yav61q2c" path="res://characters/player/player.tscn" id="5_bbrih"]
+[ext_resource type="Texture2D" uid="uid://2xudq7b4bard" path="res://stage/dark_wizard/sprites/boss-cloak.png" id="6_n1hxq"]
+[ext_resource type="Texture2D" uid="uid://ywnc402aqfm7" path="res://stage/dark_wizard/sprites/boss-hand.png" id="7_hqns1"]
 [ext_resource type="PackedScene" uid="uid://dn8nt54xw2krf" path="res://stage/dark_wizard/energy_beam.tscn" id="7_n1hxq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpd13"]
@@ -2592,10 +2593,277 @@ texture = ExtResource("1_f5gnk")
 sources/0 = SubResource("TileSetAtlasSource_ikpj5")
 sources/1 = SubResource("TileSetAtlasSource_n1hxq")
 
+[sub_resource type="Gradient" id="Gradient_hqns1"]
+offsets = PackedFloat32Array(0.506494, 0.980519)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ydxm8"]
+gradient = SubResource("Gradient_hqns1")
+width = 48
+height = 24
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Animation" id="Animation_p0hit"]
+resource_name = "down"
+length = 0.3335
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_pihfe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_c6eme"]
+resource_name = "up"
+length = 0.3335
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_n1hxq"]
+resource_name = "side"
+length = 0.3335
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ho3dj"]
+_data = {
+&"RESET": SubResource("Animation_pihfe"),
+&"down": SubResource("Animation_p0hit"),
+&"side": SubResource("Animation_n1hxq"),
+&"up": SubResource("Animation_c6eme")
+}
+
+[sub_resource type="Gradient" id="Gradient_oye8m"]
+offsets = PackedFloat32Array(0.409091, 1)
+colors = PackedColorArray(1, 0.523234, 0.797473, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kg2qh"]
+gradient = SubResource("Gradient_oye8m")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Animation" id="Animation_ydxm8"]
+resource_name = "idle"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CloakSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(0, -31), Vector2(0, -40), Vector2(0, -31)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CloakSprite/Hand01:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CloakSprite/Hand01:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(20, 5), Vector2(20, 7), Vector2(20, 5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CloakSprite/Hand02:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CloakSprite/Hand02:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(-20, 4), Vector2(-20, 7), Vector2(-20, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_ho3dj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CloakSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -31)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CloakSprite/Hand01:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CloakSprite/Hand01:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, 5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CloakSprite/Hand02:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CloakSprite/Hand02:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, 4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oye8m"]
+_data = {
+&"RESET": SubResource("Animation_ho3dj"),
+&"idle": SubResource("Animation_ydxm8")
+}
+
+[sub_resource type="Gradient" id="Gradient_ikpj5"]
+offsets = PackedFloat32Array(0.564935, 0.707792, 0.896104)
+colors = PackedColorArray(1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n1hxq"]
+gradient = SubResource("Gradient_ikpj5")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [node name="stage2" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("5_bbrih")]
-position = Vector2(415, 532)
+position = Vector2(335, 593)
 
 [node name="tile" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -2614,21 +2882,117 @@ tile_set = SubResource("TileSet_hqns1")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("3_470us")]
 
-[node name="EnergyOrb" parent="." instance=ExtResource("4_i6h3b")]
-position = Vector2(577, 593)
-rotation = 0.00227991
+[node name="DarkWizardBoss" type="Node2D" parent="."]
 
-[node name="EnergyOrb2" parent="." instance=ExtResource("4_i6h3b")]
-position = Vector2(255, 591)
-rotation = 0.00227991
+[node name="BossNode" type="Node2D" parent="DarkWizardBoss"]
+position = Vector2(416, 524)
 
-[node name="EnergyOrb3" parent="." instance=ExtResource("4_i6h3b")]
-position = Vector2(576, 403)
-rotation = 0.00227991
+[node name="ShadowSprite" type="Sprite2D" parent="DarkWizardBoss/BossNode"]
+texture = SubResource("GradientTexture2D_ydxm8")
 
-[node name="EnergyOrb4" parent="." instance=ExtResource("4_i6h3b")]
-position = Vector2(255, 403)
-rotation = 0.00227991
+[node name="CloakSprite" type="Sprite2D" parent="DarkWizardBoss/BossNode"]
+position = Vector2(0, -31)
+texture = ExtResource("6_n1hxq")
+hframes = 9
 
-[node name="EnergyBeam" parent="." instance=ExtResource("7_n1hxq")]
-position = Vector2(415, 548)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DarkWizardBoss/BossNode/CloakSprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_ho3dj")
+}
+autoplay = "down"
+
+[node name="Hand01" type="Sprite2D" parent="DarkWizardBoss/BossNode/CloakSprite"]
+position = Vector2(20, 5)
+texture = ExtResource("7_hqns1")
+hframes = 16
+
+[node name="Hand02" type="Sprite2D" parent="DarkWizardBoss/BossNode/CloakSprite"]
+position = Vector2(-20, 4)
+texture = ExtResource("7_hqns1")
+flip_h = true
+hframes = 16
+
+[node name="Hand01_UP" type="Sprite2D" parent="DarkWizardBoss/BossNode/CloakSprite"]
+visible = false
+show_behind_parent = true
+position = Vector2(20, 5)
+texture = ExtResource("7_hqns1")
+hframes = 16
+
+[node name="Hand02_UP" type="Sprite2D" parent="DarkWizardBoss/BossNode/CloakSprite"]
+visible = false
+show_behind_parent = true
+position = Vector2(-20, 4)
+texture = ExtResource("7_hqns1")
+flip_h = true
+hframes = 16
+
+[node name="Hand01_SIDE" type="Sprite2D" parent="DarkWizardBoss/BossNode/CloakSprite"]
+visible = false
+show_behind_parent = true
+position = Vector2(10, 2)
+texture = ExtResource("7_hqns1")
+hframes = 16
+
+[node name="Hand02_SIDE" type="Sprite2D" parent="DarkWizardBoss/BossNode/CloakSprite"]
+visible = false
+position = Vector2(0, 8)
+texture = ExtResource("7_hqns1")
+flip_h = true
+hframes = 16
+
+[node name="PointLight2D" type="PointLight2D" parent="DarkWizardBoss/BossNode"]
+energy = 0.75
+texture = SubResource("GradientTexture2D_kg2qh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="DarkWizardBoss/BossNode"]
+max_polyphony = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DarkWizardBoss/BossNode"]
+libraries = {
+&"": SubResource("AnimationLibrary_oye8m")
+}
+autoplay = "idle"
+
+[node name="BeamAttack" type="Node2D" parent="DarkWizardBoss"]
+visible = false
+
+[node name="EB_H1" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
+position = Vector2(416, 609)
+
+[node name="EB_H2" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
+position = Vector2(416, 524)
+
+[node name="EB_H3" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
+position = Vector2(416, 442)
+
+[node name="EB_V1" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
+position = Vector2(297, 524)
+rotation = 1.5708
+
+[node name="EB_V2" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
+position = Vector2(415, 524)
+rotation = 1.5708
+
+[node name="EB_V3" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
+position = Vector2(536, 524)
+rotation = 1.5708
+
+[node name="PositionTargets" type="Node2D" parent="DarkWizardBoss"]
+
+[node name="Sprite2D" type="Sprite2D" parent="DarkWizardBoss/PositionTargets"]
+position = Vector2(416, 614)
+texture = SubResource("GradientTexture2D_n1hxq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="DarkWizardBoss/PositionTargets"]
+position = Vector2(575, 524)
+texture = SubResource("GradientTexture2D_n1hxq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="DarkWizardBoss/PositionTargets"]
+position = Vector2(416, 442)
+texture = SubResource("GradientTexture2D_n1hxq")
+
+[node name="Sprite2D4" type="Sprite2D" parent="DarkWizardBoss/PositionTargets"]
+position = Vector2(258, 524)
+scale = Vector2(1.15673, 1.1047)
+texture = SubResource("GradientTexture2D_n1hxq")

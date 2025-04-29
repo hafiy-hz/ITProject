@@ -28,7 +28,7 @@ func _physics_process(delta):
 		self.queue_free()
 
 #function to control player
-func player_movement(delta):
+func player_movement( _delta ):
 	var new_direction = Vector2.ZERO
 
 	if Input.is_action_pressed("ui_right"):
