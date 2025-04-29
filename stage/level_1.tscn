@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://cras6qihtholi"]
+[gd_scene load_steps=33 format=4 uid="uid://cras6qihtholi"]
 
 [ext_resource type="Texture2D" uid="uid://pve06w87bmdl" path="res://sprites/tilesets/grass.png" id="1_5b26f"]
 [ext_resource type="Texture2D" uid="uid://bj7a38f75g0fq" path="res://sprites/tilesets/plains.png" id="2_02usw"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b18wq0dlxub4r" path="res://sprites/tilesets/decor_8x8.png" id="7_p8yn5"]
 [ext_resource type="Texture2D" uid="uid://b3b1q584lydbh" path="res://art/mystic_woods_free_2.2/sprites/objects/chest_01.png" id="8_uq8ft"]
 [ext_resource type="PackedScene" uid="uid://yhu6yav61q2c" path="res://characters/player/player.tscn" id="9_uwuon"]
+[ext_resource type="PackedScene" uid="uid://enui7o7v7bhk" path="res://characters/enemy/slime/enemy.tscn" id="11_02usw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsjsl"]
 texture = ExtResource("1_5b26f")
@@ -739,4 +740,5 @@ tile_set = SubResource("TileSet_6fnqi")
 [node name="player" parent="." instance=ExtResource("9_uwuon")]
 position = Vector2(79, 96)
 
-[editable path="player"]
+[node name="enemy" parent="." instance=ExtResource("11_02usw")]
+position = Vector2(218, 132)

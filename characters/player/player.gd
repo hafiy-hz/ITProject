@@ -13,6 +13,7 @@ const speed = 100
 var current_dir = "none"
 
 func _ready():
+	PlayerManager.player = self
 	$AnimatedSprite2D.play("front_idle")
 
 func _physics_process(delta):
@@ -27,7 +28,7 @@ func _physics_process(delta):
 		self.queue_free()
 
 #function to control player
-func player_movement(delta):
+func player_movement( _delta ):
 	var new_direction = Vector2.ZERO
 
 	if Input.is_action_pressed("ui_right"):
