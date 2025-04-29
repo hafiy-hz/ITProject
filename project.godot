@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 LevelManagers="*res://00_Globals/LevelManagers.gd"
 Global="*res://Global.gd"
 global="*res://characters/player/global.gd"
+PlayerManager="*res://character/player/PlayerManager.gd"
 
 [display]
 
@@ -73,7 +74,9 @@ interact={
 
 [layer_names]
 
+2d_physics/layer_2="PlayerHurt"
 2d_physics/layer_3="playerInteract"
+2d_physics/layer_9="Enemy"
 
 [rendering]
 

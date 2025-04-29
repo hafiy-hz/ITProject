@@ -13,6 +13,7 @@ const speed = 100
 var current_dir = "none"
 
 func _ready():
+	PlayerManager.player = self
 	$AnimatedSprite2D.play("front_idle")
 
 func _physics_process(delta):
