@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=4 uid="uid://c66bhnma1sv8k"]
+[gd_scene load_steps=30 format=4 uid="uid://c66bhnma1sv8k"]
 
 [ext_resource type="Texture2D" uid="uid://cmq1uwe1vv6jx" path="res://art/RF_Catacombs_v1.0/mainlevbuild.png" id="1_f5gnk"]
 [ext_resource type="Texture2D" uid="uid://5dyds03hi2vi" path="res://art/RF_Catacombs_v1.0/decorative.png" id="2_fhvj3"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="3_470us"]
+[ext_resource type="PackedScene" uid="uid://dv4d1gmtajnol" path="res://stage/dark_wizard/energy_orb.tscn" id="4_i6h3b"]
 [ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://scripts/LevelTilemapLayer.gd" id="4_ikpj5"]
 [ext_resource type="PackedScene" uid="uid://yhu6yav61q2c" path="res://characters/player/player.tscn" id="5_bbrih"]
 [ext_resource type="Texture2D" uid="uid://2xudq7b4bard" path="res://stage/dark_wizard/sprites/boss-cloak.png" id="6_n1hxq"]
@@ -2955,28 +2956,33 @@ libraries = {
 autoplay = "idle"
 
 [node name="BeamAttack" type="Node2D" parent="DarkWizardBoss"]
-visible = false
 
 [node name="EB_H1" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
 position = Vector2(416, 609)
+use_timer = true
 
 [node name="EB_H2" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
 position = Vector2(416, 524)
+use_timer = true
 
 [node name="EB_H3" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
 position = Vector2(416, 442)
+use_timer = true
 
 [node name="EB_V1" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
 position = Vector2(297, 524)
 rotation = 1.5708
+use_timer = true
 
 [node name="EB_V2" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
 position = Vector2(415, 524)
 rotation = 1.5708
+use_timer = true
 
 [node name="EB_V3" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
 position = Vector2(536, 524)
 rotation = 1.5708
+use_timer = true
 
 [node name="PositionTargets" type="Node2D" parent="DarkWizardBoss"]
 
@@ -2996,3 +3002,15 @@ texture = SubResource("GradientTexture2D_n1hxq")
 position = Vector2(258, 524)
 scale = Vector2(1.15673, 1.1047)
 texture = SubResource("GradientTexture2D_n1hxq")
+
+[node name="EnergyOrb" parent="." instance=ExtResource("4_i6h3b")]
+position = Vector2(576, 402)
+
+[node name="EnergyOrb2" parent="." instance=ExtResource("4_i6h3b")]
+position = Vector2(576, 597)
+
+[node name="EnergyOrb3" parent="." instance=ExtResource("4_i6h3b")]
+position = Vector2(255, 593)
+
+[node name="EnergyOrb4" parent="." instance=ExtResource("4_i6h3b")]
+position = Vector2(255, 402)
