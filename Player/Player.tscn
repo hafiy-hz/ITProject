@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bxw4o4iulxjcp"]
+[gd_scene load_steps=23 format=3 uid="uid://bxw4o4iulxjcp"]
 
 [ext_resource type="Texture2D" uid="uid://biff3k5igtl1t" path="res://art/mystic_woods_free_2.2/sprites/characters/player.png" id="1_3qydi"]
 [ext_resource type="Script" uid="uid://crkqfarcw6646" path="res://Player/Scripts/player.gd" id="1_q3lat"]
@@ -7,9 +7,11 @@
 [ext_resource type="Script" uid="uid://nbhk418d51y1" path="res://Player/Scripts/state_walk.gd" id="5_8g4oa"]
 [ext_resource type="Script" uid="uid://cwg1f4x7neqtp" path="res://Player/Scripts/state_attack.gd" id="6_6ysni"]
 [ext_resource type="AudioStream" uid="uid://btc0yo7c61maq" path="res://Player/Audio/SwordSwoosh.wav" id="7_vlldt"]
+[ext_resource type="Script" uid="uid://cpslmll4qla6m" path="res://Player/Scripts/PlayerInteractionsHost.gd" id="8_j23h2"]
+[ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="8_s1rgi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0rwas"]
-radius = 7.07107
+radius = 6.0
 
 [sub_resource type="Animation" id="Animation_tok1r"]
 length = 0.001
@@ -190,16 +192,22 @@ _data = {
 &"walk_up": SubResource("Animation_s1rgi")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_j23h2"]
+radius = 12.0
+
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 16
 motion_mode = 1
 wall_min_slide_angle = 0.174533
 script = ExtResource("1_q3lat")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 14)
+position = Vector2(0, -2)
+scale = Vector2(0.998516, 0.978723)
 shape = SubResource("CircleShape2D_0rwas")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -14)
 texture = ExtResource("1_3qydi")
 hframes = 6
 vframes = 10
@@ -221,7 +229,6 @@ script = ExtResource("5_8g4oa")
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("6_6ysni")
 attack_sound = ExtResource("7_vlldt")
-decelerate_speed = 6.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -229,3 +236,15 @@ decelerate_speed = 6.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Audio"]
 max_polyphony = 4
+
+[node name="Interactions" type="Node2D" parent="."]
+script = ExtResource("8_j23h2")
+
+[node name="HurtBox" parent="Interactions" instance=ExtResource("8_s1rgi")]
+position = Vector2(0, 10)
+collision_mask = 256
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/HurtBox"]
+shape = SubResource("CircleShape2D_j23h2")
+debug_color = Color(0.996078, 0, 0.168627, 0.301961)
