@@ -1,11 +1,10 @@
-[gd_scene load_steps=30 format=4 uid="uid://c66bhnma1sv8k"]
+[gd_scene load_steps=29 format=4 uid="uid://c66bhnma1sv8k"]
 
 [ext_resource type="Texture2D" uid="uid://cmq1uwe1vv6jx" path="res://art/RF_Catacombs_v1.0/mainlevbuild.png" id="1_f5gnk"]
 [ext_resource type="Texture2D" uid="uid://5dyds03hi2vi" path="res://art/RF_Catacombs_v1.0/decorative.png" id="2_fhvj3"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="3_470us"]
 [ext_resource type="PackedScene" uid="uid://dv4d1gmtajnol" path="res://stage/dark_wizard/energy_orb.tscn" id="4_i6h3b"]
 [ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://scripts/LevelTilemapLayer.gd" id="4_ikpj5"]
-[ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/player.tscn" id="5_bbrih"]
 [ext_resource type="Texture2D" uid="uid://2xudq7b4bard" path="res://stage/dark_wizard/sprites/boss-cloak.png" id="6_n1hxq"]
 [ext_resource type="Texture2D" uid="uid://ywnc402aqfm7" path="res://stage/dark_wizard/sprites/boss-hand.png" id="7_hqns1"]
 [ext_resource type="PackedScene" uid="uid://dn8nt54xw2krf" path="res://stage/dark_wizard/energy_beam.tscn" id="7_n1hxq"]
@@ -2862,9 +2861,6 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
 [node name="stage2" type="Node2D"]
-
-[node name="player" parent="." instance=ExtResource("5_bbrih")]
-position = Vector2(335, 593)
 
 [node name="tile" type="TileMapLayer" parent="."]
 use_parent_material = true

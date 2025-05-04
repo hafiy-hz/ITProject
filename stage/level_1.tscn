@@ -724,7 +724,6 @@ sources/5 = SubResource("TileSetAtlasSource_uwuon")
 
 [node name="stage" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(-2, 0)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 light_mask = 0
