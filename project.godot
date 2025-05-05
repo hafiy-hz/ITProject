@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 
 LevelManagers="*res://00_Globals/LevelManagers.gd"
 Global="*res://Global.gd"
-PlayerManager="*res://character/player/PlayerManager.gd"
 global="*res://Player/Scripts/Global.gd"
+PlayerManager="*res://00_Globals/PlayerManager.gd"
 
 [display]
 

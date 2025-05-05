@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://c66bhnma1sv8k"]
+[gd_scene load_steps=39 format=4 uid="uid://c66bhnma1sv8k"]
 
 [ext_resource type="Texture2D" uid="uid://cmq1uwe1vv6jx" path="res://art/RF_Catacombs_v1.0/mainlevbuild.png" id="1_f5gnk"]
 [ext_resource type="Texture2D" uid="uid://5dyds03hi2vi" path="res://art/RF_Catacombs_v1.0/decorative.png" id="2_fhvj3"]
@@ -3174,41 +3174,6 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0)
 }
 tracks/6/use_blend = true
-tracks/7/type = "method"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("..")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0.2, 0.498939, 0.798058, 1.1, 1.40242, 1.70154, 2.00116, 2.29905),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"values": [{
-"args": [Vector2(10, -32)],
-"method": &"explosion"
-}, {
-"args": [Vector2(2, -15)],
-"method": &"explosion"
-}, {
-"args": [Vector2(-14, -36)],
-"method": &"explosion"
-}, {
-"args": [Vector2(12, -29)],
-"method": &"explosion"
-}, {
-"args": [Vector2(-2, -22)],
-"method": &"explosion"
-}, {
-"args": [Vector2(2, -27)],
-"method": &"explosion"
-}, {
-"args": [Vector2(6, -32)],
-"method": &"explosion"
-}, {
-"args": [Vector2(9, -24)],
-"method": &"explosion"
-}]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oye8m"]
 _data = {
@@ -3218,59 +3183,6 @@ _data = {
 &"destroy": SubResource("Animation_f2um1"),
 &"disappear": SubResource("Animation_oye8m"),
 &"idle": SubResource("Animation_ydxm8")
-}
-
-[sub_resource type="Animation" id="Animation_px4of"]
-resource_name = "damaged"
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CloakSprite:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.296667, 0.396667, 0.497713, 0.597713, 0.69876, 0.79876, 0.899807),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(3, 2, 1.5, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ynvnh"]
-resource_name = "default"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CloakSprite:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_o0vi8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CloakSprite:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nqojd"]
-_data = {
-&"RESET": SubResource("Animation_o0vi8"),
-&"damaged": SubResource("Animation_px4of"),
-&"default": SubResource("Animation_ynvnh")
 }
 
 [sub_resource type="Gradient" id="Gradient_ikpj5"]
@@ -3310,7 +3222,6 @@ position = Vector2(351, 572)
 
 [node name="DarkWizardBoss" type="Node2D" parent="."]
 script = ExtResource("6_c6eme")
-max_hp = 2
 
 [node name="BossNode" type="Node2D" parent="DarkWizardBoss"]
 position = Vector2(416, 524)
@@ -3374,6 +3285,7 @@ energy = 0.75
 texture = SubResource("GradientTexture2D_kg2qh")
 
 [node name="HurtBox" parent="DarkWizardBoss/BossNode" instance=ExtResource("8_pihfe")]
+damage = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DarkWizardBoss/BossNode/HurtBox"]
 position = Vector2(0, -13)
@@ -3396,13 +3308,8 @@ libraries = {
 }
 autoplay = "idle"
 
-[node name="AnimationPlayer_damage" type="AnimationPlayer" parent="DarkWizardBoss/BossNode"]
-libraries = {
-&"": SubResource("AnimationLibrary_nqojd")
-}
-autoplay = "default"
-
 [node name="BeamAttack" type="Node2D" parent="DarkWizardBoss"]
+visible = false
 
 [node name="EB_H1" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("7_n1hxq")]
 position = Vector2(416, 609)
