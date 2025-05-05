@@ -11,9 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="8_s1rgi"]
 [ext_resource type="Script" uid="uid://bavkmla4rpkec" path="res://scripts/PlayerCamera.gd" id="9_0j2ni"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_j23h2"]
-radius = 12.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_0j2ni"]
 radius = 4.00594
 
@@ -34,7 +31,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/AttackHurtBox:position")
+tracks/1/path = NodePath("AttackHurtBox:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -62,7 +59,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/AttackHurtBox:position")
+tracks/1/path = NodePath("AttackHurtBox:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -90,7 +87,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/AttackHurtBox:position")
+tracks/1/path = NodePath("AttackHurtBox:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -118,7 +115,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/AttackHurtBox:position")
+tracks/1/path = NodePath("AttackHurtBox:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -244,6 +241,9 @@ _data = {
 &"walk_up": SubResource("Animation_s1rgi")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_j23h2"]
+radius = 11.0
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 17
 motion_mode = 1
@@ -255,17 +255,6 @@ position = Vector2(0, -14)
 texture = ExtResource("1_3qydi")
 hframes = 6
 vframes = 10
-
-[node name="AttackHurtBox" parent="Sprite2D" instance=ExtResource("8_s1rgi")]
-unique_name_in_owner = true
-position = Vector2(0, 24)
-collision_mask = 256
-monitoring = false
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/AttackHurtBox"]
-position = Vector2(3, 11)
-shape = SubResource("CircleShape2D_j23h2")
-debug_color = Color(0.996078, 0, 0.168627, 0.301961)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.402, 1.25674)
@@ -284,7 +273,6 @@ script = ExtResource("4_ddoul")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("5_8g4oa")
-move_speed = null
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("6_6ysni")
@@ -300,3 +288,14 @@ max_polyphony = 4
 
 [node name="Interactions" type="Node2D" parent="."]
 script = ExtResource("8_j23h2")
+
+[node name="AttackHurtBox" parent="." instance=ExtResource("8_s1rgi")]
+unique_name_in_owner = true
+position = Vector2(0, 24)
+collision_mask = 256
+monitoring = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AttackHurtBox"]
+position = Vector2(3, 11)
+shape = SubResource("CircleShape2D_j23h2")
+debug_color = Color(0.996078, 0, 0.168627, 0.301961)

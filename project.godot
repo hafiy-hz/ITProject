@@ -19,14 +19,14 @@ config/icon="res://icon.svg"
 
 LevelManagers="*res://00_Globals/LevelManagers.gd"
 Global="*res://Global.gd"
-PlayerManager="*res://character/player/PlayerManager.gd"
+PlayerManager="*res://00_Globals/global.player_manager.gd"
 global="*res://Player/Scripts/Global.gd"
+PlayerHud="*res://GUI/player_hud/player_hud.tscn"
 
 [display]
 
 window/size/viewport_width=480
 window/size/viewport_height=270
-window/size/resizable=false
 window/size/borderless=true
 window/size/window_width_override=1920
 window/size/window_height_override=1080

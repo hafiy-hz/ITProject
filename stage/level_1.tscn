@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cras6qihtholi"]
+[gd_scene load_steps=34 format=4 uid="uid://cras6qihtholi"]
 
 [ext_resource type="Texture2D" uid="uid://pve06w87bmdl" path="res://sprites/tilesets/grass.png" id="1_5b26f"]
 [ext_resource type="Texture2D" uid="uid://bj7a38f75g0fq" path="res://sprites/tilesets/plains.png" id="2_02usw"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b3b1q584lydbh" path="res://art/mystic_woods_free_2.2/sprites/objects/chest_01.png" id="8_uq8ft"]
 [ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/Player.tscn" id="10_5b26f"]
 [ext_resource type="PackedScene" uid="uid://bt1tlgawwieo6" path="res://Props/Plants/plant.tscn" id="11_02usw"]
+[ext_resource type="PackedScene" uid="uid://cajar7j1rs8xl" path="res://Enemies/Slime/slime.tscn" id="12_vnuwj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsjsl"]
 texture = ExtResource("1_5b26f")
@@ -740,7 +741,7 @@ tile_map_data = PackedByteArray("AAAfAP//AwAAAAUAAAAfAAAAAwAAAAYAAAAfAAEAAwAAAAc
 tile_set = SubResource("TileSet_6fnqi")
 
 [node name="Player" parent="." instance=ExtResource("10_5b26f")]
-position = Vector2(168, 107)
+position = Vector2(165, 110)
 
 [node name="Plant" parent="." instance=ExtResource("11_02usw")]
 y_sort_enabled = true
@@ -748,3 +749,6 @@ position = Vector2(405, 94)
 
 [node name="Plant2" parent="." instance=ExtResource("11_02usw")]
 position = Vector2(434, 240)
+
+[node name="Slime" parent="." instance=ExtResource("12_vnuwj")]
+position = Vector2(238, 113)
