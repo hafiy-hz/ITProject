@@ -1,8 +1,9 @@
-[gd_scene load_steps=43 format=4 uid="uid://c66bhnma1sv8k"]
+[gd_scene load_steps=44 format=4 uid="uid://c66bhnma1sv8k"]
 
 [ext_resource type="Texture2D" uid="uid://cmq1uwe1vv6jx" path="res://art/RF_Catacombs_v1.0/mainlevbuild.png" id="1_f5gnk"]
 [ext_resource type="Texture2D" uid="uid://5dyds03hi2vi" path="res://art/RF_Catacombs_v1.0/decorative.png" id="2_fhvj3"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="3_470us"]
+[ext_resource type="PackedScene" uid="uid://dv4d1gmtajnol" path="res://stage/dark_wizard/energy_orb.tscn" id="4_i6h3b"]
 [ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://scripts/LevelTilemapLayer.gd" id="4_ikpj5"]
 [ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/Player.tscn" id="5_bbrih"]
 [ext_resource type="Script" uid="uid://bdux12xl48lm5" path="res://stage/dark_wizard/script/dark_wizard_boss.gd" id="6_c6eme"]
@@ -3449,3 +3450,15 @@ texture = SubResource("GradientTexture2D_n1hxq")
 position = Vector2(258, 524)
 scale = Vector2(1.15673, 1.1047)
 texture = SubResource("GradientTexture2D_n1hxq")
+
+[node name="EnergyOrb" parent="DarkWizardBoss" instance=ExtResource("4_i6h3b")]
+position = Vector2(254, 593)
+
+[node name="EnergyOrb2" parent="DarkWizardBoss" instance=ExtResource("4_i6h3b")]
+position = Vector2(576, 593)
+
+[node name="EnergyOrb3" parent="DarkWizardBoss" instance=ExtResource("4_i6h3b")]
+position = Vector2(576, 396)
+
+[node name="EnergyOrb4" parent="DarkWizardBoss" instance=ExtResource("4_i6h3b")]
+position = Vector2(254, 396)
