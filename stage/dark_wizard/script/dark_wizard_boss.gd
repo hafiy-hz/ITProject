@@ -87,10 +87,10 @@ func idle() -> void:
 	#var _t : int = current_position
 	#while _t == current_position:
 		#_t = randf_range( 0, 3)
-	var _t : int = current_position + 1
-	if _t > 3:
-		_t = 0
-	teleport( _t )
+	#var _t : int = current_position + 1
+	#if _t > 3:
+		#_t = 0
+	#teleport( _t )
 	
 	pass
 
@@ -149,7 +149,7 @@ func play_audio( _a : AudioStream ) -> void:
 
 func defeat() -> void:
 	animation_player.play( "destroy" )
-	enable_hit_boxes( false )
+	enable_hit_boxes( true )
 	await animation_player.animation_finished
 	# reopen the room
 
