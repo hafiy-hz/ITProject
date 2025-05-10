@@ -288,6 +288,7 @@ script = ExtResource("5_8g4oa")
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("6_6ysni")
 attack_sound = ExtResource("7_vlldt")
+decelerate_speed = 6.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("9_0j2ni")
