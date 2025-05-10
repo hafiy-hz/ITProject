@@ -30,10 +30,13 @@ var damage_count : int = 0
 @onready var hand_02_up: Sprite2D = $BossNode/CloakSprite/Hand02_UP
 @onready var hand_01_side: Sprite2D = $BossNode/CloakSprite/Hand01_SIDE
 @onready var hand_02_side: Sprite2D = $BossNode/CloakSprite/Hand02_SIDE
+@onready var door_block: TileMapLayer = $"../DoorBlock"
 
 
 
 func _ready() -> void:
+	
+	
 	
 	hp = max_hp
 	
