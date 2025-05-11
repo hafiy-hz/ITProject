@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cki0o4n181jdd"
-path="res://.godot/imported/candlemerge.png-6a979ecea811fa02259aafacab320a69.ctex"
+uid="uid://b7nyhn425xfme"
+path="res://.godot/imported/smallleavespng.png-aae27798d55e278266d50ab673955078.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://candlemerge.png"
-dest_files=["res://.godot/imported/candlemerge.png-6a979ecea811fa02259aafacab320a69.ctex"]
+source_file="res://sprites/particles/smallleavespng.png"
+dest_files=["res://.godot/imported/smallleavespng.png-aae27798d55e278266d50ab673955078.ctex"]
 
 [params]
 

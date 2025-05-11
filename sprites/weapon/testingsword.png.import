@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0i2yofmnbmhm"
-path="res://.godot/imported/greatswordclass.png-6e23d7b01eecbe1310bc4d63f75848eb.ctex"
+uid="uid://bsgne1fkcneee"
+path="res://.godot/imported/testingsword.png-c68b7a3627af283c42db020aecb81e4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://greatswordclass.png"
-dest_files=["res://.godot/imported/greatswordclass.png-6e23d7b01eecbe1310bc4d63f75848eb.ctex"]
+source_file="res://sprites/weapon/testingsword.png"
+dest_files=["res://.godot/imported/testingsword.png-c68b7a3627af283c42db020aecb81e4f.ctex"]
 
 [params]
 

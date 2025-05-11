@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2ecyrs7yfpiv"
-path="res://.godot/imported/Pixel Art Wooden Signboard on Green.png-190f745734d3213e8fd503b35e407d0c.ctex"
+uid="uid://b0i2yofmnbmhm"
+path="res://.godot/imported/greatswordclass.png-d64bf1bd68988ce8dea6b583992d98fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pixel Art Wooden Signboard on Green.png"
-dest_files=["res://.godot/imported/Pixel Art Wooden Signboard on Green.png-190f745734d3213e8fd503b35e407d0c.ctex"]
+source_file="res://sprites/weapon/greatswordclass.png"
+dest_files=["res://.godot/imported/greatswordclass.png-d64bf1bd68988ce8dea6b583992d98fb.ctex"]
 
 [params]
 

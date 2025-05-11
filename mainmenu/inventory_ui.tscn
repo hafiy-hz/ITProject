@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ppko1nwe5h0h"]
 
 [ext_resource type="Script" uid="uid://chn3lmfycblqe" path="res://testing/inventory_ui.gd" id="1_p2ibh"]
-[ext_resource type="Texture2D" uid="uid://d2ecyrs7yfpiv" path="res://Pixel Art Wooden Signboard on Green.png" id="2_ijrpy"]
-[ext_resource type="Texture2D" uid="uid://bsgne1fkcneee" path="res://testingsword.png" id="3_6n8yg"]
+[ext_resource type="Texture2D" uid="uid://d2ecyrs7yfpiv" path="res://sprites/objects/Pixel Art Wooden Signboard on Green.png" id="2_ijrpy"]
+[ext_resource type="Texture2D" uid="uid://bsgne1fkcneee" path="res://sprites/weapon/testingsword.png" id="3_6n8yg"]
 [ext_resource type="Texture2D" uid="uid://dlcs6xwv1xyh7" path="res://sprites/weapon/bronze-weapons.png" id="4_8dwew"]
 
 [node name="InventoryUI" type="Control"]
