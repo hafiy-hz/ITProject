@@ -8,10 +8,6 @@ func _ready():
 	pass
 
 
-func _process( _delta ):
-	pass
-
-
 func AreaEntered( a : Area2D ) -> void:
 	if a is HitBox:
 		a.take_damage( self )

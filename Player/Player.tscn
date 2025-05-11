@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bxw4o4iulxjcp"]
+[gd_scene load_steps=26 format=3 uid="uid://bxw4o4iulxjcp"]
 
 [ext_resource type="Texture2D" uid="uid://biff3k5igtl1t" path="res://art/mystic_woods_free_2.2/sprites/characters/player.png" id="1_3qydi"]
 [ext_resource type="Script" uid="uid://crkqfarcw6646" path="res://Player/Scripts/player.gd" id="1_q3lat"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://cpslmll4qla6m" path="res://Player/Scripts/PlayerInteractionsHost.gd" id="8_j23h2"]
 [ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="8_s1rgi"]
 [ext_resource type="Script" uid="uid://bavkmla4rpkec" path="res://scripts/PlayerCamera.gd" id="9_0j2ni"]
+[ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="11_v0k0e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j23h2"]
 radius = 12.0
@@ -244,6 +245,9 @@ _data = {
 &"walk_up": SubResource("Animation_s1rgi")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wa8t"]
+radius = 5.09902
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 17
 motion_mode = 1
@@ -289,6 +293,7 @@ move_speed = null
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("6_6ysni")
 attack_sound = ExtResource("7_vlldt")
+decelerate_speed = 6.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("9_0j2ni")
@@ -300,3 +305,9 @@ max_polyphony = 4
 
 [node name="Interactions" type="Node2D" parent="."]
 script = ExtResource("8_j23h2")
+
+[node name="HitBox" parent="." instance=ExtResource("11_v0k0e")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_5wa8t")
+debug_color = Color(0.685614, 0.500623, 5.77569e-07, 0.42)

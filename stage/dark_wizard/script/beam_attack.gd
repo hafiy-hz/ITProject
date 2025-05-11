@@ -1,7 +1,7 @@
 class_name BeamAttack extends Node
 
 @export var use_timer : bool = false
-@export var time_between_attack : float = 3
+@export var time_between_attack : float = 20
 
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
