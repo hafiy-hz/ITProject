@@ -40,7 +40,7 @@ func _physics_process( _delta ):
 	move_and_slide()
 
 
-func Set_direction() -> bool:
+func SetDirection() -> bool:
 	if direction == Vector2.ZERO:
 		return false
 	
@@ -85,5 +85,5 @@ func _take_damage( hurt_box : HurtBox ) -> void:
 
 func update_hp( delta : int ) -> void:
 	hp = clampi( hp + delta, 0, max_hp )
-	PlayerHud.update_hp( hp, max_hp )
+#	PlayerHud.update_hp( hp, max_hp )
 	pass

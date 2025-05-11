@@ -1,4 +1,4 @@
-extends State
+class_name State_Idle extends State
 
 @export var move_speed : float = 100.0
 
