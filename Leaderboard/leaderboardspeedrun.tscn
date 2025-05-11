@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dwa4vnn1m4he4" path="res://mainmenu/buttonwoodenpress.png" id="1_2q67v"]
 [ext_resource type="Script" uid="uid://qw1gytbskdqd" path="res://Leaderboard/leaderboardspeedrun.gd" id="1_sa53a"]
-[ext_resource type="Texture2D" uid="uid://vjigxfyhmnbk" path="res://Wooden Signboard in Pixel Art.png" id="2_rmbua"]
-[ext_resource type="Texture2D" uid="uid://d2ecyrs7yfpiv" path="res://Pixel Art Wooden Signboard on Green.png" id="2_wpaec"]
+[ext_resource type="Texture2D" uid="uid://vjigxfyhmnbk" path="res://sprites/objects/Wooden Signboard in Pixel Art.png" id="2_rmbua"]
+[ext_resource type="Texture2D" uid="uid://d2ecyrs7yfpiv" path="res://sprites/objects/Pixel Art Wooden Signboard on Green.png" id="2_wpaec"]
 [ext_resource type="Texture2D" uid="uid://vlkalk1sgnvu" path="res://mainmenu/—Pngtree—wooden buttons for user interface_7931312.png" id="3_rmbua"]
 
 [node name="Leaderboardspeedrun" type="Control"]

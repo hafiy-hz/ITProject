@@ -1,9 +1,90 @@
-[gd_scene load_steps=5 format=3 uid="uid://byw01wl62kogm"]
+[gd_scene load_steps=15 format=3 uid="uid://byw01wl62kogm"]
 
 [ext_resource type="Script" uid="uid://by8an5ssoxe5o" path="res://mainmenu/press_start.gd" id="1_8pamh"]
 [ext_resource type="Texture2D" uid="uid://b53a3txhsjsec" path="res://mainmenu/backgroundimage.png" id="2_d0nky"]
-[ext_resource type="Texture2D" uid="uid://tm7b8rlyf7lg" path="res://boardusername.png" id="3_wvchv"]
+[ext_resource type="Texture2D" uid="uid://bddusuyc6ic6w" path="res://sprites/particles/leaf.webp" id="3_d0nky"]
+[ext_resource type="Texture2D" uid="uid://tm7b8rlyf7lg" path="res://sprites/objects/boardusername.png" id="3_wvchv"]
 [ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://mainmenu/Kenney Mini Square.ttf" id="4_k4fr1"]
+
+[sub_resource type="Curve" id="Curve_d0nky"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 36.4045), 104.783, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_d0nky"]
+curve = SubResource("Curve_d0nky")
+
+[sub_resource type="Curve" id="Curve_wvchv"]
+_data = [Vector2(0, 0.348315), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wvchv"]
+curve = SubResource("Curve_wvchv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xl8ud"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(350, 1, 1)
+angle_min = 1.07288e-05
+angle_max = 35.0
+angle_curve = SubResource("CurveTexture_d0nky")
+inherit_velocity_ratio = 15.0
+initial_velocity_min = 28.74
+initial_velocity_max = 28.74
+gravity = Vector3(20, 98, 0)
+scale_curve = SubResource("CurveTexture_wvchv")
+
+[sub_resource type="Animation" id="Animation_wvchv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.00392157)]
+}
+
+[sub_resource type="Animation" id="Animation_d0nky"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.00392157)]
+}
+
+[sub_resource type="Animation" id="Animation_k4fr1"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k4fr1"]
+_data = {
+&"RESET": SubResource("Animation_wvchv"),
+&"fade_in": SubResource("Animation_d0nky"),
+&"fade_out": SubResource("Animation_k4fr1")
+}
 
 [node name="PressStart" type="Control"]
 layout_mode = 3
@@ -15,10 +96,20 @@ grow_vertical = 2
 script = ExtResource("1_8pamh")
 
 [node name="Backgroundimage" type="Sprite2D" parent="."]
-position = Vector2(576.785, 319.975)
-rotation = -0.0305912
-scale = Vector2(1.44363, 1.28039)
+texture_filter = 1
+position = Vector2(573.017, 311.756)
+rotation = -0.0228583
+scale = Vector2(1.5921, 1.45634)
 texture = ExtResource("2_d0nky")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Backgroundimage"]
+modulate = Color(4.87324e-06, 0.408274, 0.0483681, 1)
+position = Vector2(-65.4296, -266.585)
+amount = 7
+texture = ExtResource("3_d0nky")
+lifetime = 5.92
+speed_scale = 0.85
+process_material = SubResource("ParticleProcessMaterial_xl8ud")
 
 [node name="Boardusername" type="Sprite2D" parent="."]
 position = Vector2(567, 379)
@@ -33,10 +124,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -161.0
-offset_top = 40.0
-offset_right = 176.0
-offset_bottom = 72.0
+offset_left = -168.5
+offset_top = 36.0
+offset_right = 168.5
+offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -51,9 +142,8 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -437.5
-offset_top = 45.0
 offset_right = 437.5
-offset_bottom = 202.0
+offset_bottom = 157.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.836307, 0.616362, 0.300037, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -61,3 +151,20 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_k4fr1")
 theme_override_font_sizes/font_size = 125
 text = "Torch N Steel"
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_k4fr1")
+}
+playback_auto_capture_ease_type = 2
+
+[node name="FadeRect" type="ColorRect" parent="Transition"]
+modulate = Color(1, 1, 1, 0.00392157)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]
