@@ -1,20 +1,19 @@
-class_name State extends Node
+class_name State_Stun extends State
 
-## store a references to the player that this State belong to
-static var player: Player
-static  var state_machine: PlayerStateMachine
+@export var knockback_speed : float = 200.0
+@export var decelerate_speed : float = 10.0
+@export var invulnarable_duration : float = 1.0
 
-func _ready():
-	
-	pass
+var hurt_box : HurtBox
+var direction : Vector2
 
-func init() -> void:
-	
-	pass
+var next_state : State = null
+
+@onready var idle: State_Idle = $"../Idle"
+
 
 ## what happend when the player enter this state?
-func Enter() -> void:
-	
+func Enter() -> void: 
 	
 	pass
 
@@ -25,7 +24,8 @@ func Exit() -> void:
 
 ## what happen during _process update in this state
 func Process( _delta : float ) -> State:
-	return null
+	
+	return next_state
 
 
 

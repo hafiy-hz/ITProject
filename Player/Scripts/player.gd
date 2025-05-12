@@ -14,6 +14,7 @@ var max_hp : int = 6
 
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
+@onready var effect_animation_player: AnimationPlayer = $EffectAnimationPlayer
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var state_machine: PlayerStateMachine = $StateMachine
 @onready var hit_box: HitBox = $HitBox
@@ -24,7 +25,8 @@ var max_hp : int = 6
 func _ready():
 	PlayerManager.player = self
 	state_machine.Initialize(self)
-	hit_box.damaged( _take_damage )
+	hit_box.damaged.connect( _take_damage )
+	update_hp( 99 )
 	pass
 
 
@@ -74,11 +76,16 @@ func AnimDirection() -> String:
 		
 
 func _take_damage( hurt_box : HurtBox ) -> void:
-	
+	if invulnerable == true:
+		return
+	update_hp( -hurt_box.damage )
+	if hp > 0:
+		player_damage.emit( hurt_box )
+		update_hp( 99 )
 	pass
 
 func update_hp( delta : int ) -> void:
-	
+	hp = clampi( hp + delta, 0, max_hp )
 	pass
 
 
