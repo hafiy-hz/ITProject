@@ -2,9 +2,14 @@ class_name State extends Node
 
 ## store a references to the player that this State belong to
 static var player: Player
+static var state_machine: PlayerStateMachine
 
 func _ready():
 	
+	pass
+
+
+func init() -> void:
 	pass
 
 ## what happend when the player enter this state?
