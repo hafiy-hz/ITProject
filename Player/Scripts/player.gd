@@ -89,5 +89,12 @@ func update_hp( delta : int ) -> void:
 #	PlayerHud.update_hp( hp, max_hp )
 	pass
 
-func make_invulnerable( ) -> void:
+func make_invulnerable( _duration : float = 1.0 ) -> void:
+	invulnerable = true
+	hit_box.monitoring = false 
+	
+	await get_tree().create_timer( _duration ).timeout
+	
+	invulnerable = false
+	hit_box.monitoring = true
 	pass
