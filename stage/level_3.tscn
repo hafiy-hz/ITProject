@@ -3314,6 +3314,7 @@ tile_set = SubResource("TileSet_ru4te")
 position = Vector2(351, 572)
 
 [node name="DarkWizardBoss" type="Node2D" parent="."]
+visibility_layer = 257
 script = ExtResource("6_c6eme")
 
 [node name="BossNode" type="Node2D" parent="DarkWizardBoss"]

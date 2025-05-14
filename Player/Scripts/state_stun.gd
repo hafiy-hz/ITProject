@@ -52,6 +52,7 @@ func HandleInput( _event: InputEvent ) -> State:
 	return null
 
 
+func _player_damage( _hurt_box : HurtBox ) -> void:
 func _player_damaged( _hurt_box : HurtBox ) -> void:
 	hurt_box = _hurt_box
 	state_machine.ChangeState( self )
