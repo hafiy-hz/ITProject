@@ -33,6 +33,8 @@ func Exit() -> void:
 	audio.play()
 	
 	attacking = true
+	
+	await get_tree().create_timer( 0.075).timeout
 	hurt_box.monitoring = false
 	pass
 

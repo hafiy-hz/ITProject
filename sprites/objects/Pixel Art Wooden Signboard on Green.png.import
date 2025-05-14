@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tm7b8rlyf7lg"
-path="res://.godot/imported/boardusername.png-d12bae4b209f195ca4c2782ac22a0e84.ctex"
+uid="uid://d2ecyrs7yfpiv"
+path="res://.godot/imported/Pixel Art Wooden Signboard on Green.png-00d60bde365a84d927c0c8a4d2c8c4a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://boardusername.png"
-dest_files=["res://.godot/imported/boardusername.png-d12bae4b209f195ca4c2782ac22a0e84.ctex"]
+source_file="res://sprites/objects/Pixel Art Wooden Signboard on Green.png"
+dest_files=["res://.godot/imported/Pixel Art Wooden Signboard on Green.png-00d60bde365a84d927c0c8a4d2c8c4a0.ctex"]
 
 [params]
 

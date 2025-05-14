@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1rg05cfx5g1u"]
+[gd_scene load_steps=4 format=3 uid="uid://d1rg05cfx5g1u"]
 
-[ext_resource type="Script" uid="uid://bn0opsx0ywjxt" path="res://options_test.gd" id="1_2627h"]
+[ext_resource type="Script" uid="uid://bn0opsx0ywjxt" path="res://testing/options_test.gd" id="1_2627h"]
 [ext_resource type="FontFile" uid="uid://d1m1t468j375t" path="res://mainmenu/Kenney Pixel Square.ttf" id="1_l4ci8"]
+[ext_resource type="Texture2D" uid="uid://b53a3txhsjsec" path="res://mainmenu/backgroundimage.png" id="2_r52le"]
 
 [node name="OptionsTest" type="Control"]
 layout_mode = 3
@@ -11,6 +12,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2627h")
+
+[node name="Backgroundimage" type="Sprite2D" parent="."]
+modulate = Color(0.439049, 0.439049, 0.439049, 1)
+position = Vector2(576.785, 319.975)
+rotation = -0.0305912
+scale = Vector2(1.44363, 1.28039)
+texture = ExtResource("2_r52le")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

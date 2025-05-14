@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7kea2mtl54ik"
-path="res://.godot/imported/rapierclass.png-ae930e64436b848a5f618bdc64879673.ctex"
+uid="uid://myeyuj5o43ci"
+path="res://.godot/imported/swordcalss.png-5340d92e393376a479a6059d7574bc7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rapierclass.png"
-dest_files=["res://.godot/imported/rapierclass.png-ae930e64436b848a5f618bdc64879673.ctex"]
+source_file="res://sprites/weapon/swordcalss.png"
+dest_files=["res://.godot/imported/swordcalss.png-5340d92e393376a479a6059d7574bc7d.ctex"]
 
 [params]
 

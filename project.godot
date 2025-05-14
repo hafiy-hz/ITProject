@@ -11,13 +11,24 @@ config_version=5
 [application]
 
 config/name="Torch N Steel"
-run/main_scene="uid://oqfscqppigqu"
+run/main_scene="uid://byw01wl62kogm"
 config/features=PackedStringArray("4.4", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [autoload]
 
 LevelManagers="*res://00_Globals/LevelManagers.gd"
+
+global="*res://character/player/global.gd"
+Global="*res://00_Globals/Global.gd"
+MainmenuBgs="*res://mainmenu/MainmenuBGS.tscn"
+PlayerManager="*res://character/player/PlayerManager.gd"
+
+[display]
+
+window/subwindows/embed_subwindows=false
+=======
 Global="*res://Global.gd"
 global="*res://Player/Scripts/Global.gd"
 PlayerManager="*res://00_Globals/PlayerManager.gd"
@@ -30,6 +41,7 @@ window/size/resizable=false
 window/size/borderless=true
 window/size/window_width_override=1920
 window/size/window_height_override=1080
+
 window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
@@ -76,9 +88,31 @@ interact={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
 ]
 }
+
+move_left={
+"deadzone": 0.2,
+"events": []
+}
+move_right={
+"deadzone": 0.2,
+"events": []
+}
+move_up={
+"deadzone": 0.2,
+"events": []
+}
+move_down={
+"deadzone": 0.2,
+"events": []
+}
+interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+
 attack={
 "deadzone": 0.2,
 "events": [null, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":90,"key_label":0,"unicode":122,"location":0,"echo":false,"script":null)
+
 ]
 }
 up={

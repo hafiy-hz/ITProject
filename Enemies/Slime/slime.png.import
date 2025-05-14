@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://myeyuj5o43ci"
-path="res://.godot/imported/swordcalss.png-4382777642b3316b37660c3db3f76456.ctex"
+uid="uid://cw1m70e1pd3uj"
+path="res://.godot/imported/slime.png-aa185ca72d8f237897e930b6204bdc8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://swordcalss.png"
-dest_files=["res://.godot/imported/swordcalss.png-4382777642b3316b37660c3db3f76456.ctex"]
+source_file="res://Enemies/Slime/slime.png"
+dest_files=["res://.godot/imported/slime.png-aa185ca72d8f237897e930b6204bdc8e.ctex"]
 
 [params]
 
