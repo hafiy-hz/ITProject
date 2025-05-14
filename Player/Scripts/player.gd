@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-signal DirectionChanged( new_direction: Vector2 )
+signal direction_changed( new_direction: Vector2 )
 signal player_damage( hurt_box : HurtBox )
 
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
@@ -57,7 +57,7 @@ func SetDirection() -> bool:
 		return false
 	
 	cardinal_direction = new_dir
-	DirectionChanged.emit( new_dir )
+	direction_changed.emit( new_dir )
 	sprite.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
 	return true
 
@@ -81,6 +81,8 @@ func _take_damage( hurt_box : HurtBox ) -> void:
 	update_hp( -hurt_box.damage )
 	if hp > 0:
 		player_damage.emit( hurt_box )
+	else:
+		player_damage.emit( hurt_box )
 		update_hp( 99 )
 	pass
 
@@ -89,6 +91,12 @@ func update_hp( delta : int ) -> void:
 	pass
 
 
-func make_invulnerable(  ) -> void:
+func make_invulnerable( _duration : float = 1.0 ) -> void:
+	invulnerable = true
+	hit_box.monitoring = false
 	
+	await get_tree().create_timer( _duration ).timeout
+	
+	invulnerable = false
+	hit_box.monitoring = true
 	pass
