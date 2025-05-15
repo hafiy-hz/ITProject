@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg3sptd3qslql"
-path="res://.godot/imported/button_hover.png-2b31de553b79e9199dc9cedc3ed05f54.ctex"
+uid="uid://cki0o4n181jdd"
+path="res://.godot/imported/candlemerge.png-6a979ecea811fa02259aafacab320a69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://button_hover.png"
-dest_files=["res://.godot/imported/button_hover.png-2b31de553b79e9199dc9cedc3ed05f54.ctex"]
+source_file="res://candlemerge.png"
+dest_files=["res://.godot/imported/candlemerge.png-6a979ecea811fa02259aafacab320a69.ctex"]
 
 [params]
 

@@ -13,6 +13,7 @@ config_version=5
 config/name="Torch N Steel"
 run/main_scene="uid://cras6qihtholi"
 config/features=PackedStringArray("4.4", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [autoload]
@@ -20,6 +21,11 @@ config/icon="res://icon.svg"
 Global="*res://00_Globals/Global.gd"
 PlayerManager="*res://00_Globals/PlayerManager.gd"
 LevelManagers="*res://00_Globals/LevelManagers.gd"
+
+global="*res://character/player/global.gd"
+Global="*res://00_Globals/Global.gd"
+MainmenuBgs="*res://mainmenu/MainmenuBGS.tscn"
+PlayerManager="*res://character/player/PlayerManager.gd"
 
 [display]
 
@@ -91,3 +97,7 @@ attack={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=1
+textures/size/viewport_height=648
+textures/size/viewport_width=1152
+textures/size/window_height_override=0
