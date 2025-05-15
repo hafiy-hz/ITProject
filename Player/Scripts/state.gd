@@ -8,7 +8,6 @@ func _ready():
 	
 	pass
 
-
 func init() -> void:
 	pass
 

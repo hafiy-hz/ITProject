@@ -19,6 +19,7 @@ func init() -> void:
 
 ## what happend when the player enter this state?
 func Enter() -> void: 
+	
 	player.animation_player.animation_finished.connect( _animation_finished )
 	
 	direction = player.global_position.direction_to( hurt_box.global_position )
@@ -28,6 +29,7 @@ func Enter() -> void:
 	player.UpdateAnimation("stun")
 	player.make_invulnerable( invulnerable_duration )
 	player.effect_animation_player.play("damaged")
+
 	pass
 
 
@@ -52,7 +54,6 @@ func HandleInput( _event: InputEvent ) -> State:
 	return null
 
 
-func _player_damage( _hurt_box : HurtBox ) -> void:
 func _player_damaged( _hurt_box : HurtBox ) -> void:
 	hurt_box = _hurt_box
 	state_machine.ChangeState( self )

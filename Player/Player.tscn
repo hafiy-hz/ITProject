@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://cpslmll4qla6m" path="res://Player/Scripts/PlayerInteractionsHost.gd" id="8_j23h2"]
 [ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="8_s1rgi"]
 [ext_resource type="Script" uid="uid://bavkmla4rpkec" path="res://scripts/PlayerCamera.gd" id="9_0j2ni"]
-[ext_resource type="Script" uid="uid://b3ya1dxpq55m6" path="res://Player/Scripts/state_stun.gd" id="9_p7tob"]
+[ext_resource type="Script" uid="uid://cnt1xphsfp2k" path="res://Player/Scripts/state_stun.gd" id="9_p7tob"]
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="11_v0k0e"]
 [ext_resource type="AudioStream" uid="uid://kbyi8iejx42i" path="res://Player/Audio/hit_player.wav" id="12_5wa8t"]
 
@@ -200,20 +200,18 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_7v5gs"]
-resource_name = "stun_side"
-length = 0.9
-loop_mode = 2
+resource_name = "default"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [6, 10]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_3mea3"]
@@ -303,73 +301,6 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5wa8t"]
 radius = 5.0
-
-[sub_resource type="Animation" id="Animation_8sa4y"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_3nb2p"]
-resource_name = "damaged"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0980392), Color(1, 1, 1, 1), Color(1, 1, 1, 0.196078), Color(1, 1, 1, 1), Color(1, 1, 1, 0.392157), Color(1, 1, 1, 1), Color(1, 1, 1, 0.588235), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "audio"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Audio/AudioStreamPlayer2D")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("12_5wa8t")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/1/use_blend = true
-
-[sub_resource type="Animation" id="Animation_7v5gs"]
-resource_name = "default"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_d7xyo"]
-_data = {
-&"RESET": SubResource("Animation_8sa4y"),
-&"damaged": SubResource("Animation_3nb2p"),
-&"default": SubResource("Animation_7v5gs")
-}
 
 [sub_resource type="Animation" id="Animation_p7tob"]
 length = 0.001
