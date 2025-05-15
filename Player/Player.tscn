@@ -390,7 +390,7 @@ collision_mask = 256
 monitoring = false
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/AttackHurtBox"]
-position = Vector2(0, 1)
+position = Vector2(4, 11)
 shape = SubResource("CircleShape2D_j23h2")
 debug_color = Color(0.996078, 0, 0.168627, 0.301961)
 
