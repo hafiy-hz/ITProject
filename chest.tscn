@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://7ewpgphg2qbb"]
+
+[ext_resource type="Texture2D" uid="uid://b3b1q584lydbh" path="res://art/mystic_woods_free_2.2/sprites/objects/chest_01.png" id="1_twpm2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uwsg"]
+atlas = ExtResource("1_twpm2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp1or"]
+atlas = ExtResource("1_twpm2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trlyu"]
+atlas = ExtResource("1_twpm2")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7mpe"]
+atlas = ExtResource("1_twpm2")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bv3sb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uwsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp1or")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trlyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7mpe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Chest" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_bv3sb")
+frame_progress = 0.675677

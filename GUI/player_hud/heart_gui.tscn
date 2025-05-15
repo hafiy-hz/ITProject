@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2aus7tkkqvfl"]
+
+[ext_resource type="Script" uid="uid://bqm8mdcf7dym2" path="res://GUI/player_hud/heart_gui.gd" id="1_3bqq8"]
+[ext_resource type="Texture2D" uid="uid://dkc0pt0e6wwjn" path="res://GUI/player_hud/gui-health.png" id="1_ulq1r"]
+
+[node name="Hearth" type="Control"]
+custom_minimum_size = Vector2(9, 9)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3bqq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ulq1r")
+centered = false
+hframes = 7
+vframes = 2

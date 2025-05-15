@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc30uaxyvud2v"]
+
+[ext_resource type="Texture2D" uid="uid://dlcs6xwv1xyh7" path="res://sprites/weapon/bronze-weapons.png" id="1_qt6r5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bronze-weapons" type="Sprite2D" parent="."]
+position = Vector2(479, 358)
+scale = Vector2(4, 4)
+texture = ExtResource("1_qt6r5")
+region_enabled = true
+region_rect = Rect2(15.8517, 0, 16.2713, 16.1138)
+
+[node name="Bronze-weapons2" type="Sprite2D" parent="."]
+position = Vector2(479, 358)
+scale = Vector2(4, 4)
+texture = ExtResource("1_qt6r5")
+region_enabled = true
+region_rect = Rect2(15.8517, 0, 16.2713, 16.1138)
