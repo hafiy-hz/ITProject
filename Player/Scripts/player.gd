@@ -15,7 +15,7 @@ var max_hp : int = 6
 @onready var hit_box : HitBox = $HitBox
 @onready var state_machine: PlayerStateMachine = $StateMachine
 
-signal DirectionChanged( new_direction: Vector2 )
+signal direction_changed( new_direction: Vector2 )
 signal player_damaged( hurt_box: HurtBox)
 
 func _ready():
