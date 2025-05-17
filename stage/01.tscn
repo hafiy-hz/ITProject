@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://k4pktqxo58dr" path="res://sprites/tilesets/fences.png" id="4_eg2r8"]
 [ext_resource type="Texture2D" uid="uid://lalge0enmolp" path="res://sprites/tilesets/decor_16x16.png" id="5_4kdij"]
 [ext_resource type="Texture2D" uid="uid://xh7wxbmejljj" path="res://sprites/objects/objects.png" id="6_en214"]
-[ext_resource type="Script" uid="uid://ccq0n0qdb3ecl" path="res://stage/LevelTilemap.gd" id="7_o85wo"]
+[ext_resource type="Script" uid="uid://ccqwet3lxow6g" path="res://stage/LevelTilemap.gd" id="7_o85wo"]
 [ext_resource type="Texture2D" uid="uid://b3b1q584lydbh" path="res://art/mystic_woods_free_2.2/sprites/objects/chest_01.png" id="8_ho6xl"]
 [ext_resource type="Texture2D" uid="uid://b18wq0dlxub4r" path="res://sprites/tilesets/decor_8x8.png" id="9_oiygk"]
 [ext_resource type="Texture2D" uid="uid://cre2qghmry87b" path="res://art/MP_Dungeon1_v1.0/outside_entrance.png" id="10_lke1o"]

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ba1qudcxyewsl" path="res://art/RFCastle_1.0/lightB02.png" id="7_6jkt7"]
 [ext_resource type="Texture2D" uid="uid://beq32mxmd8xh" path="res://art/RFCastle_1.0/lightB03.png" id="8_1xbk0"]
 [ext_resource type="Texture2D" uid="uid://d26l03eluciio" path="res://art/candless.png" id="9_o5yw0"]
-[ext_resource type="Script" uid="uid://ccq0n0qdb3ecl" path="res://stage/LevelTilemap.gd" id="10_h4s5g"]
+[ext_resource type="Script" uid="uid://ccqwet3lxow6g" path="res://stage/LevelTilemap.gd" id="10_h4s5g"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="10_nst33"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rpf8"]
