@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://lalge0enmolp" path="res://sprites/tilesets/decor_16x16.png" id="4_rf50t"]
 [ext_resource type="Texture2D" uid="uid://xh7wxbmejljj" path="res://sprites/objects/objects.png" id="5_hlghl"]
 [ext_resource type="Texture2D" uid="uid://cre2qghmry87b" path="res://art/MP_Dungeon1_v1.0/outside_entrance.png" id="5_uwuon"]
-[ext_resource type="Script" uid="uid://ccq0n0qdb3ecl" path="res://stage/LevelTilemap.gd" id="6_vnuwj"]
+[ext_resource type="Script" uid="uid://ccqwet3lxow6g" path="res://stage/LevelTilemap.gd" id="6_vnuwj"]
 [ext_resource type="Texture2D" uid="uid://b18wq0dlxub4r" path="res://sprites/tilesets/decor_8x8.png" id="7_p8yn5"]
 [ext_resource type="Texture2D" uid="uid://b3b1q584lydbh" path="res://art/mystic_woods_free_2.2/sprites/objects/chest_01.png" id="8_uq8ft"]
 [ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/Player.tscn" id="10_5b26f"]
@@ -741,7 +741,7 @@ tile_map_data = PackedByteArray("AAABAAYAAAAAAAEAAAABAAIAAAAAAAAAAAABAAQAAAAAAAE
 tile_set = SubResource("TileSet_rx38u")
 
 [node name="Player" parent="." instance=ExtResource("10_5b26f")]
-position = Vector2(70, 88)
+position = Vector2(606, 143)
 
 [node name="Slime" parent="." instance=ExtResource("12_vnuwj")]
 position = Vector2(631, 167)

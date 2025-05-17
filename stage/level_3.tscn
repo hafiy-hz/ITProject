@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cmq1uwe1vv6jx" path="res://art/RF_Catacombs_v1.0/mainlevbuild.png" id="1_f5gnk"]
 [ext_resource type="Texture2D" uid="uid://5dyds03hi2vi" path="res://art/RF_Catacombs_v1.0/decorative.png" id="2_fhvj3"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="3_470us"]
-[ext_resource type="Script" uid="uid://ccq0n0qdb3ecl" path="res://stage/LevelTilemap.gd" id="3_c6eme"]
+[ext_resource type="Script" uid="uid://ccqwet3lxow6g" path="res://stage/LevelTilemap.gd" id="3_c6eme"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpd13"]
 texture = ExtResource("1_f5gnk")

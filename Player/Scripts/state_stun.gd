@@ -29,6 +29,7 @@ func Enter() -> void:
 	player.UpdateAnimation("stun")
 	player.make_invulnerable( invulnerable_duration )
 	player.effect_animation_player.play("damaged")
+
 	pass
 
 
