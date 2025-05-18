@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d14uefpqys76h" path="res://stage/player_spawn.tscn" id="13_4iwck"]
 [ext_resource type="PackedScene" uid="uid://4owefshmesp4" path="res://stage/level_transition.tscn" id="14_4iwck"]
 
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rpf8"]
 texture = ExtResource("1_h7lwi")
 6:0/0 = 0

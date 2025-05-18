@@ -19,29 +19,29 @@ func ChangeTilemapBounds( bounds : Array[ Vector2 ] ) -> void:
 	TileMapBoundsChanged.emit( bounds )
 
 func load_new_level(
-		level_path : String,
-		_target_transition : String,
-		_position_offset : Vector2
+		level_path: String,
+		_target_transition: String,
+		_position_offset: Vector2
 ) -> void:
-	
+	if level_path == "" or not ResourceLoader.exists(level_path):
+		push_warning("Invalid or missing level path: " + str(level_path))
+		return
+
 	get_tree().paused = true
 	target_transition = _target_transition
 	position_offset = _position_offset
-	
+
 	await SceneTransition.fade_out()
-	
 	level_load_started.emit()
-	
-	await get_tree().process_frame
-	
-	get_tree().change_scene_to_file( level_path )
-	
+
+	var scene_resource = load(level_path)
+	if scene_resource == null:
+		push_warning("Failed to load scene from path: " + level_path)
+		return
+
+	var new_scene = scene_resource.instantiate()
+	get_tree().get_root().add_child(new_scene)
+
 	await SceneTransition.fade_in()
-	
 	get_tree().paused = false
-	
-	await get_tree().process_frame
-	
 	level_loaded.emit()
-	
-	pass
