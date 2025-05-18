@@ -6,19 +6,31 @@ const SAVE_PATH = "user://"
 signal game_loaded
 signal game_saved
 
-
 var current_save : Dictionary = {
-	scene_path = "",
-	player = {
-		hp = 1,
-		max_hp = 1,
-		pos_x = 0,
-		pos_y = 0,
+	"scene_path": "",
+	"player": {
+		"hp": 1,
+		"max_hp": 1,
+		"pos_x": 0,
+		"pos_y": 0,
 	},
-	item = [],
-	persistence = [],
-	quest = [],
+	"item": [],
+	"persistence": [],
+	"quest": []
 }
+
+#var current_save : Dictionary = {
+	#scene_path = "",
+	#player = {
+		#hp = 1,
+		#max_hp = 1,
+		#pos_x = 0,
+		#pos_y = 0,
+	#},
+	#item = [],
+	#persistence = [],
+	#quest = [],
+#}
 
 
 
@@ -45,7 +57,7 @@ func load_game() -> void:
 	await LevelManagers.level_load_started
 	
 	PlayerManager.set_player_position( Vector2( current_save.player.pos_x,current_save.player.pos_y ) )
-	PlayerManager.set_health( current_save.player.hp, current_save.max_hp )
+	PlayerManager.set_health( current_save.player.hp, current_save.player.hp )
 	
 	await LevelManagers.level_loaded
 	
