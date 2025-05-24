@@ -1,13 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://c62ojbuksw5av"]
+[gd_scene load_steps=8 format=3 uid="uid://c62ojbuksw5av"]
 
 [ext_resource type="Script" uid="uid://cug6528hwxn7q" path="res://GUI/pause_menu/pause_menu.gd" id="1_4w82k"]
 [ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="2_yiq8o"]
 [ext_resource type="Script" uid="uid://dbib2oam48ph" path="res://GUI/pause_menu/inventory/scripts/inventory_ui.gd" id="3_36pfd"]
 [ext_resource type="PackedScene" uid="uid://b8ugpemory517" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_rsqrg"]
-[ext_resource type="Script" uid="uid://b015lxw5qan1g" path="res://GUI/pause_menu/inventory/scripts/inventory_data.gd" id="4_sn1ji"]
-[ext_resource type="Script" uid="uid://2cbl0bwpghl1" path="res://GUI/pause_menu/inventory/scripts/slot_data.gd" id="5_8rjl7"]
-[ext_resource type="Resource" uid="uid://diknh5puau6vc" path="res://GUI/pause_menu/inventory/potions.tres" id="6_8rjl7"]
-[ext_resource type="Resource" uid="uid://dpu6supdtpjnv" path="res://GUI/pause_menu/inventory/stones.tres" id="7_dvxeg"]
+[ext_resource type="Resource" uid="uid://g0hv0mbg8v68" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_ewgu5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsqrg"]
 atlas = ExtResource("2_yiq8o")
@@ -23,11 +20,6 @@ texture_margin_left = 14.0
 texture_margin_top = 14.0
 texture_margin_right = 14.0
 texture_margin_bottom = 14.0
-
-[sub_resource type="Resource" id="Resource_dvxeg"]
-script = ExtResource("4_sn1ji")
-slots = Array[ExtResource("5_8rjl7")]([ExtResource("6_8rjl7"), ExtResource("7_dvxeg"), null, null, null, null, ExtResource("6_8rjl7"), null, null, null])
-metadata/_custom_type_script = "uid://b015lxw5qan1g"
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -69,6 +61,22 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "[PAUSED]"
 
+[node name="ItemDescription" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = 69.0
+offset_right = 86.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 9
+autowrap_mode = 2
+
 [node name="PanelContainer" type="PanelContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
@@ -88,7 +96,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_36pfd")
 layout_mode = 2
 columns = 5
 script = ExtResource("3_36pfd")
-data = SubResource("Resource_dvxeg")
+data = ExtResource("4_ewgu5")
 
 [node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
@@ -134,19 +142,5 @@ layout_mode = 2
 text = "LOAD
 "
 
-[node name="ItemDescription" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -90.0
-offset_top = 69.0
-offset_right = 86.0
-offset_bottom = 98.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 9
-text = "Red Drink that restore a bit of player health"
-autowrap_mode = 2
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+max_polyphony = 4

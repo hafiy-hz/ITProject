@@ -3032,7 +3032,7 @@ tile_set = SubResource("TileSet_1l5bl")
 [node name="CanvasLayer" parent="." instance=ExtResource("10_nst33")]
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("13_4iwck")]
-position = Vector2(783, 373)
+position = Vector2(835, 320)
 
 [node name="LevelTransition" parent="." instance=ExtResource("14_4iwck")]
 position = Vector2(872, 259)
