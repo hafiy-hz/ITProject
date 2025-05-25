@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8eftt8vargg0" path="res://stage/scripts/level_transition.gd" id="1_laja3"]
 
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x42pm"]
 resource_local_to_scene = true
 size = Vector2(48, 16)
