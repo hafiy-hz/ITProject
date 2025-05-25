@@ -776,11 +776,11 @@ item_data = ExtResource("15_odr1k")
 [node name="Goblin" parent="." instance=ExtResource("16_p8yn5")]
 position = Vector2(212, 502)
 
-[node name="Goblin2" parent="." instance=ExtResource("16_p8yn5")]
-position = Vector2(65, 506)
+[node name="Goblin4" parent="." instance=ExtResource("16_p8yn5")]
+position = Vector2(304, 148)
 
 [node name="Goblin3" parent="." instance=ExtResource("16_p8yn5")]
-position = Vector2(155, 106)
+position = Vector2(167, 121)
 
-[node name="Goblin4" parent="." instance=ExtResource("16_p8yn5")]
-position = Vector2(294, 122)
+[node name="Goblin2" parent="." instance=ExtResource("16_p8yn5")]
+position = Vector2(79, 508)
