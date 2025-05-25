@@ -381,6 +381,7 @@ _data = {
 top_level = true
 y_sort_enabled = true
 texture_filter = 1
+collision_layer = 3
 collision_mask = 257
 motion_mode = 1
 wall_min_slide_angle = 0.174533

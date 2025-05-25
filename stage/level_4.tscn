@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://ccqwet3lxow6g" path="res://stage/LevelTilemap.gd" id="4_e4qhd"]
 [ext_resource type="PackedScene" uid="uid://d14uefpqys76h" path="res://stage/player_spawn.tscn" id="6_movr5"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpd13"]
 texture = ExtResource("2_mjrff")
 40:0/0 = 0

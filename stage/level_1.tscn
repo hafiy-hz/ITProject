@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://cras6qihtholi"]
+[gd_scene load_steps=36 format=4 uid="uid://cras6qihtholi"]
 
 [ext_resource type="Texture2D" uid="uid://pve06w87bmdl" path="res://sprites/tilesets/grass.png" id="1_5b26f"]
 [ext_resource type="Script" uid="uid://ho6m5j4d8mt3" path="res://stage/scripts/level.gd" id="1_vnuwj"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d14uefpqys76h" path="res://stage/player_spawn.tscn" id="11_02usw"]
 [ext_resource type="PackedScene" uid="uid://cajar7j1rs8xl" path="res://Enemies/Slime/slime.tscn" id="12_vnuwj"]
 [ext_resource type="PackedScene" uid="uid://4owefshmesp4" path="res://stage/level_transition.tscn" id="13_rf50t"]
+[ext_resource type="PackedScene" uid="uid://demle5oq8dx3y" path="res://Enemies/Goblin/Goblin.tscn" id="14_hlghl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsjsl"]
 texture = ExtResource("1_5b26f")
@@ -751,18 +752,39 @@ tile_map_data = PackedByteArray("AAAfAP//AwAAAAUAAAAfAAAAAwAAAAYAAAAfAAEAAwAAAAc
 tile_set = SubResource("TileSet_6fnqi")
 
 [node name="Slime" parent="." instance=ExtResource("12_vnuwj")]
-position = Vector2(631, 167)
+position = Vector2(637, 253)
 
 [node name="Slime2" parent="." instance=ExtResource("12_vnuwj")]
-position = Vector2(682, 151)
+position = Vector2(730, 131)
 
 [node name="Slime3" parent="." instance=ExtResource("12_vnuwj")]
-position = Vector2(682, 171)
+position = Vector2(699, 179)
 
 [node name="Slime4" parent="." instance=ExtResource("12_vnuwj")]
-position = Vector2(646, 183)
+position = Vector2(680, 216)
+
+[node name="Slime5" parent="." instance=ExtResource("12_vnuwj")]
+position = Vector2(606, 207)
+
+[node name="Slime6" parent="." instance=ExtResource("12_vnuwj")]
+position = Vector2(665, 126)
+
+[node name="Slime7" parent="." instance=ExtResource("12_vnuwj")]
+position = Vector2(624, 132)
 
 [node name="LevelTransition" parent="." instance=ExtResource("13_rf50t")]
 position = Vector2(138, 487)
 size = 3
 side = 2
+
+[node name="Goblin" parent="." instance=ExtResource("14_hlghl")]
+position = Vector2(413, 132)
+
+[node name="Goblin2" parent="." instance=ExtResource("14_hlghl")]
+position = Vector2(286, 128)
+
+[node name="Goblin3" parent="." instance=ExtResource("14_hlghl")]
+position = Vector2(211, 509)
+
+[node name="Goblin4" parent="." instance=ExtResource("14_hlghl")]
+position = Vector2(72, 513)
