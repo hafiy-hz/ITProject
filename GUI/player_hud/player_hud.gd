@@ -8,6 +8,7 @@ func _ready():
 		if child is HeartGUI:
 			hearts.append( child )
 			child.visible = false
+	print("HeartGUI nodes found: ", hearts.size())
 	pass
 
 func update_hp( _hp: int, _max_hp: int) -> void:
@@ -18,8 +19,9 @@ func update_hp( _hp: int, _max_hp: int) -> void:
 	pass
 
 func update_heart( _index : int, _hp : int) -> void:
-	var _value : int = clampi( _hp - _index * 2, 0, 2 )
-	hearts[ _index ].value = _value
+	if _index >= 0 and _index < hearts.size():
+		var _value : int = clampi( _hp - _index * 2, 0, 2 )
+		hearts[ _index ].value = _value
 	pass
 
 func update_max_hp( _max_hp : int ) -> void:

@@ -9,4 +9,4 @@ func _ready():
 
 
 func take_damage( hurt_box : HurtBox ) -> void:
-	damaged.emit( hurt_box )
+		damaged.emit( hurt_box )
