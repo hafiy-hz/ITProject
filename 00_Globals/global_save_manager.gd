@@ -6,37 +6,38 @@ const SAVE_PATH = "user://"
 signal game_loaded
 signal game_saved
 
-var current_save : Dictionary = {
-	"scene_path": "",
-	"player": {
-		"hp": 1,
-		"max_hp": 1,
-		"pos_x": 0,
-		"pos_y": 0,
-	},
-	"item": [],
-	"persistence": [],
-	"quest": []
-}
-
 #var current_save : Dictionary = {
-	#scene_path = "",
-	#player = {
-		#hp = 1,
-		#max_hp = 1,
-		#pos_x = 0,
-		#pos_y = 0,
+	#"scene_path": "",
+	#"player": {
+		#"hp": 1,
+		#"max_hp": 1,
+		#"pos_x": 0,
+		#"pos_y": 0,
 	#},
-	#item = [],
-	#persistence = [],
-	#quest = [],
+	#"item": [],
+	#"persistence": [],
+	#"quest": []
 #}
+
+var current_save : Dictionary = {
+	scene_path = "",
+	player = {
+		hp = 1,
+		max_hp = 1,
+		pos_x = 0,
+		pos_y = 0,
+	},
+	item = [],
+	persistence = [],
+	quest = [],
+}
 
 
 
 func save_game() -> void:
 	update_player_data()
 	update_scene_path()
+	update_item_data()
 	var file := FileAccess.open( SAVE_PATH + "save.sav",FileAccess.WRITE )
 	var save_json = JSON.stringify( current_save )
 	file.store_line( save_json )
@@ -58,6 +59,7 @@ func load_game() -> void:
 	
 	PlayerManager.set_player_position( Vector2( current_save.player.pos_x,current_save.player.pos_y ) )
 	PlayerManager.set_health( current_save.player.hp, current_save.player.hp )
+	PlayerManager.INVENTORY_DATA.parse_save_data( current_save.item )
 	
 	await LevelManagers.level_loaded
 	
@@ -81,3 +83,6 @@ func update_scene_path() -> void:
 		if c is Level:
 			p = c.scene_file_path
 	current_save.scene_path = p
+
+func update_item_data() -> void:
+	current_save.item = PlayerManager.INVENTORY_DATA.get_save_data()
