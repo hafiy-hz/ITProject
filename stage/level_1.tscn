@@ -731,7 +731,7 @@ sources/5 = SubResource("TileSetAtlasSource_uwuon")
 
 [node name="stage" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(-35, 2)
+position = Vector2(-67, -83)
 script = ExtResource("1_vnuwj")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -762,12 +762,12 @@ position = Vector2(682, 171)
 position = Vector2(646, 183)
 
 [node name="Itempickup" parent="." instance=ExtResource("13_hlghl")]
-position = Vector2(423, 565)
+position = Vector2(116, 111)
 item_data = ExtResource("14_odr1k")
 
 [node name="Itempickup2" parent="." instance=ExtResource("13_hlghl")]
-position = Vector2(463, 573)
+position = Vector2(126, 71)
 item_data = ExtResource("15_odr1k")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("11_02usw")]
-position = Vector2(230, 556)
+position = Vector2(-1, 3)
