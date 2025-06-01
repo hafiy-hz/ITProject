@@ -43,13 +43,17 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 101.0
+offset_top = 51.0
+offset_right = 57.0
+offset_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rq453")
 
 [node name="Backgroundimage" type="Sprite2D" parent="."]
 modulate = Color(0.439049, 0.439049, 0.439049, 1)
-position = Vector2(574.283, 330.364)
+position = Vector2(533, 318)
 rotation = -0.0305912
 scale = Vector2(1.58673, 1.45461)
 texture = ExtResource("1_fgnwx")
