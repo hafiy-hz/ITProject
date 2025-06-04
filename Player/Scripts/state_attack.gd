@@ -15,6 +15,16 @@ var attacking : bool = false
 
 ## what happend when the player enter this state?
 func Enter() -> void: 
+
+    player.UpdateAnimation("attack")
+    animation_player.animation_finished.connect( EndAttack )
+    
+    attacking = true
+    
+    await get_tree().create_timer( 0.075 ).timeout
+    hurt_box.monitoring = true 
+    pass
+
 	player.UpdateAnimation("attack")
 	animation_player.animation_finished.connect( EndAttack )
 	
@@ -26,44 +36,45 @@ func Enter() -> void:
 	pass
 
 
+
 func Exit() -> void:
-	animation_player.animation_finished.disconnect( EndAttack )
-	
-	audio.stream = attack_sound
-	audio.pitch_scale = randf_range(0.9, 1.1)
-	audio.play()
-	
-	attacking = true
-	
-	await get_tree().create_timer( 0.075).timeout
-	hurt_box.monitoring = false
-	pass
+    animation_player.animation_finished.disconnect( EndAttack )
+    
+    audio.stream = attack_sound
+    audio.pitch_scale = randf_range(0.9, 1.1)
+    audio.play()
+    
+    attacking = true
+    
+    await get_tree().create_timer( 0.075).timeout
+    hurt_box.monitoring = false
+    pass
 
 
 ## what happen during _process update in this state
 func Process( _delta : float ) -> State:
-	player.velocity -= player.velocity * decelerate_speed * _delta
-	
-	if attacking == false:
-		if player.direction == Vector2.ZERO:
-			return idle
-		else:
-			return walk
-	
-	return null
+    player.velocity -= player.velocity * decelerate_speed * _delta
+    
+    if attacking == false:
+        if player.direction == Vector2.ZERO:
+            return idle
+        else:
+            return walk
+    
+    return null
 
 
 ## what happend during the _pyshics_process update in this state
 func Physics( _delta : float ) -> State:
-	return null
+    return null
 
 
 ## what happend with input event in this state
 func HandleInput( _event: InputEvent ) -> State:
-	return null
+    return null
 
 
 func EndAttack( _newAnimName : String ) -> void:
-	attacking = false
-	
-	pass
+    attacking = false
+    
+    pass
