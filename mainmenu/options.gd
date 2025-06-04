@@ -6,7 +6,7 @@ var button_to_update : Button = null
 
     
 func _ready() -> void:
-    scale = Vector2(0.25, 0.25)  # Counteracts scale 4
+    scale = Vector2(0.5, 0.5)  # Counteracts scale 4
     $CanvasLayer/HBoxContainer/Fullscreen.focus_mode = Control.FOCUS_NONE  # Replace with actual node path
 
     var actions = ["move_left", "move_right", "move_up", "move_down"]

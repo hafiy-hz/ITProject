@@ -16,4 +16,3 @@ func GetTilemapBounds() -> Array[ Vector2 ]:
         Vector2( get_used_rect().end * rendering_quadrant_size )
     )
     return bounds
-

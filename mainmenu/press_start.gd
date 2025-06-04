@@ -6,7 +6,7 @@ var has_started = false
 var main_menu = preload("res://mainmenu/main_menu.tscn")
 
 func _ready():
-    scale = Vector2(0.25, 0.25)  # Counteracts scale 4
+    scale = Vector2(0.5, 0.5)  # Counteracts scale 4
     # Play fade-in animation when scene starts
     $CanvasLayer2/Transition.play("fade_in")
 

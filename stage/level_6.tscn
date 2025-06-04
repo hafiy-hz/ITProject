@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dn8nt54xw2krf" path="res://stage/dark_wizard/energy_beam.tscn" id="11_5pqcp"]
 [ext_resource type="PackedScene" uid="uid://4owefshmesp4" path="res://stage/level_transition.tscn" id="13_ddpu0"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpd13"]
 texture = ExtResource("1_1xogy")
 40:0/0 = 0

@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-    scale = Vector2(0.25, 0.25)  # Counteracts scale 4
+    scale = Vector2(0.5, 0.5)  # Counteracts scale 4
 
 func _on_back_button_2_pressed() -> void:
     get_tree().change_scene_to_file("res://mainmenu/main_menu.tscn")

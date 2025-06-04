@@ -25,15 +25,15 @@ func Enter() -> void:
     hurt_box.monitoring = true 
     pass
 
-	player.UpdateAnimation("attack")
-	animation_player.animation_finished.connect( EndAttack )
-	
-	attacking = true
-	
-	await get_tree().create_timer( 0.075 ).timeout
-	if attacking:
-		hurt_box.monitoring = true 
-	pass
+    player.UpdateAnimation("attack")
+    animation_player.animation_finished.connect( EndAttack )
+    
+    attacking = true
+    
+    await get_tree().create_timer( 0.075 ).timeout
+    if attacking:
+        hurt_box.monitoring = true 
+    pass
 
 
 
