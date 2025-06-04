@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://c8oditm46yl86"]
 
-[ext_resource type="Script" uid="uid://2o2x7ktgf3mm" path="res://mainmenu/main_menu.gd" id="1_la1qf"]
+[ext_resource type="Script" uid="uid://2o2x7ktgf3mm" path="res://mainmenu/main_menu.gd" id="1_skept"]
 [ext_resource type="Texture2D" uid="uid://b53a3txhsjsec" path="res://mainmenu/backgroundimage.png" id="2_jh8tq"]
 [ext_resource type="Texture2D" uid="uid://b6xj0jkae86mn" path="res://mainmenu/button_normal.png" id="3_6f8v3"]
 [ext_resource type="Texture2D" uid="uid://bddusuyc6ic6w" path="res://sprites/particles/leaf.webp" id="3_la1qf"]
@@ -43,7 +43,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MainMenu/CanvasLayer/Transition/FadeRect:modulate")
+tracks/0/path = NodePath("Transition/FadeRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -58,7 +58,7 @@ resource_name = "fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MainMenu/CanvasLayer/Transition/FadeRect:modulate")
+tracks/0/path = NodePath("Transition/FadeRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -73,7 +73,7 @@ resource_name = "fade_out"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MainMenu/CanvasLayer/Transition/FadeRect:modulate")
+tracks/0/path = NodePath("Transition/FadeRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -90,21 +90,45 @@ _data = {
 &"fade_out": SubResource("Animation_k4fr1")
 }
 
-[node name="MainMenu" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_la1qf")
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_ni4cm")
 
-[node name="Backgroundimage" type="Sprite2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 4.0
+offset_right = -6.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_skept")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.99991
+offset_top = -6.10352e-05
+offset_right = 2.99988
+offset_bottom = -6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backgroundimage" type="Sprite2D" parent="CanvasLayer/Control"]
 texture_filter = 1
-position = Vector2(987.556, 544.805)
+position = Vector2(573.017, 311.756)
 rotation = -0.0228583
-scale = Vector2(2.9606, 2.85472)
+scale = Vector2(1.5921, 1.45634)
 texture = ExtResource("2_jh8tq")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Backgroundimage"]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="CanvasLayer/Control/Backgroundimage"]
 modulate = Color(4.87324e-06, 0.408274, 0.0483681, 1)
 position = Vector2(-65.4296, -266.585)
 amount = 7
@@ -113,14 +137,17 @@ lifetime = 5.92
 speed_scale = 0.85
 process_material = SubResource("ParticleProcessMaterial_urtg7")
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-script = ExtResource("4_ni4cm")
-
-[node name="Control" type="Control" parent="CanvasLayer2"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504348
+anchor_top = 0.0570988
+anchor_right = 0.504348
+anchor_bottom = 0.138889
+offset_left = -107.0
+offset_top = 237.0
+offset_right = 514.0
+offset_bottom = 993.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -134,14 +161,14 @@ scale = Vector2(1.01419, 0.878733)
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Control/CenterContainer"]
 layout_mode = 2
 
-[node name="Startbutton" type="TextureButton" parent="CanvasLayer2/Control/CenterContainer/VBoxContainer"]
+[node name="Startbutton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
 texture_normal = ExtResource("3_6f8v3")
 texture_pressed = ExtResource("4_ape7v")
 texture_hover = ExtResource("5_5xekc")
 
-[node name="Label" type="Label" parent="CanvasLayer2/Control/CenterContainer/VBoxContainer/Startbutton"]
+[node name="Label" type="Label" parent="VBoxContainer/Startbutton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -157,14 +184,14 @@ text = "Start
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="OptionsButton" type="TextureButton" parent="CanvasLayer2/Control/CenterContainer/VBoxContainer"]
+[node name="OptionsButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 texture_normal = ExtResource("3_6f8v3")
 texture_pressed = ExtResource("4_ape7v")
 texture_hover = ExtResource("5_5xekc")
 
-[node name="Label" type="Label" parent="CanvasLayer2/Control/CenterContainer/VBoxContainer/OptionsButton"]
+[node name="Label" type="Label" parent="VBoxContainer/OptionsButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -182,14 +209,14 @@ text = "Options
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Exitbutton" type="TextureButton" parent="CanvasLayer2/Control/CenterContainer/VBoxContainer"]
+[node name="Exitbutton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 texture_normal = ExtResource("3_6f8v3")
 texture_pressed = ExtResource("4_ape7v")
 texture_hover = ExtResource("5_5xekc")
 
-[node name="Label" type="Label" parent="CanvasLayer2/Control/CenterContainer/VBoxContainer/Exitbutton"]
+[node name="Label" type="Label" parent="VBoxContainer/Exitbutton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -207,15 +234,16 @@ text = "Exit
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer2/Control"]
-layout_mode = 0
-offset_left = 402.0
-offset_top = 106.0
-offset_right = 1627.0
-offset_bottom = 325.0
-
-[node name="Label" type="Label" parent="CanvasLayer2/Control/CenterContainer2"]
-layout_mode = 2
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -437.0
+offset_top = 45.0
+offset_right = 438.0
+offset_bottom = 202.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(0.836307, 0.616362, 0.300037, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -226,23 +254,28 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Transition" type="AnimationPlayer" parent="CanvasLayer"]
-root_node = NodePath("../../..")
+[node name="Transition" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_k4fr1")
 }
 playback_auto_capture_ease_type = 2
 
-[node name="FadeRect" type="ColorRect" parent="CanvasLayer/Transition"]
+[node name="FadeRect" type="ColorRect" parent="Transition"]
 modulate = Color(1, 1, 1, 0.00392157)
-anchors_preset = 15
+anchors_preset = -1
+anchor_left = 0.258
+anchor_top = 0.247
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -530.36
+offset_top = -302.76
+offset_right = -35.0
+offset_bottom = -36.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[connection signal="pressed" from="CanvasLayer2/Control/CenterContainer/VBoxContainer/Startbutton" to="." method="_on_startbutton_pressed"]
-[connection signal="pressed" from="CanvasLayer2/Control/CenterContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="CanvasLayer2/Control/CenterContainer/VBoxContainer/Exitbutton" to="." method="_on_exitbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/Startbutton" to="." method="_on_startbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exitbutton" to="." method="_on_exitbutton_pressed"]

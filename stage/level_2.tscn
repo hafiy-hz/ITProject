@@ -3517,9 +3517,3 @@ position = Vector2(872, 259)
 monitorable = false
 level = "uid://cv4vfhnwer57m"
 side = 2
-
-[node name="LevelTransition2" parent="." instance=ExtResource("14_4iwck")]
-position = Vector2(80, 32)
-monitorable = false
-level = "uid://cras6qihtholi"
-size = 4
