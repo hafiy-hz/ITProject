@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://bw63qgclglb8i" path="res://ShadersNMaterial/light_material.tres" id="2_xvj86"]
 [ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="3_t6og7"]
 
+
 [sub_resource type="Gradient" id="Gradient_xvj86"]
 offsets = PackedFloat32Array(0, 0.422078, 0.642857, 0.818182, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 0.765482, 0.99481, 1, 0.894484, 0.00086077, 0.928011, 1, 0.499708, 0.480571, 0.993861, 1, 0.392157, 0, 0.509804, 0)

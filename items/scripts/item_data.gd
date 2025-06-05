@@ -8,13 +8,11 @@ class_name ItemsData extends Resource
 @export var effects : Array[ ItemEffect ]
 
 
-
-
 func use() -> bool:
-	if effects.size() == 0:
-		return false
-	
-	for e in effects:
-		if e:
-			e.use()
-	return true
+    if effects.size() == 0:
+        return false
+    
+    for e in effects:
+        if e:
+            e.use()
+    return true

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://be26nhj1ygpr0" path="res://stage/dark_wizard/sprites/energy-explosion.png" id="1_3oi62"]
 [ext_resource type="Material" uid="uid://bw63qgclglb8i" path="res://ShadersNMaterial/light_material.tres" id="1_qrihd"]
 
+
 [sub_resource type="Animation" id="Animation_qrihd"]
 length = 0.001
 tracks/0/type = "value"

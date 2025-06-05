@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dnh3freje1cfn" path="res://stage/dark_wizard/sprites/energy-beam-large.png" id="4_2htyb"]
 [ext_resource type="AudioStream" uid="uid://balo0uuqmw1dg" path="res://stage/dark_wizard/audio/boss_beam.wav" id="5_j3rwt"]
 
+
 [sub_resource type="Animation" id="Animation_j3rwt"]
 length = 0.001
 tracks/0/type = "value"
