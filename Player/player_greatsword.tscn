@@ -1,18 +1,18 @@
-[gd_scene load_steps=36 format=3 uid="uid://bxw4o4iulxjcp"]
+[gd_scene load_steps=36 format=3 uid="uid://c7wy7tbnu6ha4"]
 
-[ext_resource type="Texture2D" uid="uid://biff3k5igtl1t" path="res://art/mystic_woods_free_2.2/sprites/characters/player.png" id="1_3qydi"]
-[ext_resource type="Script" uid="uid://crkqfarcw6646" path="res://Player/Scripts/player.gd" id="1_q3lat"]
-[ext_resource type="Script" uid="uid://bn1oh17prxemt" path="res://Player/Scripts/player_state_machine.gd" id="3_tok1r"]
-[ext_resource type="Script" uid="uid://dlqn2d36ol6sk" path="res://Player/Scripts/state_idle.gd" id="4_ddoul"]
-[ext_resource type="Script" uid="uid://nbhk418d51y1" path="res://Player/Scripts/state_walk.gd" id="5_8g4oa"]
-[ext_resource type="Script" uid="uid://cwg1f4x7neqtp" path="res://Player/Scripts/state_attack.gd" id="6_6ysni"]
-[ext_resource type="AudioStream" uid="uid://btc0yo7c61maq" path="res://Player/Audio/SwordSwoosh.wav" id="7_vlldt"]
-[ext_resource type="Script" uid="uid://cpslmll4qla6m" path="res://Player/Scripts/PlayerInteractionsHost.gd" id="8_j23h2"]
-[ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="8_s1rgi"]
-[ext_resource type="Script" uid="uid://bavkmla4rpkec" path="res://scripts/PlayerCamera.gd" id="9_0j2ni"]
-[ext_resource type="Script" uid="uid://cnt1xphsfp2k" path="res://Player/Scripts/state_stun.gd" id="9_p7tob"]
-[ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="11_v0k0e"]
-[ext_resource type="AudioStream" uid="uid://kbyi8iejx42i" path="res://Player/Audio/hit_player.wav" id="12_5wa8t"]
+[ext_resource type="Script" uid="uid://crkqfarcw6646" path="res://Player/Scripts/player.gd" id="1_fohqi"]
+[ext_resource type="Texture2D" uid="uid://biff3k5igtl1t" path="res://art/mystic_woods_free_2.2/sprites/characters/player.png" id="2_myfsw"]
+[ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="3_nij6k"]
+[ext_resource type="Script" uid="uid://bn1oh17prxemt" path="res://Player/Scripts/player_state_machine.gd" id="4_ul8cp"]
+[ext_resource type="Script" uid="uid://dlqn2d36ol6sk" path="res://Player/Scripts/state_idle.gd" id="5_rm8ux"]
+[ext_resource type="Script" uid="uid://nbhk418d51y1" path="res://Player/Scripts/state_walk.gd" id="6_k07tt"]
+[ext_resource type="Script" uid="uid://cwg1f4x7neqtp" path="res://Player/Scripts/state_attack.gd" id="7_m77oq"]
+[ext_resource type="AudioStream" uid="uid://btc0yo7c61maq" path="res://Player/Audio/SwordSwoosh.wav" id="8_dnlxo"]
+[ext_resource type="Script" uid="uid://cnt1xphsfp2k" path="res://Player/Scripts/state_stun.gd" id="9_3dul7"]
+[ext_resource type="Script" uid="uid://bavkmla4rpkec" path="res://scripts/PlayerCamera.gd" id="10_0c4tg"]
+[ext_resource type="Script" uid="uid://cpslmll4qla6m" path="res://Player/Scripts/PlayerInteractionsHost.gd" id="11_5evrs"]
+[ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="12_ljio3"]
+[ext_resource type="AudioStream" uid="uid://kbyi8iejx42i" path="res://Player/Audio/hit_player.wav" id="13_6qyhr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j23h2"]
 radius = 12.0
@@ -352,7 +352,7 @@ tracks/1/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("12_5wa8t")
+"stream": ExtResource("13_6qyhr")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -388,16 +388,16 @@ collision_layer = 3
 collision_mask = 257
 motion_mode = 1
 wall_min_slide_angle = 0.174533
-script = ExtResource("1_q3lat")
+script = ExtResource("1_fohqi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, -14)
-texture = ExtResource("1_3qydi")
+texture = ExtResource("2_myfsw")
 hframes = 6
 vframes = 10
 
-[node name="AttackHurtBox" parent="Sprite2D" instance=ExtResource("8_s1rgi")]
+[node name="AttackHurtBox" parent="Sprite2D" instance=ExtResource("3_nij6k")]
 unique_name_in_owner = true
 position = Vector2(0, 24)
 collision_layer = 0
@@ -419,25 +419,25 @@ libraries = {
 }
 
 [node name="StateMachine" type="Node" parent="."]
-script = ExtResource("3_tok1r")
+script = ExtResource("4_ul8cp")
 
 [node name="Idle" type="Node" parent="StateMachine"]
-script = ExtResource("4_ddoul")
+script = ExtResource("5_rm8ux")
 
 [node name="Walk" type="Node" parent="StateMachine"]
-script = ExtResource("5_8g4oa")
+script = ExtResource("6_k07tt")
 
 [node name="Attack" type="Node" parent="StateMachine"]
-script = ExtResource("6_6ysni")
-attack_sound = ExtResource("7_vlldt")
+script = ExtResource("7_m77oq")
+attack_sound = ExtResource("8_dnlxo")
 decelerate_speed = 6.0
 
 [node name="Stun" type="Node" parent="StateMachine"]
-script = ExtResource("9_p7tob")
+script = ExtResource("9_3dul7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
-script = ExtResource("9_0j2ni")
+script = ExtResource("10_0c4tg")
 
 [node name="Audio" type="Node2D" parent="."]
 
@@ -445,7 +445,7 @@ script = ExtResource("9_0j2ni")
 max_polyphony = 4
 
 [node name="Interactions" type="Node2D" parent="."]
-script = ExtResource("8_j23h2")
+script = ExtResource("11_5evrs")
 
 [node name="Area2D" type="Area2D" parent="Interactions"]
 collision_layer = 255
@@ -455,7 +455,7 @@ collision_mask = 255
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_p7tob")
 
-[node name="HitBox" parent="." instance=ExtResource("11_v0k0e")]
+[node name="HitBox" parent="." instance=ExtResource("12_ljio3")]
 collision_layer = 2
 collision_mask = 256
 

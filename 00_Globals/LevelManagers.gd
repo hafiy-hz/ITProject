@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 signal level_load_started
 signal level_loaded 
@@ -11,6 +11,9 @@ var position_offset : Vector2
 func _ready() -> void:
 	await get_tree().process_frame
 	level_loaded.emit()
+	self.y_sort_enabled = true 
+	#PlayerManager.set_as_parent( self )
+	LevelManagers.level_load_started.connect( _free_level )
 
 
 func ChangeTilemapBounds( bounds : Array[ Vector2 ] ) -> void:
@@ -44,3 +47,9 @@ func load_new_level(
 	await SceneTransition.fade_in()
 	get_tree().paused = false
 	level_loaded.emit()
+	
+
+func _free_level() -> void:
+	#PlayerManager.unparent_player( self )
+	queue_free()
+	

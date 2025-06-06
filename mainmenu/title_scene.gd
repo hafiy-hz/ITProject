@@ -10,6 +10,7 @@ const START_LEVEL : String = "res://stage/level_1.tscn"
 @onready var exitbutton: TextureButton = $CanvasLayer/Control/VBoxContainer/Exitbutton
 
 
+	
 func _ready() ->void:
 	get_tree().paused = true
 	PlayerManager.player.visible = false
@@ -18,11 +19,14 @@ func _ready() ->void:
 	
 	LevelManagers.level_load_started.connect( exit_title_screen )
 	
+	
+	
 	pass
 
 func setup_title_screen() -> void:
 	button_start.pressed.connect( start_game )
-	
+	button_exit.pressed.connect(exit_game)
+	exitbutton.pressed.connect(exit_game)
 	
 	button_start.grab_focus()
 	pass
@@ -32,7 +36,7 @@ func start_game() -> void:
 	pass
 
 func exit_game() -> void:
-	
+	get_tree().quit()
 	pass
 
 func load_game() -> void:

@@ -10,9 +10,8 @@ const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
-var player : Player 
+var player : Player
 var invulnerable : bool = false
-
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Sprite2D
@@ -23,7 +22,6 @@ func _ready():
 	state_machine.initialize( self )
 	player = PlayerManager.player
 	hit_box.damaged.connect( _take_damage )
-
 	pass
 
 func _process(_delta):
