@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://cbkth0x2hk56k" path="res://Enemies/Scripts/states/enemy_state_wander.gd" id="8_1hgxi"]
 [ext_resource type="Script" uid="uid://dbfateb78ey2t" path="res://Enemies/Scripts/states/enemy_state_stun.gd" id="9_e2m7b"]
 [ext_resource type="Script" uid="uid://cw1h5safs5sak" path="res://Enemies/Scripts/states/enemy_state_destroy.gd" id="10_cawwt"]
-[ext_resource type="Script" uid="uid://c4gn0xge6hux3" path="res://Enemies/Scripts/states/enemy_state_chase.gd" id="11_ey4fv"]
+[ext_resource type="Script" path="res://Enemies/Scripts/states/enemy_state_chase.gd" id="11_ey4fv"]
 [ext_resource type="Texture2D" uid="uid://cxqoyw8add6ip" path="res://art/DestroySmoke.png" id="12_fxdb0"]
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="13_o2ibi"]
 [ext_resource type="PackedScene" uid="uid://d1c7ymtuontqg" path="res://Enemies/vision_area.tscn" id="14_gon2m"]
