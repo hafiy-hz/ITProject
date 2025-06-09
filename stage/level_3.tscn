@@ -2645,7 +2645,7 @@ position = Vector2(702, -159)
 
 [node name="Slime3" parent="slimee" instance=ExtResource("7_hqns1")]
 top_level = true
-position = Vector2(207, -292)
+position = Vector2(206, -292)
 
 [node name="Slime4" parent="slimee" instance=ExtResource("7_hqns1")]
 top_level = true
