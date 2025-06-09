@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://cwu1i076r35sr"]
+[gd_scene load_steps=40 format=4 uid="uid://cwu1i076r35sr"]
 
 [ext_resource type="Script" uid="uid://bn0ytny1aej5k" path="res://00_Globals/LevelManagers.gd" id="1_4iwck"]
 [ext_resource type="Texture2D" uid="uid://dsnwwbruqik8g" path="res://art/RFCastle_1.0/mainlevbuild.png" id="1_h7lwi"]
@@ -14,6 +14,9 @@
 [ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://scripts/LevelTilemapLayer.gd" id="11_4iwck"]
 [ext_resource type="PackedScene" uid="uid://4owefshmesp4" path="res://stage/level_transition.tscn" id="14_4iwck"]
 [ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/Player.tscn" id="14_6jkt7"]
+[ext_resource type="PackedScene" uid="uid://demle5oq8dx3y" path="res://Enemies/Goblin/Goblin.tscn" id="15_6jkt7"]
+[ext_resource type="PackedScene" uid="uid://b66u2xr8xbbnd" path="res://Chest/chest1.tscn" id="16_1xbk0"]
+[ext_resource type="PackedScene" uid="uid://cajar7j1rs8xl" path="res://Enemies/Slime/slime.tscn" id="17_o5yw0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rpf8"]
 texture = ExtResource("1_h7lwi")
@@ -3518,3 +3521,85 @@ side = 2
 
 [node name="Player" parent="." instance=ExtResource("14_6jkt7")]
 position = Vector2(107, 19)
+
+[node name="goblib" type="Node" parent="."]
+
+[node name="Goblin" parent="goblib" instance=ExtResource("15_6jkt7")]
+top_level = true
+position = Vector2(293, -171)
+rotation = -1.04627
+
+[node name="Goblin3" parent="goblib" instance=ExtResource("15_6jkt7")]
+top_level = true
+position = Vector2(1282, 321)
+rotation = 0.677981
+
+[node name="Goblin4" parent="goblib" instance=ExtResource("15_6jkt7")]
+top_level = true
+position = Vector2(1112, 312)
+rotation = 0.949409
+
+[node name="Goblin5" parent="goblib" instance=ExtResource("15_6jkt7")]
+top_level = true
+position = Vector2(1191, 426)
+rotation = 1.8198
+
+[node name="Goblin6" parent="goblib" instance=ExtResource("15_6jkt7")]
+top_level = true
+position = Vector2(226, 497)
+rotation = -2.09049
+
+[node name="Goblin7" parent="goblib" instance=ExtResource("15_6jkt7")]
+top_level = true
+position = Vector2(451, 392)
+rotation = -2.33097
+
+[node name="Goblin8" parent="goblib" instance=ExtResource("15_6jkt7")]
+top_level = true
+position = Vector2(377, 594)
+rotation = -2.5557
+
+[node name="Goblin9" parent="goblib" instance=ExtResource("15_6jkt7")]
+top_level = true
+position = Vector2(400, 463)
+rotation = -3.45198
+
+[node name="Goblin2" parent="goblib" instance=ExtResource("15_6jkt7")]
+top_level = true
+position = Vector2(492, -175)
+rotation = 0.582668
+
+[node name="chest" type="Node" parent="."]
+
+[node name="Chest" parent="chest" instance=ExtResource("16_1xbk0")]
+position = Vector2(632, 62)
+
+[node name="Chest2" parent="chest" instance=ExtResource("16_1xbk0")]
+position = Vector2(243, -173)
+
+[node name="Chest3" parent="chest" instance=ExtResource("16_1xbk0")]
+position = Vector2(1203, 374)
+
+[node name="Chest4" parent="chest" instance=ExtResource("16_1xbk0")]
+position = Vector2(264, 538)
+
+[node name="Chest5" parent="chest" instance=ExtResource("16_1xbk0")]
+position = Vector2(274, 594)
+
+[node name="slimee" type="Node" parent="."]
+
+[node name="Slime" parent="slimee" instance=ExtResource("17_o5yw0")]
+top_level = true
+position = Vector2(526, 61)
+
+[node name="Slime3" parent="slimee" instance=ExtResource("17_o5yw0")]
+top_level = true
+position = Vector2(615, 31)
+
+[node name="Slime4" parent="slimee" instance=ExtResource("17_o5yw0")]
+top_level = true
+position = Vector2(590, 72)
+
+[node name="Slime2" parent="slimee" instance=ExtResource("17_o5yw0")]
+top_level = true
+position = Vector2(658, 34)
