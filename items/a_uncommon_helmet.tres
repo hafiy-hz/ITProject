@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://b8wr8n8nmul51"]
+
+[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_xbu7u"]
+[ext_resource type="Script" uid="uid://e0706nrbxy3p" path="res://items/scripts/equipable_item_modifier.gd" id="2_2g0y1"]
+[ext_resource type="Script" uid="uid://bwlux7d3dqi4" path="res://items/scripts/equipable_item_data.gd" id="3_jot2u"]
+[ext_resource type="Texture2D" uid="uid://bepwvrsbqcc1r" path="res://sprites/weapon/Fantasy Armor Set Grid (2).png" id="4_bt6rm"]
+
+[sub_resource type="Resource" id="Resource_lxhhc"]
+script = ExtResource("2_2g0y1")
+type = 0
+value = 5
+metadata/_custom_type_script = "uid://e0706nrbxy3p"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6ilr"]
+atlas = ExtResource("4_bt6rm")
+region = Rect2(67, 125, 163, 185)
+
+[resource]
+script = ExtResource("3_jot2u")
+type = 1
+modifiers = Array[ExtResource("2_2g0y1")]([SubResource("Resource_lxhhc")])
+name = "Starter Helmet"
+description = ""
+texture = SubResource("AtlasTexture_x6ilr")
+effects = Array[ExtResource("1_xbu7u")]([])
+metadata/_custom_type_script = "uid://bwlux7d3dqi4"
