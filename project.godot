@@ -18,8 +18,8 @@ run/stretch/scale=4.0
 
 [autoload]
 
-LevelManagers="*res://00_Globals/LevelManagers.gd"
 PlayerManager="*res://00_Globals/PlayerManager.gd"
+LevelManagers="*res://00_Globals/LevelManagers.gd"
 Global="*res://00_Globals/Global.gd"
 PlayerHud="*res://GUI/player_hud/player_hud.tscn"
 SaveManager="*res://00_Globals/global_save_manager.gd"

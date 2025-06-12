@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dn8nt54xw2krf"]
+[gd_scene load_steps=13 format=3 uid="uid://dn8nt54xw2krf"]
 
 [ext_resource type="Material" uid="uid://bw63qgclglb8i" path="res://ShadersNMaterial/light_material.tres" id="1_8istc"]
 [ext_resource type="Texture2D" uid="uid://dxx18u4tuc4p2" path="res://stage/dark_wizard/sprites/energy-beam.png" id="1_h5sd1"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://6xwlsgfyk3lx" path="res://stage/dark_wizard/script/energy_beam_sprite.gd" id="3_ggttr"]
 [ext_resource type="Texture2D" uid="uid://dnh3freje1cfn" path="res://stage/dark_wizard/sprites/energy-beam-large.png" id="4_2htyb"]
 [ext_resource type="AudioStream" uid="uid://balo0uuqmw1dg" path="res://stage/dark_wizard/audio/boss_beam.wav" id="5_j3rwt"]
-
+[ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="7_v5l3b"]
 
 [sub_resource type="Animation" id="Animation_j3rwt"]
 length = 0.001
@@ -161,7 +161,11 @@ _data = {
 &"default": SubResource("Animation_2htyb")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5l3b"]
+size = Vector2(1024, 36)
+
 [node name="EnergyBeam" type="Node2D"]
+light_mask = 19
 script = ExtResource("1_uyb7n")
 
 [node name="EnergyIndicatorSprite2D" type="Sprite2D" parent="."]
@@ -173,6 +177,7 @@ texture = ExtResource("1_h5sd1")
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 16)
 script = ExtResource("3_ggttr")
+speed = 100.0
 
 [node name="EnergyBeamSprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -191,3 +196,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_uyb7n")
 }
 autoplay = "default"
+
+[node name="HurtBox" parent="." instance=ExtResource("7_v5l3b")]
+monitoring = false
+damage = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("RectangleShape2D_v5l3b")
+debug_color = Color(0.980392, 0, 0.396078, 0)

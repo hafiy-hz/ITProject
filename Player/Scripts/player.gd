@@ -1,4 +1,5 @@
-class_name Player extends CharacterBody2D
+class_name Player 
+extends CharacterBody2D
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
@@ -99,6 +100,3 @@ func make_invulnerable( _duration : float = 1.0 ) -> void:
 	invulnerable = false
 	hit_box.monitoring = true
 	pass
-
-
-	
