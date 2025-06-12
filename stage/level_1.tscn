@@ -765,6 +765,18 @@ position = Vector2(682, 171)
 [node name="Slime4" parent="." instance=ExtResource("12_vnuwj")]
 position = Vector2(646, 183)
 
+[node name="Slime5" parent="." instance=ExtResource("12_vnuwj")]
+position = Vector2(628, 626)
+
+[node name="Slime6" parent="." instance=ExtResource("12_vnuwj")]
+position = Vector2(666, 714)
+
+[node name="Slime7" parent="." instance=ExtResource("12_vnuwj")]
+position = Vector2(612, 676)
+
+[node name="Slime8" parent="." instance=ExtResource("12_vnuwj")]
+position = Vector2(676, 655)
+
 [node name="Itempickup" parent="." instance=ExtResource("13_hlghl")]
 position = Vector2(421, 559)
 item_data = ExtResource("14_odr1k")
@@ -776,11 +788,11 @@ item_data = ExtResource("15_odr1k")
 [node name="Goblin" parent="." instance=ExtResource("16_p8yn5")]
 position = Vector2(212, 502)
 
-[node name="Goblin4" parent="." instance=ExtResource("16_p8yn5")]
-position = Vector2(304, 148)
+[node name="Goblin2" parent="." instance=ExtResource("16_p8yn5")]
+position = Vector2(145, 127)
 
 [node name="Goblin3" parent="." instance=ExtResource("16_p8yn5")]
-position = Vector2(167, 121)
+position = Vector2(276, 157)
 
-[node name="Goblin2" parent="." instance=ExtResource("16_p8yn5")]
-position = Vector2(79, 508)
+[node name="Goblin4" parent="." instance=ExtResource("16_p8yn5")]
+position = Vector2(94, 503)
