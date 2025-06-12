@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cajar7j1rs8xl"]
+[gd_scene load_steps=37 format=3 uid="uid://cajar7j1rs8xl"]
 
 [ext_resource type="Texture2D" uid="uid://cw1m70e1pd3uj" path="res://Enemies/Slime/slime.png" id="1_byu67"]
 [ext_resource type="Script" uid="uid://b4as8uxxkct3" path="res://Enemies/Scripts/enemy.gd" id="1_q0lue"]
@@ -12,6 +12,9 @@
 [ext_resource type="Script" uid="uid://cw1h5safs5sak" path="res://Enemies/Scripts/states/enemy_state_destroy.gd" id="7_8tnav"]
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="7_jlwhn"]
 [ext_resource type="Texture2D" uid="uid://cxqoyw8add6ip" path="res://art/DestroySmoke.png" id="10_pydiu"]
+[ext_resource type="Script" uid="uid://cgqfcrdxycsvj" path="res://Enemies/Scripts/drop_data.gd" id="10_t1krp"]
+[ext_resource type="Resource" uid="uid://bg30gd61gwqdk" path="res://items/gems.tres" id="11_nsi17"]
+[ext_resource type="Resource" uid="uid://dg4m7ytmghexm" path="res://items/apple.tres" id="12_nsi17"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwfkb"]
 radius = 4.0
@@ -661,6 +664,22 @@ _data = {
 &"walk_up": SubResource("Animation_jlwhn")
 }
 
+[sub_resource type="Resource" id="Resource_vjyi2"]
+script = ExtResource("10_t1krp")
+item = ExtResource("11_nsi17")
+probability = 100.0
+min_amount = 1
+max_amount = 4
+metadata/_custom_type_script = "uid://cgqfcrdxycsvj"
+
+[sub_resource type="Resource" id="Resource_yynal"]
+script = ExtResource("10_t1krp")
+item = ExtResource("12_nsi17")
+probability = 85.0
+min_amount = 1
+max_amount = 2
+metadata/_custom_type_script = "uid://cgqfcrdxycsvj"
+
 [sub_resource type="Animation" id="Animation_2qn7y"]
 length = 0.001
 tracks/0/type = "value"
@@ -764,6 +783,7 @@ next_state = NodePath("../Wander")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("7_8tnav")
+drops = Array[ExtResource("10_t1krp")]([SubResource("Resource_vjyi2"), SubResource("Resource_yynal")])
 
 [node name="DestroyEffectSprite" type="Sprite2D" parent="."]
 visible = false
