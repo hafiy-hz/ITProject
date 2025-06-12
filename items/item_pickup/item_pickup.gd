@@ -1,5 +1,5 @@
 @tool
-class_name ItemPickup extends Node2D
+class_name ItemPickup extends CharacterBody2D
 
 @export var item_data : ItemsData : set = _set_item_data
 
@@ -15,6 +15,12 @@ func _ready() -> void:
 	
 	
 	
+func _physics_process(delta: float) -> void:
+	var collision_info = move_and_collide( velocity * delta )
+	if collision_info:
+		velocity = velocity.bounce( collision_info.get_normal() )
+	velocity -= velocity * delta * 4
+
 
 func _on_body_entered( b ) -> void:
 	if b is Player:
