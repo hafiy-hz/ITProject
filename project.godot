@@ -14,14 +14,16 @@ config/name="Torch N Steel"
 run/main_scene="uid://c8oditm46yl86"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+run/stretch/scale=4.0
 
 [autoload]
 
-Global="*res://00_Globals/Global.gd"
-LevelManagers="*res://00_Globals/LevelManagers.gd"
-PlayerHud="*res://GUI/player_hud/player_hud.tscn"
 PlayerManager="*res://00_Globals/PlayerManager.gd"
+LevelManagers="*res://00_Globals/LevelManagers.gd"
+Global="*res://00_Globals/Global.gd"
+PlayerHud="*res://GUI/player_hud/player_hud.tscn"
 SaveManager="*res://00_Globals/global_save_manager.gd"
+PlayerInfoUi="*res://00_Globals/player_info_ui.tscn"
 SceneTransition="*res://GUI/scene_transition/scene_transition.tscn"
 PauseMenu="*res://GUI/pause_menu/pause_menu.tscn"
 MainmenuBgs="*res://mainmenu/MainmenuBGS.tscn"
@@ -33,6 +35,10 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/scale=2.0
+
+[global_group]
+
+Player=""
 
 [input]
 

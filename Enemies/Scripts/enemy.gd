@@ -6,13 +6,12 @@ signal enemy_destroyed( hurt_box : HurtBox )
 
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 
-@export var hp : int = 3
+@export var hp : int = 15
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
-var player : Player 
+var player : Player
 var invulnerable : bool = false
-
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Sprite2D
@@ -23,7 +22,6 @@ func _ready():
 	state_machine.initialize( self )
 	player = PlayerManager.player
 	hit_box.damaged.connect( _take_damage )
-
 	pass
 
 func _process(_delta):
@@ -67,7 +65,15 @@ func anim_direction() -> String:
 func _take_damage( hurt_box : HurtBox ) -> void:
 	if invulnerable == true:
 		return
+
 	hp -= hurt_box.damage
+
+	# Show floating damage number
+	var floating_text = preload("res://Enemies/floating_text.tscn").instantiate()
+	floating_text.position = global_position + Vector2(0, -20)
+	floating_text.initial_text = str(hurt_box.damage)
+	get_tree().current_scene.add_child(floating_text)
+
 	if hp > 0:
 		enemy_damaged.emit( hurt_box )
 	else:

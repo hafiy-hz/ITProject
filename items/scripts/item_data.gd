@@ -9,10 +9,10 @@ class_name ItemsData extends Resource
 
 
 func use() -> bool:
-    if effects.size() == 0:
-        return false
-    
-    for e in effects:
-        if e:
-            e.use()
-    return true
+	if effects.size() == 0:
+		return false
+	
+	for e in effects:
+		if e:
+			e.use()
+	return true

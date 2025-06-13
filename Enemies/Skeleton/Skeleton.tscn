@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=3 uid="uid://birwsd8mpt38g"]
 
 [ext_resource type="Script" uid="uid://b4as8uxxkct3" path="res://Enemies/Scripts/enemy.gd" id="1_xxlxq"]
-[ext_resource type="Texture2D" uid="uid://dfp5td0ptg126" path="res://Enemies/Goblin/goblin.png" id="2_jjepw"]
+[ext_resource type="Texture2D" uid="uid://cnemnuxa4htin" path="res://art/lpc_entry/png/spellcast/BODY_skeleton.png" id="2_xxlxq"]
 [ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="3_n2ckn"]
 [ext_resource type="AudioStream" uid="uid://csrlgtrsu6gyj" path="res://Player/Audio/hit_01.wav" id="4_r768l"]
 [ext_resource type="AudioStream" uid="uid://dnwr1mehe5nsw" path="res://Player/Audio/hit_00.wav" id="5_usdt8"]
@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://cbkth0x2hk56k" path="res://Enemies/Scripts/states/enemy_state_wander.gd" id="8_1hgxi"]
 [ext_resource type="Script" uid="uid://dbfateb78ey2t" path="res://Enemies/Scripts/states/enemy_state_stun.gd" id="9_e2m7b"]
 [ext_resource type="Script" uid="uid://cw1h5safs5sak" path="res://Enemies/Scripts/states/enemy_state_destroy.gd" id="10_cawwt"]
-[ext_resource type="Script" uid="uid://c4gn0xge6hux3" path="res://Enemies/Scripts/states/enemy_state_chase.gd" id="11_ey4fv"]
+[ext_resource type="Script" path="res://Enemies/Scripts/states/enemy_state_chase.gd" id="11_ey4fv"]
 [ext_resource type="Texture2D" uid="uid://cxqoyw8add6ip" path="res://art/DestroySmoke.png" id="12_fxdb0"]
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="13_o2ibi"]
 [ext_resource type="PackedScene" uid="uid://d1c7ymtuontqg" path="res://Enemies/vision_area.tscn" id="14_gon2m"]
@@ -34,7 +34,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [10]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -375,7 +375,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [10, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_t8cwk"]
@@ -682,9 +682,10 @@ script = ExtResource("1_xxlxq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -5)
-texture = ExtResource("2_jjepw")
-hframes = 8
-vframes = 3
+texture = ExtResource("2_xxlxq")
+hframes = 7
+vframes = 4
+frame = 10
 
 [node name="AttackHurtBox" parent="Sprite2D" instance=ExtResource("3_n2ckn")]
 position = Vector2(18, -2)

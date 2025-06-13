@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://tm7b8rlyf7lg" path="res://sprites/objects/boardusername.png" id="3_nlu4a"]
 [ext_resource type="Texture2D" uid="uid://b6xj0jkae86mn" path="res://mainmenu/button_normal.png" id="4_wkpwx"]
 [ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://mainmenu/button_pressed.png" id="5_4hg45"]
-[ext_resource type="Script" uid="uid://dijl74cwiqr0k" path="res://mainmenu/canvas_layer.gd" id="5_wslha"]
+[ext_resource type="Script" uid="uid://bfvrgwhjw5f8m" path="res://mainmenu/class_player.gd" id="5_wslha"]
 [ext_resource type="Texture2D" uid="uid://d10blkakyfdag" path="res://mainmenu/button_hover.png" id="6_wslha"]
 [ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://mainmenu/Kenney Mini Square.ttf" id="7_st2s4"]
 [ext_resource type="FontFile" uid="uid://dsfg1k6fs0aci" path="res://mainmenu/Kenney Future Narrow.ttf" id="8_312id"]
@@ -76,19 +76,19 @@ position = Vector2(933, 381)
 scale = Vector2(0.692614, 0.272024)
 texture = ExtResource("3_nlu4a")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="PlayerClass" type="CanvasLayer" parent="."]
 script = ExtResource("5_wslha")
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+[node name="CenterContainer" type="CenterContainer" parent="PlayerClass"]
 offset_left = 637.0
 offset_top = 309.0
 offset_right = 1244.0
 offset_bottom = 432.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerClass/CenterContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PlayerClass/CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -99,18 +99,22 @@ theme_override_font_sizes/font_size = 50
 text = "What should I call you?"
 horizontal_alignment = 1
 
+
 [node name="UsernameInput" type="LineEdit" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+
+[node name="LineEdit" type="LineEdit" parent="PlayerClass/CenterContainer/VBoxContainer"]
+
 layout_mode = 2
 theme_override_fonts/font = ExtResource("8_312id")
 placeholder_text = "Enter your Name"
 alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="PlayerClass/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("7_st2s4")
 text = "Continue"
 
-[node name="BackButton2" type="TextureButton" parent="CanvasLayer"]
+[node name="BackButton2" type="TextureButton" parent="PlayerClass"]
 offset_left = 5.0
 offset_top = 1038.0
 offset_right = 626.0
@@ -120,7 +124,7 @@ texture_normal = ExtResource("4_wkpwx")
 texture_pressed = ExtResource("5_4hg45")
 texture_hover = ExtResource("6_wslha")
 
-[node name="Label2" type="Label" parent="CanvasLayer/BackButton2"]
+[node name="Label2" type="Label" parent="PlayerClass/BackButton2"]
 layout_mode = 0
 offset_left = 160.682
 offset_top = 32.3369
@@ -131,7 +135,7 @@ theme_override_font_sizes/font_size = 120
 text = "Back
 "
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+[node name="ButtonRapier" type="TextureButton" parent="PlayerClass"]
 offset_left = 462.0
 offset_top = 580.0
 offset_right = 1662.0
@@ -141,12 +145,12 @@ toggle_mode = true
 texture_normal = ExtResource("9_n4vo8")
 texture_pressed = ExtResource("10_pfhup")
 
-[node name="Rapierclass" type="Sprite2D" parent="CanvasLayer/TextureButton"]
+[node name="Rapierclass" type="Sprite2D" parent="PlayerClass/ButtonRapier"]
 position = Vector2(590.395, 598.349)
 scale = Vector2(3.94491, 2.04107)
 texture = ExtResource("11_wkpwx")
 
-[node name="TextureButton2" type="TextureButton" parent="CanvasLayer"]
+[node name="ButtonSword" type="TextureButton" parent="PlayerClass"]
 offset_left = 780.0
 offset_top = 580.0
 offset_right = 1980.0
@@ -156,12 +160,12 @@ toggle_mode = true
 texture_normal = ExtResource("9_n4vo8")
 texture_pressed = ExtResource("10_pfhup")
 
-[node name="Swordcalss" type="Sprite2D" parent="CanvasLayer/TextureButton2"]
+[node name="Swordclass" type="Sprite2D" parent="PlayerClass/ButtonSword"]
 position = Vector2(627.965, 670.266)
 scale = Vector2(3.48749, 1.95874)
 texture = ExtResource("12_4hg45")
 
-[node name="TextureButton3" type="TextureButton" parent="CanvasLayer"]
+[node name="ButtonGreatSword" type="TextureButton" parent="PlayerClass"]
 offset_left = 1103.0
 offset_top = 580.0
 offset_right = 2303.0
@@ -171,12 +175,12 @@ toggle_mode = true
 texture_normal = ExtResource("9_n4vo8")
 texture_pressed = ExtResource("10_pfhup")
 
-[node name="Greatswordclass" type="Sprite2D" parent="CanvasLayer/TextureButton3"]
+[node name="Greatswordclass" type="Sprite2D" parent="PlayerClass/ButtonGreatSword"]
 position = Vector2(799.717, 526.432)
 scale = Vector2(1.20398, 0.546739)
 texture = ExtResource("13_wslha")
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="PlayerClass"]
 offset_left = 754.0
 offset_top = 600.0
 offset_right = 1126.0
@@ -185,8 +189,18 @@ theme_override_fonts/font = ExtResource("8_312id")
 theme_override_font_sizes/font_size = 40
 text = "Pick Your Class"
 
+
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/BackButton2" to="." method="_on_back_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+
+[connection signal="pressed" from="PlayerClass/BackButton2" to="." method="_on_back_button_2_pressed"]
+[connection signal="pressed" from="PlayerClass/ButtonRapier" to="." method="_on_button_rapier_pressed"]
+[connection signal="pressed" from="PlayerClass/ButtonRapier" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="PlayerClass/ButtonSword" to="." method="_on_button_sword_pressed"]
+[connection signal="pressed" from="PlayerClass/ButtonSword" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="PlayerClass/ButtonGreatSword" to="." method="_on_button_great_sword_pressed"]
+[connection signal="pressed" from="PlayerClass/ButtonGreatSword" to="." method="_on_texture_button_3_pressed"]
+

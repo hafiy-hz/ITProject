@@ -1,6 +1,5 @@
 extends Node
 
-
 const SAVE_PATH = "user://"
 
 signal game_loaded
