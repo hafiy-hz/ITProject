@@ -99,7 +99,7 @@ theme_override_font_sizes/font_size = 50
 text = "What should I call you?"
 horizontal_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+[node name="UsernameInput" type="LineEdit" parent="CanvasLayer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("8_312id")
 placeholder_text = "Enter your Name"
@@ -107,8 +107,8 @@ alignment = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("8_312id")
-text = "Confirm?"
+theme_override_fonts/font = ExtResource("7_st2s4")
+text = "Continue"
 
 [node name="BackButton2" type="TextureButton" parent="CanvasLayer"]
 offset_left = 5.0
@@ -137,6 +137,7 @@ offset_top = 580.0
 offset_right = 1662.0
 offset_bottom = 1780.0
 scale = Vector2(0.252899, 0.473802)
+toggle_mode = true
 texture_normal = ExtResource("9_n4vo8")
 texture_pressed = ExtResource("10_pfhup")
 
@@ -151,6 +152,7 @@ offset_top = 580.0
 offset_right = 1980.0
 offset_bottom = 1780.0
 scale = Vector2(0.252899, 0.473802)
+toggle_mode = true
 texture_normal = ExtResource("9_n4vo8")
 texture_pressed = ExtResource("10_pfhup")
 
@@ -165,6 +167,7 @@ offset_top = 580.0
 offset_right = 2303.0
 offset_bottom = 1780.0
 scale = Vector2(0.252899, 0.473802)
+toggle_mode = true
 texture_normal = ExtResource("9_n4vo8")
 texture_pressed = ExtResource("10_pfhup")
 
@@ -182,6 +185,7 @@ theme_override_fonts/font = ExtResource("8_312id")
 theme_override_font_sizes/font_size = 40
 text = "Pick Your Class"
 
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/BackButton2" to="." method="_on_back_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextureButton2" to="." method="_on_texture_button_2_pressed"]

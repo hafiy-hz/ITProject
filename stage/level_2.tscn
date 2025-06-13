@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://cwu1i076r35sr"]
+[gd_scene load_steps=37 format=4 uid="uid://cwu1i076r35sr"]
 
 [ext_resource type="Script" uid="uid://ho6m5j4d8mt3" path="res://stage/scripts/level.gd" id="1_0ipus"]
 [ext_resource type="Texture2D" uid="uid://dsnwwbruqik8g" path="res://art/RFCastle_1.0/mainlevbuild.png" id="1_h7lwi"]
@@ -14,9 +14,6 @@
 [ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://scripts/LevelTilemapLayer.gd" id="11_4iwck"]
 [ext_resource type="PackedScene" uid="uid://d14uefpqys76h" path="res://stage/player_spawn.tscn" id="13_4iwck"]
 [ext_resource type="PackedScene" uid="uid://4owefshmesp4" path="res://stage/level_transition.tscn" id="14_4iwck"]
-[ext_resource type="PackedScene" uid="uid://b66u2xr8xbbnd" path="res://Chest/chest1.tscn" id="15_6jkt7"]
-[ext_resource type="Resource" uid="uid://b8wr8n8nmul51" path="res://items/a_uncommon_helmet.tres" id="16_28bd7"]
-[ext_resource type="PackedScene" uid="uid://b72d8itanm0ll" path="res://items/item_pickup/item_pickup.tscn" id="16_o5yw0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rpf8"]
 texture = ExtResource("1_h7lwi")
@@ -3520,10 +3517,3 @@ position = Vector2(872, 259)
 monitorable = false
 level = "uid://cv4vfhnwer57m"
 side = 2
-
-[node name="Chest" parent="." instance=ExtResource("15_6jkt7")]
-position = Vector2(231, 40)
-item_data = ExtResource("16_28bd7")
-
-[node name="Itempickup" parent="." instance=ExtResource("16_o5yw0")]
-position = Vector2(278, 50)

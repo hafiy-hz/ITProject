@@ -25,6 +25,7 @@ SaveManager="*res://00_Globals/global_save_manager.gd"
 SceneTransition="*res://GUI/scene_transition/scene_transition.tscn"
 PauseMenu="*res://GUI/pause_menu/pause_menu.tscn"
 MainmenuBgs="*res://mainmenu/MainmenuBGS.tscn"
+player_username="res://mainmenu/player_username.gd"
 
 [display]
 

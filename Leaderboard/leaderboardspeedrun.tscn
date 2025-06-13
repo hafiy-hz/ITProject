@@ -20,18 +20,18 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -200.0
-offset_top = -614.0
-offset_right = -152.0
-offset_bottom = -62.0
+offset_left = -347.0
+offset_top = -956.0
+offset_right = -242.0
+offset_bottom = -109.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.28959, 1.5517)
 texture = ExtResource("1_2q67v")
 
 [node name="WoodenSignboardInPixelArt" type="Sprite2D" parent="."]
-position = Vector2(583, 48)
-scale = Vector2(0.686002, 0.123156)
+position = Vector2(936, 100)
+scale = Vector2(1.17271, 0.291554)
 texture = ExtResource("2_rmbua")
 
 [node name="Label" type="Label" parent="."]
@@ -39,17 +39,17 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -125.5
-offset_top = 18.0
-offset_right = 147.5
-offset_bottom = 71.0
+offset_left = -152.0
+offset_top = 69.0
+offset_right = 121.0
+offset_bottom = 122.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 38
 text = "LEADERBOARD"
 
 [node name="PixelArtWoodenSignboardOnGreen" type="Sprite2D" parent="."]
-position = Vector2(587, 321)
-scale = Vector2(0.866211, 0.933594)
+position = Vector2(957, 556.5)
+scale = Vector2(2.13867, 1.39355)
 texture = ExtResource("2_wpaec")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -72,6 +72,7 @@ size_flags_vertical = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "1. Alice - 1:25.30"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -81,6 +82,7 @@ layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "2. Bob - 1:30.12"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -90,6 +92,7 @@ layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "3. Charlie - 1:45.67"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -99,6 +102,7 @@ layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "4. Diana - 2:00.00"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -108,17 +112,18 @@ layout_mode = 2
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "5. (You!) - 2:10.45"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 171.0
-offset_top = 391.0
-offset_right = 1483.0
-offset_bottom = 1591.0
-scale = Vector2(0.702398, 0.17988)
+offset_left = 251.0
+offset_top = 659.0
+offset_right = 1563.0
+offset_bottom = 1859.0
+scale = Vector2(1.18726, 0.34184)
 texture_normal = ExtResource("3_rmbua")
 texture_pressed = ExtResource("1_2q67v")
 
