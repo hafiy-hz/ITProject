@@ -428,7 +428,7 @@ _data = {
 &"default": SubResource("Animation_5wa8t")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 top_level = true
 y_sort_enabled = true
 texture_filter = 1
