@@ -5,7 +5,7 @@ func _ready() -> void:
 	 # Make sure we're not in game mode
 	PlayerManager.is_in_game = false
 	PlayerManager.player_spawn = false
-   
+	# PlayerManager.player_info_updated.emit() # This might be useful if the menu doesn't update initially
 
 func _on_startbutton_pressed() -> void:
 	get_tree().change_scene_to_file("res://mainmenu/PlayerUsername.tscn")

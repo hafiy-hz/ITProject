@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsp5mi4qnemv8"]
+
+[ext_resource type="Script" uid="uid://cltn33adhlgrv" path="res://00_Globals/PlayerInfoUI.gd" id="1_script"]
+
+[node name="PlayerInfoUI" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="PlayerInfoContainer" type="VBoxContainer" parent="."]
+offset_right = 1.0
+offset_bottom = 50.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="UsernameLabel" type="Label" parent="PlayerInfoContainer"]
+layout_mode = 2
+text = "Username: "
+
+[node name="PlayerClassLabel" type="Label" parent="PlayerInfoContainer"]
+layout_mode = 2
+text = "Class: "

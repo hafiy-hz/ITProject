@@ -173,6 +173,20 @@ theme_override_font_sizes/font_size = 175
 text = "Torch N Steel"
 metadata/_edit_use_anchors_ = true
 
+[node name="PlayerInfoContainer" type="VBoxContainer" parent="CanvasLayer2"]
+offset_right = 1.0
+offset_bottom = 50.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="UsernameLabel" type="Label" parent="CanvasLayer2/PlayerInfoContainer"]
+layout_mode = 2
+text = "Username: "
+
+[node name="PlayerClassLabel" type="Label" parent="CanvasLayer2/PlayerInfoContainer"]
+layout_mode = 2
+text = "Class: "
+
 [connection signal="pressed" from="CanvasLayer2/Control/CenterContainer/VBoxContainer/Startbutton" to="." method="_on_startbutton_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Control/CenterContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Control/CenterContainer/VBoxContainer/Exitbutton" to="." method="_on_exitbutton_pressed"]

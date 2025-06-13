@@ -21,6 +21,9 @@ func Enter() -> void:
 	
 	attacking = true
 	
+	# Set the player's attack damage based on class
+	hurt_box.damage = PlayerManager.player_damage
+	
 	await get_tree().create_timer( 0.075 ).timeout
 	hurt_box.monitoring = true 
 	pass
