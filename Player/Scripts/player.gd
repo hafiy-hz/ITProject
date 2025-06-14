@@ -15,6 +15,7 @@ var max_hp : int = 6
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var hit_box : HitBox = $HitBox
 @onready var state_machine: PlayerStateMachine = $StateMachine
+@onready var hurt_box : HurtBox = $HurtBox
 
 signal direction_changed( new_direction: Vector2 )
 signal player_damaged( hurt_box: HurtBox)
@@ -22,6 +23,8 @@ signal player_damaged( hurt_box: HurtBox)
 func _ready():
 	PlayerManager.player = self
 	state_machine.Initialize(self)
+	# Corrected: Player's attack HitBox should not connect to _take_damage.
+	# This signal is usually emitted by a HurtBox being hit, not a HitBox.
 	hit_box.damaged.connect( _take_damage )
 	update_hp(99)
 

@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://cw1h5safs5sak" path="res://Enemies/Scripts/states/enemy_state_destroy.gd" id="7_8tnav"]
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="7_jlwhn"]
 [ext_resource type="Texture2D" uid="uid://cxqoyw8add6ip" path="res://art/DestroySmoke.png" id="10_pydiu"]
-[ext_resource type="Script" uid="uid://cgqfcrdxycsvj" path="res://Enemies/Scripts/drop_data.gd" id="10_t1krp"]
+[ext_resource type="Script" path="res://Enemies/Scripts/drop_data.gd" id="10_t1krp"]
 [ext_resource type="Resource" uid="uid://bg30gd61gwqdk" path="res://items/gems.tres" id="11_nsi17"]
 [ext_resource type="Resource" uid="uid://dg4m7ytmghexm" path="res://items/apple.tres" id="12_nsi17"]
 
@@ -744,7 +744,7 @@ _data = {
 radius = 6.0
 
 [node name="Slime" type="CharacterBody2D"]
-collision_layer = 258
+collision_layer = 262
 collision_mask = 275
 script = ExtResource("1_q0lue")
 
@@ -798,7 +798,9 @@ libraries = {
 }
 
 [node name="HitBox" parent="." instance=ExtResource("7_jlwhn")]
+collision_layer = 1
 collision_mask = 2
+monitoring = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, -3)
@@ -809,7 +811,9 @@ debug_color = Color(0.768627, 0, 0.113725, 0.419608)
 max_polyphony = 4
 
 [node name="HurtBox" parent="." instance=ExtResource("6_pg00x")]
+collision_layer = 1
 collision_mask = 2
+monitorable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, -3)

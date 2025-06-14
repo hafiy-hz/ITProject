@@ -1,8 +1,7 @@
-class_name BeamAttack extends Node
+class_name BeamAttack extends Node2D
 
-@export var use_timer : bool = false
+@export var use_timer : bool = true
 @export var time_between_attack : float = 20
-
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -14,6 +13,7 @@ func _ready() -> void:
 func attack() -> void:
 	animation_player.play( "attack" )
 	await animation_player.animation_finished
+	
 	animation_player.play( "default" )
 	if use_timer == true:
 		attack_delay()
