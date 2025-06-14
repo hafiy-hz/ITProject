@@ -20,7 +20,6 @@ func init() -> void:
 
 func enter() -> void:
 	enemy.invulnerable = true 
-	enemy.is_dead = true  # Prevent future state changes
 	_direction = enemy.global_position.direction_to( _damage_position )
 	enemy.set_direction( _direction )
 	enemy.velocity = _direction * -knockback_speed
