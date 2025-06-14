@@ -1,6 +1,7 @@
 class_name HitBox extends Area2D
 
-signal damaged( hurt_box : HurtBox ) 
+signal damaged( hurt_box : HurtBox )
+
 
 func _ready():
 	pass
