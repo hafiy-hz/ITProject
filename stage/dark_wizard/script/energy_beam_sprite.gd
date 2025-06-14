@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var speed : float = 450
+@export var speed : float = 100
 
 
 var rect : Rect2
