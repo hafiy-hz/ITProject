@@ -78,7 +78,7 @@ func teleport( _location : int ) -> void:
 	if hp < max_hp:
 		shoot_orb()
 	
-	await get_tree().create_timer( 1 ).timeout
+	await get_tree().create_timer( 5 ).timeout
 	
 	boss_node.global_position = positions[ _location ]
 	current_position = _location
