@@ -4,8 +4,6 @@ class_name EnemyStateMachine extends Node
 var states : Array[ EnemyState ]
 var prev_state : EnemyState 
 var current_state : EnemyState 
-var enemy : Enemy
-var is_dead: bool = false
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_DISABLED
@@ -35,13 +33,14 @@ func initialize( _enemy : Enemy ) -> void:
 		process_mode = Node.PROCESS_MODE_INHERIT
 	pass
 
-func change_state(new_state: EnemyState) -> void:
-	if enemy.is_dead:
-		return  # 👈 Don't allow any state changes after death
-
-	# Continue with the state change...
-	if current_state != null:
+func change_state( new_state : EnemyState ) -> void:
+	if new_state == null || new_state == current_state:
+		return
+	
+	if current_state:
 		current_state.exit()
+	
+	
+	prev_state = current_state
 	current_state = new_state
-	if current_state != null:
-		current_state.enter()
+	current_state.enter()

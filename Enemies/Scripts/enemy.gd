@@ -12,7 +12,6 @@ var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
 var player : Player
 var invulnerable : bool = false
-var is_dead: bool = false
 
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
