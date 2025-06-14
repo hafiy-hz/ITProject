@@ -38,23 +38,23 @@ func exit() -> void:
 
 
 
-func process( _delta : float ) -> EnemyState:
-	if _animation_finished == true:
+func process(_delta: float) -> EnemyState:
+	# Only allow transition if animation is finished AND NOT in Destroy state
+	if _animation_finished and not (state_machine.current_state is EnemyStateDestroy):
 		return next_state
+	
+	# Continue with other behavior like velocity damping (optional)
 	enemy.velocity -= enemy.velocity * decelerate_speed * _delta
-	if state_machine.current_state is EnemyStateDestroy:
-		return null
+	
 	return null
 
+
 func physics( _delta : float ) -> EnemyState:
-	if state_machine.current_state is EnemyStateDestroy:
-		return null
 	return null
 
 func _on_enemy_damaged( hurt_box : HurtBox ) -> void:
 	_damage_position = hurt_box.global_position
 	state_machine.change_state( self )
 
-func _on_animation_finished( _a : String ) -> void:
+func _on_animation_finished(_a: String) -> void:
 	_animation_finished = true
-	

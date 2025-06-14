@@ -34,14 +34,15 @@ func exit() -> void:
 	pass
 
 func process( _delta : float ) -> EnemyState:
+	if state_machine.current_state is EnemyStateDestroy:
+		return null
+	
 	var new_dir : Vector2 = enemy.global_position.direction_to( PlayerManager.player.global_position )
 	_direction = lerp( _direction, new_dir, turn_rate )
 	enemy.velocity = _direction * chase_speed
 	if enemy.set_direction( _direction ):
 		enemy.update_animation( anim_name )
 	
-	if state_machine.current_state is EnemyStateDestroy:
-		return null
 	
 	if _can_see_player == false:
 		_timer -= _delta 
@@ -53,7 +54,7 @@ func process( _delta : float ) -> EnemyState:
 
 func physics( _delta : float ) -> EnemyState:
 	if state_machine.current_state is EnemyStateDestroy:
-		return null
+		_can_see_player = false
 	return null
 
 func _on_player_enter() -> void:

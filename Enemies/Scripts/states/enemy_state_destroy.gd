@@ -45,8 +45,20 @@ func _on_enemy_destroyed( hurt_box : HurtBox ) -> void:
 	_damage_position = hurt_box.global_position
 	state_machine.change_state( self )
 
-func _on_animation_finished( _a : String ) -> void:
+func _on_animation_finished(_a: String) -> void:
+	# Stop further state changes by disabling the state machine logic
+	if state_machine:
+		state_machine.set_process(false)
+		state_machine.set_physics_process(false)
+		state_machine.current_state = null
+
+	# Optionally disconnect animation signal to clean up
+	if enemy.animation_player.animation_finished.is_connected(_on_animation_finished):
+		enemy.animation_player.animation_finished.disconnect(_on_animation_finished)
+
+	# Finally, free the enemy
 	enemy.queue_free()
+
 	
 func disable_hurt_box() -> void:
 	var hurt_box : HurtBox = enemy.get_node_or_null("HurtBox")
