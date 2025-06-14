@@ -3523,6 +3523,11 @@ top_level = true
 position = Vector2(293, -171)
 rotation = 0.027423
 
+[node name="Goblin2" parent="goblin" instance=ExtResource("15_iprl0")]
+top_level = true
+position = Vector2(512, -178)
+rotation = 0.027423
+
 [node name="Goblin3" parent="goblin" instance=ExtResource("15_iprl0")]
 top_level = true
 position = Vector2(1282, 321)
@@ -3557,11 +3562,6 @@ rotation = -6.33302
 top_level = true
 position = Vector2(400, 463)
 rotation = -6.30426
-
-[node name="Goblin2" parent="goblin" instance=ExtResource("15_iprl0")]
-top_level = true
-position = Vector2(492, -175)
-rotation = -0.0014417
 
 [node name="chest" type="Node" parent="."]
 

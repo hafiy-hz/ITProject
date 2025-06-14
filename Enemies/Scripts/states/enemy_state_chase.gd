@@ -13,7 +13,7 @@ class_name EnemyStateChase extends EnemyState
 var _timer : float = 0.0
 var _direction : Vector2
 var _can_see_player : bool = false
-
+ 
 func init() -> void:
 	if vision_area:
 		vision_area.player_entered.connect( _on_player_enter )
@@ -24,7 +24,7 @@ func enter() -> void:
 	_timer = state_aggro_duration
 	enemy.update_animation( anim_name )
 	if attack_area:
-		attack_area.monitoring = true
+		attack_area.monitoring = true 
 	pass 
 
 func exit() -> void:
@@ -40,6 +40,9 @@ func process( _delta : float ) -> EnemyState:
 	if enemy.set_direction( _direction ):
 		enemy.update_animation( anim_name )
 	
+	if state_machine.current_state is EnemyStateDestroy:
+		return null
+	
 	if _can_see_player == false:
 		_timer -= _delta 
 		if _timer < 0:
@@ -49,6 +52,8 @@ func process( _delta : float ) -> EnemyState:
 	return null
 
 func physics( _delta : float ) -> EnemyState:
+	if state_machine.current_state is EnemyStateDestroy:
+		return null
 	return null
 
 func _on_player_enter() -> void:
