@@ -1,4 +1,4 @@
-class_name InventorySlotUI extends Button
+class_name InventorySlot extends Button
 
 
 var slot_data : SlotData : set = set_slot_data
@@ -19,13 +19,8 @@ func set_slot_data( value :  SlotData )-> void:
 	slot_data = value
 	if slot_data == null:
 		return
-	if slot_data.item_data == null:
-		texture_rect.texture = null
-		label.text = ""
-		return
 	texture_rect.texture = slot_data.item_data.texture
 	label.text = str( slot_data.quantity )
-
 
 
 func item_focused() -> void:
