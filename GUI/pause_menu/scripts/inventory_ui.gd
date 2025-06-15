@@ -1,13 +1,12 @@
-class_name InventoryUI extends Control
+class_name InventoryUI
+extends Control
+
 
 const INVENTORY_SLOT = preload("res://GUI/pause_menu/inventory/inventory_slot.tscn")
 
+var focus_index: int = 0
 
-var focus_index : int = 0
-
-
-@export var data : InventoryData
-
+@export var data: InventoryData
 
 func _ready() -> void:
 	PauseMenu.shown.connect( update_inventory )
@@ -16,11 +15,14 @@ func _ready() -> void:
 	data.changed.connect( on_inventory_changed )
 	pass
 
+    if data != null:
+        data.changed.connect(on_inventory_changed)
+    else:
+        push_error("InventoryUI: Inventory data is null. Cannot connect 'changed' signal.")
 
 func clear_inventory() -> void:
 	for c in get_children():
 		c.queue_free()
-
 
 func update_inventory() -> void:
 	for s in data.slots:
