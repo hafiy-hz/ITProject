@@ -1,0 +1,145 @@
+[gd_scene load_steps=16 format=3 uid="uid://dwfbdnoijq0s8"]
+
+[ext_resource type="Script" uid="uid://2o2x7ktgf3mm" path="res://mainmenu/Scripts,Scenes/main_menu.gd" id="1_hhk3y"]
+[ext_resource type="Texture2D" uid="uid://b53a3txhsjsec" path="res://mainmenu/sprites/backgroundimage.png" id="2_0nyrp"]
+[ext_resource type="Texture2D" uid="uid://bddusuyc6ic6w" path="res://sprites/particles/leaf.webp" id="3_r61to"]
+[ext_resource type="Script" uid="uid://dijl74cwiqr0k" path="res://mainmenu/Scripts,Scenes/canvas_layer.gd" id="4_mmler"]
+[ext_resource type="Texture2D" uid="uid://b6xj0jkae86mn" path="res://mainmenu/sprites/button_normal.png" id="5_58os0"]
+[ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://mainmenu/sprites/button_pressed.png" id="6_csijh"]
+[ext_resource type="Texture2D" uid="uid://d10blkakyfdag" path="res://mainmenu/sprites/button_hover.png" id="7_ooiep"]
+[ext_resource type="FontFile" uid="uid://du1y0y7uge5vx" path="res://mainmenu/Fontstyles/Kenney Pixel.ttf" id="8_2emi1"]
+[ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://mainmenu/Fontstyles/Kenney Mini Square.ttf" id="9_1v77a"]
+[ext_resource type="FontFile" uid="uid://dsfg1k6fs0aci" path="res://mainmenu/Fontstyles/Kenney Future Narrow.ttf" id="10_n63eq"]
+
+[sub_resource type="Curve" id="Curve_ptanl"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 36.4045), 104.783, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ni4cm"]
+curve = SubResource("Curve_ptanl")
+
+[sub_resource type="Curve" id="Curve_qrs1n"]
+_data = [Vector2(0, 0.348315), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wxggw"]
+curve = SubResource("Curve_qrs1n")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_urtg7"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(350, 1, 1)
+angle_min = 1.07288e-05
+angle_max = 35.0
+angle_curve = SubResource("CurveTexture_ni4cm")
+inherit_velocity_ratio = 15.0
+initial_velocity_min = 28.74
+initial_velocity_max = 28.74
+gravity = Vector3(20, 98, 0)
+scale_curve = SubResource("CurveTexture_wxggw")
+
+[node name="TheEnd" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_hhk3y")
+
+[node name="Backgroundimage" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(987.556, 544.805)
+rotation = -0.0228583
+scale = Vector2(2.9606, 2.85472)
+texture = ExtResource("2_0nyrp")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Backgroundimage"]
+modulate = Color(4.87324e-06, 0.408274, 0.0483681, 1)
+position = Vector2(-65.4296, -266.585)
+amount = 7
+texture = ExtResource("3_r61to")
+lifetime = 5.92
+speed_scale = 0.85
+process_material = SubResource("ParticleProcessMaterial_urtg7")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+script = ExtResource("4_mmler")
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer2/Control"]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 874.0
+offset_right = 1245.0
+offset_bottom = 1103.0
+scale = Vector2(1.01419, 0.878733)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Control/CenterContainer"]
+layout_mode = 2
+
+[node name="Exitbutton" type="TextureButton" parent="CanvasLayer2/Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("5_58os0")
+texture_pressed = ExtResource("6_csijh")
+texture_hover = ExtResource("7_ooiep")
+
+[node name="Label" type="Label" parent="CanvasLayer2/Control/CenterContainer/VBoxContainer/Exitbutton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.91608
+offset_top = 62.9967
+offset_right = 5.91608
+offset_bottom = 1.9967
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_2emi1")
+theme_override_font_sizes/font_size = 100
+text = "Exit
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer2/Control"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 79.0
+offset_right = 1751.0
+offset_bottom = 298.0
+
+[node name="Label" type="Label" parent="CanvasLayer2/Control/CenterContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.836307, 0.616362, 0.300037, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_1v77a")
+theme_override_font_sizes/font_size = 175
+text = "Torch N Steel"
+metadata/_edit_use_anchors_ = true
+
+[node name="Container" type="Container" parent="CanvasLayer2/Control"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 431.0
+offset_right = 491.0
+offset_bottom = 471.0
+
+[node name="Label" type="Label" parent="CanvasLayer2/Control/Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.835294, 0.615686, 0.301961, 1)
+theme_override_fonts/font = ExtResource("10_n63eq")
+theme_override_font_sizes/font_size = 128
+text = "THANK YOU FOR PLAYING 
+      HOPE U GUYS LIKE IT"
+
+[connection signal="pressed" from="CanvasLayer2/Control/CenterContainer/VBoxContainer/Exitbutton" to="." method="_on_exitbutton_pressed"]
