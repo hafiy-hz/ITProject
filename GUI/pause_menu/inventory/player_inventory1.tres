@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-[gd_resource type="Resource" script_class="InventoryData" load_steps=2 format=3 uid="uid://crxwm1twxh7rd"]
-=======
-[gd_resource type="Resource" script_class="InventoryData" load_steps=3 format=3 uid="uid://mwwt2obw5ors"]
->>>>>>> parent of a7929dc (Merge pull request #103 from hafiy-hz/Timer-speedrun)
+[gd_resource type="Resource" script_class="InventoryData" load_steps=2 format=3 uid="uid://ctpg2xhsaa233"]
 
 [ext_resource type="Script" uid="uid://b015lxw5qan1g" path="res://GUI/pause_menu/scripts/inventory_data.gd" id="1_ecfwn"]
 
 [resource]
 script = ExtResource("1_ecfwn")
-<<<<<<< HEAD
 slots = null
-=======
-slots = Array[ExtResource("2_17p7e")]([])
->>>>>>> parent of a7929dc (Merge pull request #103 from hafiy-hz/Timer-speedrun)
 metadata/_custom_type_script = "uid://b015lxw5qan1g"

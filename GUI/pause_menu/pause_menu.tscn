@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="2_yiq8o"]
 [ext_resource type="Script" uid="uid://dbib2oam48ph" path="res://GUI/pause_menu/scripts/inventory_ui.gd" id="3_36pfd"]
 [ext_resource type="PackedScene" uid="uid://b8ugpemory517" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_rsqrg"]
+
 [ext_resource type="Resource" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_ewgu5"]
+
 [ext_resource type="PackedScene" path="res://GUI/pause_menu/save_slot_ui.tscn" id="7_save_slot"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsqrg"]
