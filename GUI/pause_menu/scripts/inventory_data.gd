@@ -2,25 +2,22 @@ class_name InventoryData extends Resource
 
 @export var slots: Array[SlotData]
 
-func _init() -> void:
-	connect_slots()
-
-# Add item to inventory
+#func _init() -> void:
+	#connect_slots()
 func add_item(item: ItemsData, count: int = 1) -> bool:
 	# Try to stack item if already present
 	for s in slots:
-		if s and s.item_data == item:
+		if s != null and s.item_data == item:
 			s.quantity += count
 			return true
 
 	# Add to empty slot
-	for i in slots.size():
+	for i in range(slots.size()):
 		if slots[i] == null:
-			var new_slot = SlotData.new()
-			new_slot.item_data = item
-			new_slot.quantity = count
-			slots[i] = new_slot
-			new_slot.changed.connect(slot_changed)
+			var new = SlotData.new()
+			new.item_data = item
+			new.quantity = count
+			slots[i] = new
 			return true
 
 	print("Inventory is full!")

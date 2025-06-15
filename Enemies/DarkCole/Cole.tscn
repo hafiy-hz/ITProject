@@ -11,12 +11,11 @@
 [ext_resource type="Script" uid="uid://dbfateb78ey2t" path="res://Enemies/Scripts/states/enemy_state_stun.gd" id="9_kmfxc"]
 [ext_resource type="Script" uid="uid://cw1h5safs5sak" path="res://Enemies/Scripts/states/enemy_state_destroy.gd" id="10_aqy0g"]
 [ext_resource type="Script" uid="uid://cgqfcrdxycsvj" path="res://Enemies/Scripts/drop_data.gd" id="11_511y1"]
-[ext_resource type="Resource" uid="uid://b0bdmt4kaie05" path="res://items/potion.tres" id="12_jylje"]
+[ext_resource type="Resource" uid="uid://dso3ksjj5i5k4" path="res://items/potion.tres" id="12_jylje"]
 [ext_resource type="Script" uid="uid://c4gn0xge6hux3" path="res://Enemies/Scripts/states/enemy_state_chase.gd" id="14_trj3h"]
 [ext_resource type="Texture2D" uid="uid://cxqoyw8add6ip" path="res://art/DestroySmoke.png" id="15_iqyq0"]
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="16_8v6kv"]
 [ext_resource type="PackedScene" uid="uid://d1c7ymtuontqg" path="res://Enemies/vision_area.tscn" id="17_rksoy"]
-
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqytk"]
 radius = 23.0217
@@ -646,7 +645,6 @@ z_index = 1
 collision_layer = 258
 collision_mask = 275
 script = ExtResource("1_r2g82")
-hp = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -5)
