@@ -4,12 +4,16 @@ class_name GuardianStateStun extends GuardianState
 @export var knockback_speed : float = 200.0
 @export var decelerate_speed : float = 10
 
+
 @export_category("AI")
 @export var next_state : GuardianState
 
 var _damage_position : Vector2
 var _direction : Vector2
 var _animation_finished : bool = false
+
+var _has_summoned_enemies := false
+
 
 func init() -> void:
 	guardian.guardian_damaged.connect( _on_guardian_damaged )
@@ -29,6 +33,7 @@ func enter() -> void:
 	
 	guardian.update_animation( anim_name )
 	guardian.animation_player.animation_finished.connect( _on_animation_finished )
+	
 	pass 
 
 func exit() -> void:

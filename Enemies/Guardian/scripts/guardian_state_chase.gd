@@ -5,7 +5,7 @@ class_name GuardianStateChase extends GuardianState
 @export var turn_rate : float = 0.25
 
 @export_category("AI")
-@export var vision_area : VisionArea
+@export var vision_area : GuardianVisionArea
 @export var attack_area : HurtBox
 @export var state_aggro_duration : float = 0.5
 @export var next_state : GuardianState

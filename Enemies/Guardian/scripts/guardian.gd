@@ -13,6 +13,14 @@ var direction : Vector2 = Vector2.ZERO
 var player : Player
 var invulnerable : bool = false
 
+@export var summoned_enemy_scene: PackedScene
+@export var number_to_summon: int = 3
+@export var summon_radius_min: float = 50.0
+@export var summon_radius_max: float = 150.0
+@export var summon_threshold: int = 50
+
+var has_summoned_on_hp := false
+
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Sprite2D
@@ -20,6 +28,7 @@ var invulnerable : bool = false
 @onready var state_machine : GuardianStateMachine = $GuardianStateMachine
 
 func _ready():
+	randomize()
 	state_machine.initialize( self )
 	player = PlayerManager.player
 	hit_box.damaged.connect( _take_damage )
@@ -70,6 +79,15 @@ func _take_damage( hurt_box : HurtBox ) -> void:
 	hp -= hurt_box.damage
 	guardian_damaged.emit()
 
+#summon enemy
+	if not has_summoned_on_hp and hp <= summon_threshold:
+		_summon_enemies()
+		has_summoned_on_hp = true
+
+	# Optional: floating text, death handling, etc.
+	if hp == 50:
+		_summon_enemies()
+
 	# Show floating damage number
 	var floating_text = preload("res://Enemies/floating_text.tscn").instantiate()
 	floating_text.position = global_position + Vector2(0, -20)
@@ -80,3 +98,20 @@ func _take_damage( hurt_box : HurtBox ) -> void:
 		guardian_damaged.emit( hurt_box )
 	else:
 		guardian_destroyed.emit( hurt_box )
+
+func _summon_enemies():
+	if not summoned_enemy_scene:
+		print("No enemy scene assigned.")
+		return
+
+	for i in number_to_summon:
+		var enemy = summoned_enemy_scene.instantiate()
+		if enemy is CharacterBody2D:
+			var angle = randf() * TAU
+			var radius = randf_range(summon_radius_min, summon_radius_max)
+			var offset = Vector2(cos(angle), sin(angle)) * radius
+
+			enemy.global_position = global_position + offset
+			get_tree().current_scene.add_child(enemy)
+		else:
+			print("Warning: Summoned object is not CharacterBody2D.")

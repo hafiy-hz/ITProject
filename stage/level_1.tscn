@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://cwu1i076r35sr"]
+[gd_scene load_steps=41 format=4 uid="uid://cwu1i076r35sr"]
 
 [ext_resource type="Script" uid="uid://bn0ytny1aej5k" path="res://00_Globals/LevelManagers.gd" id="1_75bhg"]
 [ext_resource type="Texture2D" uid="uid://dsnwwbruqik8g" path="res://art/RFCastle_1.0/mainlevbuild.png" id="2_2ouwm"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://dph1rrsjnm3cg" path="res://Enemies/Guardian/Guardian.tscn" id="15_2ouwm"]
 [ext_resource type="PackedScene" uid="uid://demle5oq8dx3y" path="res://Enemies/Goblin/Goblin.tscn" id="15_iprl0"]
 [ext_resource type="PackedScene" uid="uid://cajar7j1rs8xl" path="res://Enemies/Slime/slime.tscn" id="16_75bhg"]
-[ext_resource type="PackedScene" uid="uid://cy35jkjs7fd23" path="res://Enemies/DarkCole/Cole.tscn" id="16_ol4kp"]
 [ext_resource type="PackedScene" uid="uid://ccjltabtlvdg1" path="res://scene/next_level.tscn" id="17_75bhg"]
 [ext_resource type="PackedScene" uid="uid://b66u2xr8xbbnd" path="res://Chest/chest1.tscn" id="18_2ouwm"]
 
@@ -3541,12 +3540,6 @@ position = Vector2(432, 443)
 [node name="Guardian" parent="goblin" instance=ExtResource("15_2ouwm")]
 position = Vector2(880, 333)
 scale = Vector2(1, 1.00331)
-
-[node name="Cole" parent="goblin" instance=ExtResource("16_ol4kp")]
-position = Vector2(983, 417)
-
-[node name="Cole2" parent="goblin" instance=ExtResource("16_ol4kp")]
-position = Vector2(1076, 330)
 
 [node name="chest" type="Node" parent="."]
 

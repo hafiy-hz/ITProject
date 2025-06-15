@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dph1rrsjnm3cg"]
+[gd_scene load_steps=47 format=3 uid="uid://dph1rrsjnm3cg"]
 
 [ext_resource type="Script" uid="uid://dn6tlvwj7vyl3" path="res://Enemies/Guardian/scripts/guardian.gd" id="1_j5cqs"]
 [ext_resource type="Texture2D" uid="uid://cfr6j25sesvoq" path="res://Enemies/Guardian/Guardian.png" id="2_j5cqs"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://dyxmvpxr8h15w" path="res://Enemies/Guardian/scripts/guardian_state_wander.gd" id="8_fg1df"]
 [ext_resource type="Script" uid="uid://dhckvr5rfh8j8" path="res://Enemies/Guardian/scripts/guardian_state_stun.gd" id="9_0yqcc"]
 [ext_resource type="Script" uid="uid://ceuvpvp24cykn" path="res://Enemies/Guardian/scripts/guardian_state_destroy.gd" id="10_4f30b"]
+[ext_resource type="PackedScene" uid="uid://cy35jkjs7fd23" path="res://Enemies/DarkCole/Cole.tscn" id="10_nkhw0"]
 [ext_resource type="Script" uid="uid://cgqfcrdxycsvj" path="res://Enemies/Scripts/drop_data.gd" id="11_bcfxy"]
 [ext_resource type="Resource" uid="uid://b0bdmt4kaie05" path="res://items/potion.tres" id="12_1cio2"]
 [ext_resource type="Resource" uid="uid://bg30gd61gwqdk" path="res://items/gems.tres" id="13_sfiir"]
@@ -782,7 +783,8 @@ radius = 72.111
 collision_layer = 258
 collision_mask = 275
 script = ExtResource("1_j5cqs")
-hp = null
+summoned_enemy_scene = ExtResource("10_nkhw0")
+summon_radius_min = 100.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
@@ -832,8 +834,9 @@ next_state = NodePath("../Chase")
 script = ExtResource("10_4f30b")
 drops = Array[ExtResource("11_bcfxy")]([SubResource("Resource_0ge8g"), SubResource("Resource_pcgih"), SubResource("Resource_fg1df")])
 
-[node name="Chase" type="Node" parent="GuardianStateMachine" node_paths=PackedStringArray("attack_area", "next_state")]
+[node name="Chase" type="Node" parent="GuardianStateMachine" node_paths=PackedStringArray("vision_area", "attack_area", "next_state")]
 script = ExtResource("14_cv3ie")
+vision_area = NodePath("../../GuardianVisionArea")
 attack_area = NodePath("../../Sprite2D/AttackHurtBox")
 next_state = NodePath("../Idle")
 
@@ -871,6 +874,7 @@ shape = SubResource("CircleShape2D_mqytk")
 debug_color = Color(0.817287, 0.405503, 0, 0.42)
 
 [node name="GuardianVisionArea" parent="." instance=ExtResource("19_nkhw0")]
+collision_mask = 2147483905
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuardianVisionArea"]
 position = Vector2(2, 0)
