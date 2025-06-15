@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://kbyi8iejx42i" path="res://Player/Audio/hit_player.wav" id="12_5wa8t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j23h2"]
-radius = 13.0
+radius = 15.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p7tob"]
 radius = 3.0

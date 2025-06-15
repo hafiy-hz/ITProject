@@ -251,3 +251,26 @@ func explosion( _p : Vector2 = Vector2.ZERO ) -> void:
     e.global_position = boss_node.global_position + _p
     get_parent().add_child.call_deferred( e )
     pass
+
+# Called when a guardian is killed - reduces boss health by specified amount
+func take_guardian_damage(damage_amount: int) -> void:
+	hp = clampi(hp - damage_amount, 0, max_hp)
+	print("Boss health reduced to: ", hp, "/", max_hp)
+	
+	# Update boss health bar
+	PlayerHud.update_boss_health(hp, max_hp)
+	
+	# Play damage animation
+	animation_player_damage.play("damaged")
+	animation_player_damage.seek(0)
+	animation_player_damage.queue("default")
+	
+	# Play hurt audio
+	play_audio(audio_hurt)
+
+# Called when all guardians are defeated - kills the boss instantly
+func die_from_guardians() -> void:
+	print("Boss defeated by guardian deaths!")
+	hp = 0
+	PlayerHud.update_boss_health(hp, max_hp)
+	defeat()

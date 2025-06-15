@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvqein6qibdt2"]
+[gd_scene load_steps=2 format=3 uid="uid://cjv712tqupkxm"]
 
-[ext_resource type="Script" uid="uid://da2m31a03xpgf" path="res://Enemies/Guardian/scripts/guardian_vision_area.gd" id="1_pr20f"]
+[ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian_vision_area.gd" id="1_pr20f"]
 
 [node name="GuardianVisionArea" type="Area2D"]
 collision_layer = 0
