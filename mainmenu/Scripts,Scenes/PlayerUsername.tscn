@@ -193,5 +193,5 @@ layout_mode = 0
 [connection signal="pressed" from="PlayerClass/ButtonRapier" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="PlayerClass/ButtonSword" to="." method="_on_button_sword_pressed"]
 [connection signal="pressed" from="PlayerClass/ButtonSword" to="." method="_on_texture_button_2_pressed"]
-[connection signal="pressed" from="PlayerClass/ButtonGreatSword" to="." method="_on_button_great_sword_pressed"]
 [connection signal="pressed" from="PlayerClass/ButtonGreatSword" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="PlayerClass/ButtonGreatSword" to="." method="_on_button_great_sword_pressed"]
