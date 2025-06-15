@@ -3292,6 +3292,7 @@ script = ExtResource("1_bbrih")
 
 [node name="Player" parent="." instance=ExtResource("5_ydxm8")]
 position = Vector2(416, 424)
+collision_layer = 287
 
 [node name="tile" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -3386,8 +3387,9 @@ energy = 0.75
 texture = SubResource("GradientTexture2D_kg2qh")
 
 [node name="HurtBox" parent="DarkWizardBoss/BossNode" instance=ExtResource("10_f2um1")]
-collision_layer = 287
-collision_mask = 1
+collision_layer = 276
+collision_mask = 3
+damage = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DarkWizardBoss/BossNode/HurtBox"]
 position = Vector2(0, -18)
@@ -3396,7 +3398,7 @@ debug_color = Color(0.988366, 0, 0.307934, 0)
 
 [node name="HitBox" parent="DarkWizardBoss/BossNode" instance=ExtResource("11_px4of")]
 collision_layer = 287
-collision_mask = 1
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DarkWizardBoss/BossNode/HitBox"]
 position = Vector2(0, -21)

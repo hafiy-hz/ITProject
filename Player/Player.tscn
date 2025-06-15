@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://kbyi8iejx42i" path="res://Player/Audio/hit_player.wav" id="12_5wa8t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j23h2"]
-radius = 10.4403
+radius = 13.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p7tob"]
 radius = 3.0
@@ -68,7 +68,19 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 6)]
+"values": [Vector2(1, -14)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/AttackHurtBox/CollisionShape2D2:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.5, 2.5)]
 }
 
 [sub_resource type="Animation" id="Animation_0j2ni"]
@@ -105,10 +117,22 @@ tracks/2/path = NodePath("Sprite2D/AttackHurtBox/CollisionShape2D2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.4),
+"times": PackedFloat32Array(0, 0.133333, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Vector2(0, 6), Vector2(3, 16), Vector2(1, 6)]
+"values": [Vector2(1, 11), Vector2(3, 16), Vector2(1, 11)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/AttackHurtBox/CollisionShape2D2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 6), Vector2(3, 16), Vector2(0, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_v0k0e"]
@@ -145,10 +169,10 @@ tracks/2/path = NodePath("Sprite2D/AttackHurtBox/CollisionShape2D2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.4, 0.466667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.166667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Vector2(0, 6), Vector2(8, 15), Vector2(0, 6), Vector2(-2, 5)]
+"values": [Vector2(0, 6), Vector2(8, 15), Vector2(0, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_j23h2"]
@@ -185,10 +209,22 @@ tracks/2/path = NodePath("Sprite2D/AttackHurtBox/CollisionShape2D2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.433333),
+"times": PackedFloat32Array(0, 0.133333, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Vector2(3, 16), Vector2(2, 6), Vector2(2, 13)]
+"values": [Vector2(3, 16), Vector2(2, 4), Vector2(3, 16)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/AttackHurtBox/CollisionShape2D2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(3, 16), Vector2(2, 6), Vector2(3, 16)]
 }
 
 [sub_resource type="Animation" id="Animation_q3lat"]
@@ -461,11 +497,14 @@ monitoring = false
 monitorable = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/AttackHurtBox"]
-position = Vector2(0, 6)
+z_index = 1
+position = Vector2(1, -14)
+scale = Vector2(2.5, 2.5)
 shape = SubResource("CircleShape2D_j23h2")
 debug_color = Color(0.996078, 0, 0.168627, 0.301961)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_p7tob")
 debug_color = Color(0.383369, 0.367967, 0, 0.42)
@@ -509,6 +548,7 @@ collision_layer = 255
 collision_mask = 255
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/Area2D"]
+visible = false
 shape = SubResource("RectangleShape2D_p7tob")
 debug_color = Color(0, 0.640211, 0.353317, 0.42)
 
@@ -517,6 +557,7 @@ collision_layer = 2
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+visible = false
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_5wa8t")
 debug_color = Color(0.685614, 0.500623, 5.77569e-07, 0.42)
@@ -527,8 +568,11 @@ libraries = {
 }
 
 [node name="HurtBox" parent="." instance=ExtResource("8_s1rgi")]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+visible = false
 position = Vector2(0, -6)
 shape = SubResource("CapsuleShape2D_p7tob")
 debug_color = Color(0.972549, 0, 0.443137, 0.0588235)
@@ -538,6 +582,7 @@ collision_layer = 2147483648
 collision_mask = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="DetectionArea"]
+visible = false
 position = Vector2(0, -6)
 shape = SubResource("CapsuleShape2D_dm7nj")
 debug_color = Color(0.929418, 0.132021, 0.57205, 0.42)

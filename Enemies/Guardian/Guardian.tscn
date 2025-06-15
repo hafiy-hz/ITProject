@@ -1,24 +1,25 @@
 [gd_scene load_steps=47 format=3 uid="uid://dph1rrsjnm3cg"]
 
-[ext_resource type="Script" uid="uid://dn6tlvwj7vyl3" path="res://Enemies/Guardian/scripts/guardian.gd" id="1_j5cqs"]
+[ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian.gd" id="1_j5cqs"]
 [ext_resource type="Texture2D" uid="uid://cfr6j25sesvoq" path="res://Enemies/Guardian/Guardian.png" id="2_j5cqs"]
 [ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="3_nkhw0"]
 [ext_resource type="AudioStream" uid="uid://csrlgtrsu6gyj" path="res://Player/Audio/hit_01.wav" id="4_fg1df"]
 [ext_resource type="AudioStream" uid="uid://dnwr1mehe5nsw" path="res://Player/Audio/hit_00.wav" id="5_0yqcc"]
-[ext_resource type="Script" uid="uid://djc8yse3clhcl" path="res://Enemies/Guardian/scripts/guardian_state_machine.gd" id="6_sfiir"]
-[ext_resource type="Script" uid="uid://kc1ooatn7yya" path="res://Enemies/Guardian/scripts/guardian_state_idle.gd" id="7_nkhw0"]
-[ext_resource type="Script" uid="uid://dyxmvpxr8h15w" path="res://Enemies/Guardian/scripts/guardian_state_wander.gd" id="8_fg1df"]
-[ext_resource type="Script" uid="uid://dhckvr5rfh8j8" path="res://Enemies/Guardian/scripts/guardian_state_stun.gd" id="9_0yqcc"]
-[ext_resource type="Script" uid="uid://ceuvpvp24cykn" path="res://Enemies/Guardian/scripts/guardian_state_destroy.gd" id="10_4f30b"]
+[ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian_state_machine.gd" id="6_sfiir"]
+[ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian_state_idle.gd" id="7_nkhw0"]
+[ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian_state_wander.gd" id="8_fg1df"]
+[ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian_state_stun.gd" id="9_0yqcc"]
+[ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian_state_destroy.gd" id="10_4f30b"]
 [ext_resource type="PackedScene" uid="uid://cy35jkjs7fd23" path="res://Enemies/DarkCole/Cole.tscn" id="10_nkhw0"]
 [ext_resource type="Script" uid="uid://cgqfcrdxycsvj" path="res://Enemies/Scripts/drop_data.gd" id="11_bcfxy"]
 [ext_resource type="Resource" uid="uid://b0bdmt4kaie05" path="res://items/potion.tres" id="12_1cio2"]
-[ext_resource type="Resource" uid="uid://bg30gd61gwqdk" path="res://items/gems.tres" id="13_sfiir"]
-[ext_resource type="Script" uid="uid://dm8m35mwe8xkw" path="res://Enemies/Guardian/scripts/guardian_state_chase.gd" id="14_cv3ie"]
-[ext_resource type="Resource" uid="uid://dg4m7ytmghexm" path="res://items/apple.tres" id="14_nkhw0"]
+[ext_resource type="Resource" uid="uid://3xtfrrcbk1p0" path="res://items/gems.tres" id="13_sfiir"]
+[ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian_state_chase.gd" id="14_cv3ie"]
+[ext_resource type="Resource" uid="uid://mkk76xhkw40o" path="res://items/apple.tres" id="14_nkhw0"]
 [ext_resource type="Texture2D" uid="uid://cxqoyw8add6ip" path="res://art/DestroySmoke.png" id="15_ef662"]
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="16_h5bxf"]
 [ext_resource type="PackedScene" uid="uid://bvqein6qibdt2" path="res://Enemies/Guardian/guardian_vision_area.tscn" id="19_nkhw0"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqytk"]
 radius = 23.0868
@@ -784,7 +785,8 @@ collision_layer = 258
 collision_mask = 275
 script = ExtResource("1_j5cqs")
 summoned_enemy_scene = ExtResource("10_nkhw0")
-summon_radius_min = 100.0
+summon_radius_min = 30.0
+summon_radius_max = 50.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
