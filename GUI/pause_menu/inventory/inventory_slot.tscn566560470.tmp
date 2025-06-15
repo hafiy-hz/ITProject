@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="1_eqhwg"]
 
 [sub_resource type="GDScript" id="GDScript_eqhwg"]
-script/source = "class_name InventorySlot extends Button
+script/source = "class_name InventorySlotUI extends Button
 
 
 var slot_data : SlotData : set = set_slot_data
