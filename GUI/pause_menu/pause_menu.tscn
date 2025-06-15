@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dbib2oam48ph" path="res://GUI/pause_menu/scripts/inventory_ui.gd" id="3_36pfd"]
 [ext_resource type="PackedScene" uid="uid://b8ugpemory517" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_rsqrg"]
 
-[ext_resource type="Resource" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_ewgu5"]
+[ext_resource type="Resource" uid="uid://piomupm18df5" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_ewgu5"]
 
 [ext_resource type="PackedScene" path="res://GUI/pause_menu/save_slot_ui.tscn" id="7_save_slot"]
 
