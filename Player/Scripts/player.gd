@@ -6,13 +6,10 @@ const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 var direction : Vector2 = Vector2.ZERO
 
 var invulnerable : bool = false
-<<<<<<< HEAD
-var hp : int = 8
-var max_hp : int = 8
-=======
+
 var hp : int = 10
 var max_hp : int = 10
->>>>>>> main
+
 
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer

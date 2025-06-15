@@ -3292,6 +3292,7 @@ script = ExtResource("1_bbrih")
 
 [node name="Player" parent="." instance=ExtResource("5_ydxm8")]
 position = Vector2(416, 424)
+collision_layer = 287
 
 [node name="tile" type="TileMapLayer" parent="."]
 use_parent_material = true

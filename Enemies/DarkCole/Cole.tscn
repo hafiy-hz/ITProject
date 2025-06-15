@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="16_8v6kv"]
 [ext_resource type="PackedScene" uid="uid://d1c7ymtuontqg" path="res://Enemies/vision_area.tscn" id="17_rksoy"]
 
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqytk"]
 radius = 23.0217
 
