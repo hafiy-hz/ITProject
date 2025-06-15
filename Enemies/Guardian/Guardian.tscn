@@ -17,7 +17,7 @@
 [ext_resource type="Resource" uid="uid://dg4m7ytmghexm" path="res://items/apple.tres" id="14_nkhw0"]
 [ext_resource type="Texture2D" uid="uid://cxqoyw8add6ip" path="res://art/DestroySmoke.png" id="15_ef662"]
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="16_h5bxf"]
-[ext_resource type="PackedScene" uid="uid://d1c7ymtuontqg" path="res://Enemies/vision_area.tscn" id="17_wuyui"]
+[ext_resource type="PackedScene" uid="uid://bvqein6qibdt2" path="res://Enemies/Guardian/guardian_vision_area.tscn" id="19_nkhw0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqytk"]
 radius = 23.0868
@@ -832,9 +832,8 @@ next_state = NodePath("../Chase")
 script = ExtResource("10_4f30b")
 drops = Array[ExtResource("11_bcfxy")]([SubResource("Resource_0ge8g"), SubResource("Resource_pcgih"), SubResource("Resource_fg1df")])
 
-[node name="Chase" type="Node" parent="GuardianStateMachine" node_paths=PackedStringArray("vision_area", "attack_area", "next_state")]
+[node name="Chase" type="Node" parent="GuardianStateMachine" node_paths=PackedStringArray("attack_area", "next_state")]
 script = ExtResource("14_cv3ie")
-vision_area = NodePath("../../VisionArea")
 attack_area = NodePath("../../Sprite2D/AttackHurtBox")
 next_state = NodePath("../Idle")
 
@@ -871,14 +870,13 @@ rotation = 1.5708
 shape = SubResource("CircleShape2D_mqytk")
 debug_color = Color(0.817287, 0.405503, 0, 0.42)
 
-[node name="VisionArea" parent="." instance=ExtResource("17_wuyui")]
-collision_mask = 2147483649
+[node name="GuardianVisionArea" parent="." instance=ExtResource("19_nkhw0")]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArea"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuardianVisionArea"]
 position = Vector2(2, 0)
 scale = Vector2(0.744629, 1.04129)
 polygon = PackedVector2Array(-16, 0, 16, 0, 128, 128, -128, 128)
 
-[node name="SenseArea" type="CollisionShape2D" parent="VisionArea"]
+[node name="SenseArea" type="CollisionShape2D" parent="GuardianVisionArea"]
 shape = SubResource("CircleShape2D_q12kk")
 debug_color = Color(0.407656, 0.00909072, 0, 0.42)
