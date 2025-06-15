@@ -22,6 +22,7 @@ func set_slot_data(value: SlotData) -> void:
     texture_rect.texture = slot_data.item_data.texture
     label.text = str(slot_data.quantity)
 
+
 func item_focused() -> void:
     if slot_data and slot_data.item_data:
         PauseMenu.update_item_description(slot_data.item_data.description)

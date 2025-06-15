@@ -1,11 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://c62ojbuksw5av"]
+[gd_scene load_steps=8 format=3 uid="uid://c62ojbuksw5av"]
 
 [ext_resource type="Script" uid="uid://cug6528hwxn7q" path="res://GUI/pause_menu/pause_menu.gd" id="1_4w82k"]
 [ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="2_yiq8o"]
 [ext_resource type="Script" uid="uid://dbib2oam48ph" path="res://GUI/pause_menu/scripts/inventory_ui.gd" id="3_36pfd"]
 [ext_resource type="PackedScene" uid="uid://b8ugpemory517" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_rsqrg"]
-[ext_resource type="Script" uid="uid://b015lxw5qan1g" path="res://GUI/pause_menu/scripts/inventory_data.gd" id="4_8rjl7"]
-[ext_resource type="Script" uid="uid://2cbl0bwpghl1" path="res://GUI/pause_menu/scripts/slot_data.gd" id="5_dvxeg"]
 [ext_resource type="Script" path="res://GUI/pause_menu/inventory/scripts/inventory_slot_ui.gd" id="6_sn1ji"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ewgu5"]
@@ -22,11 +20,6 @@ texture_margin_left = 14.0
 texture_margin_top = 14.0
 texture_margin_right = 14.0
 texture_margin_bottom = 14.0
-
-[sub_resource type="Resource" id="Resource_iqcer"]
-script = ExtResource("4_8rjl7")
-slots = Array[ExtResource("5_dvxeg")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
-metadata/_custom_type_script = "uid://b015lxw5qan1g"
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -103,7 +96,6 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_36pfd")
 layout_mode = 2
 columns = 5
 script = ExtResource("3_36pfd")
-data = SubResource("Resource_iqcer")
 
 [node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2

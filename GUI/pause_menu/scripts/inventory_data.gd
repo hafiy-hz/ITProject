@@ -1,9 +1,11 @@
 class_name InventoryData
 extends Resource
 
+
 @export var slots: Array[SlotData]
 
-func _init() -> void:
+func _init():
+    slots.resize(15)  # or however many slots you want
     connect_slots()
 
 # Add item to inventory
@@ -28,6 +30,8 @@ func add_item(item: ItemsData, count: int = 1) -> bool:
     return false
 
 # Remove empty slots and notify UI
+
+
 func slot_changed() -> void:
     for s in slots:
         if s and s.quantity < 1:
@@ -45,8 +49,9 @@ func connect_slots() -> void:
 # Utility: Get all current slots (including empty if needed)
 func get_all_items() -> Array[SlotData]:
     return slots
+    # Save the inventory to an array of dictionaries
 
-# Save the inventory to an array of dictionaries
+
 func get_save_data() -> Array:
     var item_save: Array = []
     for i in slots.size():
