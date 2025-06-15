@@ -1,28 +1,28 @@
 [gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://dce2uy0d07j08"]
 
-[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_gkqlw"]
-[ext_resource type="Script" uid="uid://e0706nrbxy3p" path="res://items/scripts/equipable_item_modifier.gd" id="2_1p64g"]
-[ext_resource type="Script" uid="uid://bwlux7d3dqi4" path="res://items/scripts/equipable_item_data.gd" id="3_qjrhp"]
-[ext_resource type="Texture2D" uid="uid://cfoxt7jaaeenf" path="res://sprites/Armory/armor_sheet_.png" id="4_8k67w"]
+[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_7yk0u"]
+[ext_resource type="Script" uid="uid://e0706nrbxy3p" path="res://items/scripts/equipable_item_modifier.gd" id="2_4pqby"]
+[ext_resource type="Script" uid="uid://bwlux7d3dqi4" path="res://items/scripts/equipable_item_data.gd" id="3_n247i"]
+[ext_resource type="Texture2D" uid="uid://cfoxt7jaaeenf" path="res://sprites/Armory/armor_sheet_.png" id="4_7hew0"]
 
 [sub_resource type="Resource" id="Resource_lxhhc"]
-script = ExtResource("2_1p64g")
+script = ExtResource("2_4pqby")
 type = 1
 value = 1
 metadata/_custom_type_script = "uid://e0706nrbxy3p"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x6ilr"]
-atlas = ExtResource("4_8k67w")
+atlas = ExtResource("4_7hew0")
 region = Rect2(15, 48, 18, 17)
 
 [resource]
-script = ExtResource("3_qjrhp")
+script = ExtResource("3_n247i")
 type = 1
-modifiers = Array[ExtResource("2_1p64g")]([SubResource("Resource_lxhhc")])
+modifiers = Array[ExtResource("2_4pqby")]([SubResource("Resource_lxhhc")])
 damage = 0
-defense = 2
+defense = 7
 name = "Beginner Sword"
 description = ""
 texture = SubResource("AtlasTexture_x6ilr")
-effects = Array[ExtResource("1_gkqlw")]([])
+effects = Array[ExtResource("1_7yk0u")]([])
 metadata/_custom_type_script = "uid://bwlux7d3dqi4"

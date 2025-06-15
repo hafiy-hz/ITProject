@@ -3413,35 +3413,29 @@ autoplay = "default"
 [node name="EB_H1" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("11_5pqcp")]
 visibility_layer = 2
 position = Vector2(416, 609)
-use_timer = true
 
 [node name="EB_H2" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("11_5pqcp")]
 visibility_layer = 2
 position = Vector2(416, 524)
-use_timer = true
 
 [node name="EB_H3" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("11_5pqcp")]
 visibility_layer = 2
 position = Vector2(416, 442)
-use_timer = true
 
 [node name="EB_V1" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("11_5pqcp")]
 visibility_layer = 2
 position = Vector2(297, 524)
 rotation = 1.5708
-use_timer = true
 
 [node name="EB_V2" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("11_5pqcp")]
 visibility_layer = 2
 position = Vector2(415, 524)
 rotation = 1.5708
-use_timer = true
 
 [node name="EB_V3" parent="DarkWizardBoss/BeamAttack" instance=ExtResource("11_5pqcp")]
 visibility_layer = 2
 position = Vector2(536, 524)
 rotation = 1.5708
-use_timer = true
 
 [node name="PositionTargets" type="Node2D" parent="DarkWizardBoss"]
 
