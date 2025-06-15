@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c62ojbuksw5av"]
 [gd_scene load_steps=11 format=3 uid="uid://c62ojbuksw5av"]
 
 [ext_resource type="Script" uid="uid://cug6528hwxn7q" path="res://GUI/pause_menu/pause_menu.gd" id="1_4w82k"]
 [ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="2_yiq8o"]
 [ext_resource type="Script" uid="uid://dbib2oam48ph" path="res://GUI/pause_menu/scripts/inventory_ui.gd" id="3_36pfd"]
 [ext_resource type="PackedScene" uid="uid://b8ugpemory517" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_rsqrg"]
-[ext_resource type="Resource" uid="uid://g0hv0mbg8v68" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_ewgu5"]
 [ext_resource type="Script" uid="uid://b015lxw5qan1g" path="res://GUI/pause_menu/scripts/inventory_data.gd" id="4_8rjl7"]
 [ext_resource type="Script" uid="uid://2cbl0bwpghl1" path="res://GUI/pause_menu/scripts/slot_data.gd" id="5_dvxeg"]
 [ext_resource type="Script" path="res://GUI/pause_menu/inventory/scripts/inventory_slot_ui.gd" id="6_sn1ji"]
@@ -109,48 +107,63 @@ data = SubResource("Resource_iqcer")
 
 [node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot11" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot12" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot13" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot14" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot15" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot16" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot17" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot18" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot19" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
+script = ExtResource("6_sn1ji")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 1
