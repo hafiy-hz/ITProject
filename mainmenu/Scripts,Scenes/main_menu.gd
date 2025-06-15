@@ -8,10 +8,10 @@ func _ready() -> void:
     # PlayerManager.player_info_updated.emit() # This might be useful if the menu doesn't update initially
 
 func _on_startbutton_pressed() -> void:
-    get_tree().change_scene_to_file("res://mainmenu/PlayerUsername.tscn")
+    get_tree().change_scene_to_file("res://mainmenu/Scripts,Scenes/PlayerUsername.tscn")
 
 func _on_options_button_pressed() -> void:
-    get_tree().change_scene_to_file("res://mainmenu/options.tscn")
+    get_tree().change_scene_to_file("res://mainmenu/Scripts,Scenes/options.tscn")
 
 func _on_exitbutton_pressed() -> void:
     get_tree().quit()

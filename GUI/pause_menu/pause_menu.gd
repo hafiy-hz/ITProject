@@ -12,6 +12,7 @@ signal hidden
 @onready var inventory_panel = $Control/PanelContainer  # Replace with actual node path to your InventoryPanel
 @onready var equipment_panel = $Control/PanelContainer2  # Replace with actual node path to your EquipmentPanel
 
+
 var is_paused : bool = false
 
 func _ready() -> void:

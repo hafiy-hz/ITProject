@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwa4vnn1m4he4"
-path="res://.godot/imported/buttonwoodenpress.png-cf189f654a58d4a357e2b26f391baf87.ctex"
+uid="uid://vlkalk1sgnvu"
+path="res://.godot/imported/—Pngtree—wooden buttons for user interface_7931312.png-32f7becc495ab0ae09aa203ecf7e204b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mainmenu/buttonwoodenpress.png"
-dest_files=["res://.godot/imported/buttonwoodenpress.png-cf189f654a58d4a357e2b26f391baf87.ctex"]
+source_file="res://mainmenu/sprites/—Pngtree—wooden buttons for user interface_7931312.png"
+dest_files=["res://.godot/imported/—Pngtree—wooden buttons for user interface_7931312.png-32f7becc495ab0ae09aa203ecf7e204b.ctex"]
 
 [params]
 

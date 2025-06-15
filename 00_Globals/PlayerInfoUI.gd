@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var username_label: Label = $"PlayerInfoContainer/UsernameLabel"
 @onready var player_class_label: Label = $"PlayerInfoContainer/PlayerClassLabel"
 @onready var armor_label: Label = $"PlayerInfoContainer/ArmorLabel"
-@onready var helmet_label: Label = $"PlayerInfoContainer/HelmetLabel"
+
 
 func _ready():
     PlayerManager.player_info_updated.connect(update_player_info)

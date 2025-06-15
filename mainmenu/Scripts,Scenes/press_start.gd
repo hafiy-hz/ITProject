@@ -3,7 +3,7 @@ extends Control
 @onready var transition = $CanvasLayer2/Transition  # AnimationPlayer node
 @onready var fade_rect = $FadeRect    # ColorRect node
 var has_started = false
-var main_menu = preload("res://mainmenu/main_menu.tscn")
+var main_menu = preload("res://mainmenu/Scripts,Scenes/main_menu.tscn")
 
 func _ready():
     scale = Vector2(0.5, 0.5)  # Counteracts scale 4
@@ -24,4 +24,4 @@ func _process(delta):
 func _on_transition_animation_finished(anim_name: StringName) -> void:
     if anim_name == "fade_out":
         # After fade-out is complete, change to the main menu scene
-        get_tree().change_scene_to_file("res://mainmenu/main_menu.tscn")
+        get_tree().change_scene_to_file("res://mainmenu/Scripts,Scenes/main_menu.tscn")

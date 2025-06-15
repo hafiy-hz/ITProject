@@ -14,7 +14,7 @@ func _ready() -> void:
         add_keybind_row(action)
 
 func _on_back_button_pressed() -> void:
-    get_tree().change_scene_to_file("res://mainmenu/main_menu.tscn")
+    get_tree().change_scene_to_file("res://mainmenu/Scripts,Scenes/main_menu.tscn")
 
 func _on_h_slider_value_changed(value: float) -> void:
     AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(value))
