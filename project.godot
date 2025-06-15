@@ -27,11 +27,20 @@ PlayerInfoUi="*res://00_Globals/player_info_ui.tscn"
 SceneTransition="*res://GUI/scene_transition/scene_transition.tscn"
 PauseMenu="*res://GUI/pause_menu/pause_menu.tscn"
 MainmenuBgs="*res://mainmenu/MainmenuBGS.tscn"
+
 player_username="res://mainmenu/player_username.gd"
+
+
+player_username="res://mainmenu/player_username.gd"
+Global="*res://00_Globals/Global.gd"
+PlayerInfoUi="*res://00_Globals/player_info_ui.tscn"
+Inventory="*res://Items/scripts/Inventory.gd"
+
+
 EquipableManager="*res://Items/scripts/EquipableManager.gd"
 LeaderboardManager="*res://Leaderboard/LeaderboardManager.gd"
 Inventory="*res://Items/scripts/Inventory.gd"
-<<<<<<<HEADplayer_username="*res://mainmenu/player_username.gd"
+player_username="*res://mainmenu/player_username.gd"
 
 [display]
 
