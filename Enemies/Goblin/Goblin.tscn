@@ -13,9 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="11_csilq"]
 [ext_resource type="Script" uid="uid://c4gn0xge6hux3" path="res://Enemies/Scripts/states/enemy_state_chase.gd" id="11_ns544"]
 [ext_resource type="Script" uid="uid://cgqfcrdxycsvj" path="res://Enemies/Scripts/drop_data.gd" id="11_q12kk"]
-[ext_resource type="Resource" uid="uid://b0bdmt4kaie05" path="res://items/potion.tres" id="12_mvdyt"]
+[ext_resource type="Resource" path="res://items/sprites/potion.tres" id="12_mvdyt"]
 [ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="12_oy78u"]
-[ext_resource type="Resource" uid="uid://dyerb483avgfl" path="res://items/stone.tres" id="13_eqe8e"]
+[ext_resource type="Resource" uid="uid://b7mn4eumdnm8a" path="res://items/stone.tres" id="13_eqe8e"]
 [ext_resource type="PackedScene" uid="uid://d1c7ymtuontqg" path="res://Enemies/vision_area.tscn" id="14_dnyso"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqytk"]
