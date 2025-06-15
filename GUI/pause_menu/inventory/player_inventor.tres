@@ -1,4 +1,9 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=3 format=3 uid="uid://ds0ecnhhictx7"]
+
+[gd_resource type="Resource" script_class="InventoryData" load_steps=3 format=3 uid="uid://piomupm18df5"]
+
+
+[gd_resource type="Resource" script_class="InventoryData" load_steps=3 format=3 uid="uid://piomupm18df5"]
+
 
 [ext_resource type="Script" uid="uid://b015lxw5qan1g" path="res://GUI/pause_menu/scripts/inventory_data.gd" id="1_x61lb"]
 [ext_resource type="Script" uid="uid://2cbl0bwpghl1" path="res://GUI/pause_menu/scripts/slot_data.gd" id="2_x61lb"]
