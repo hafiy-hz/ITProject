@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://07forc3iw27v"]
 
-[ext_resource type="Script" path="res://items/item_effect/item_effect.gd" id="1_1fr4q"]
-[ext_resource type="Script" uid="uid://e0706nrbxy3p" path="res://items/scripts/equipable_item_modifier.gd" id="2_0ctp6"]
+[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_1fr4q"]
+[ext_resource type="Script" path="res://items/scripts/equipable_item_modifier.gd" id="2_0ctp6"]
 [ext_resource type="Script" path="res://items/scripts/equipable_item_data.gd" id="3_j5l3a"]
 [ext_resource type="Texture2D" uid="uid://c3ipkx0whd3ri" path="res://sprites/weapon/gold-weapons.png" id="4_2fn52"]
 

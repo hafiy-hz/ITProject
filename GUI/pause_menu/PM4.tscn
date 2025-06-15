@@ -1,13 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8ws4isyap5rj"]
+[gd_scene load_steps=8 format=3 uid="uid://txgplgvecqtw"]
 
-[ext_resource type="Script" uid="uid://cug6528hwxn7q" path="res://GUI/pause_menu/pause_menu.gd" id="1_4w82k"]
-[ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="2_yiq8o"]
-[ext_resource type="Script" uid="uid://dbib2oam48ph" path="res://GUI/pause_menu/scripts/inventory_ui.gd" id="3_36pfd"]
-[ext_resource type="PackedScene" uid="uid://b8ugpemory517" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_rsqrg"]
-[ext_resource type="Resource" uid="uid://8ai01vk0ey6o" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_ewgu5"]
+[ext_resource type="Script" uid="uid://cug6528hwxn7q" path="res://GUI/pause_menu/pause_menu.gd" id="1_2107r"]
+[ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="2_ebum6"]
+[ext_resource type="Script" uid="uid://dbib2oam48ph" path="res://GUI/pause_menu/scripts/inventory_ui.gd" id="3_2tvt2"]
+[ext_resource type="Resource" uid="uid://8ai01vk0ey6o" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_4j280"]
+[ext_resource type="PackedScene" uid="uid://b8ugpemory517" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="5_28wtv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4g0oa"]
-atlas = ExtResource("2_yiq8o")
+atlas = ExtResource("2_ebum6")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gerl6"]
@@ -23,7 +23,7 @@ texture_margin_bottom = 14.0
 
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_4w82k")
+script = ExtResource("1_2107r")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -75,38 +75,38 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_gerl6")
 layout_mode = 2
 size_flags_horizontal = 4
 columns = 5
-script = ExtResource("3_36pfd")
-data = ExtResource("4_ewgu5")
+script = ExtResource("3_2tvt2")
+data = ExtResource("4_4j280")
 
-[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 
-[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 
-[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 button_mask = 3
 
-[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 
-[node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 
-[node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 
-[node name="InventorySlot7" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot7" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 
-[node name="InventorySlot8" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot8" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 
-[node name="InventorySlot9" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot9" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 
-[node name="InventorySlot10" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
+[node name="InventorySlot10" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_28wtv")]
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]

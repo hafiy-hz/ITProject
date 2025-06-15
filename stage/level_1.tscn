@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://b66u2xr8xbbnd" path="res://Chest/chest1.tscn" id="14_odr1k"]
 [ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/Player.tscn" id="14_oltga"]
 [ext_resource type="PackedScene" uid="uid://ccjltabtlvdg1" path="res://scene/next_level.tscn" id="15_p8yn5"]
-[ext_resource type="PackedScene" uid="uid://demle5oq8dx3y" path="res://Enemies/Goblin/Goblin.tscn" id="16_p8yn5"]
+[ext_resource type="PackedScene" uid="uid://dph1rrsjnm3cg" path="res://Enemies/Guardian/Guardian.tscn" id="16_p8yn5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rpf8"]
 texture = ExtResource("2_2ouwm")
@@ -3536,5 +3536,5 @@ position = Vector2(274, 594)
 position = Vector2(833, 213)
 scale = Vector2(1.07834, 0.89914)
 
-[node name="Goblin" parent="." instance=ExtResource("16_p8yn5")]
-position = Vector2(294, 45)
+[node name="Guardian" parent="." instance=ExtResource("16_p8yn5")]
+position = Vector2(393, 53)
