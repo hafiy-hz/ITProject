@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://fvo5s83e7uml"]
+[gd_scene load_steps=7 format=3 uid="uid://fvo5s83e7uml"]
 
 [ext_resource type="Texture2D" uid="uid://dkc0pt0e6wwjn" path="res://GUI/player_hud/gui-health.png" id="1_alx7a"]
 [ext_resource type="Script" uid="uid://bblp7dkqvcpfl" path="res://GUI/player_hud/player_hud.gd" id="1_oghrr"]
 [ext_resource type="PackedScene" uid="uid://d2aus7tkkqvfl" path="res://GUI/player_hud/heart_gui.tscn" id="2_oghrr"]
+[ext_resource type="Texture2D" uid="uid://dwk1u6wbhn0u7" path="res://stage/dark_wizard/sprites/boss-hp.png" id="4_4b3j6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhjvm"]
+atlas = ExtResource("4_4b3j6")
+region = Rect2(9, 40, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sysqg"]
+atlas = ExtResource("4_4b3j6")
+region = Rect2(40, 40, 15, 15)
 
 [node name="PlayerHud" type="CanvasLayer"]
 layer = 2
@@ -94,3 +103,64 @@ layout_mode = 2
 
 [node name="Hearth20" parent="Control/HFlowContainer" instance=ExtResource("2_oghrr")]
 layout_mode = 2
+
+[node name="BossUI" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -77.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control/BossUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -60.0
+offset_right = 240.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 80.0
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_yhjvm")
+texture_progress = SubResource("AtlasTexture_sysqg")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/BossUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -247.0
+offset_top = -82.0
+offset_right = 243.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_4b3j6")
+region_rect = Rect2(0, 0, 64, 30)
+patch_margin_left = 11
+patch_margin_right = 5
+axis_stretch_horizontal = 1
+
+[node name="Label" type="Label" parent="Control/BossUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.304
+anchor_right = 0.5
+anchor_bottom = 0.304
+offset_left = -44.0
+offset_top = -40.24
+offset_right = 48.0
+offset_bottom = -17.24
+grow_horizontal = 2
+text = "BOSS NAME"

@@ -6,8 +6,9 @@ class_name BeamAttack extends Node2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
-	if use_timer == true:
-		attack_delay()
+	# Don't start timer automatically - wait for boss to trigger attacks
+	# if use_timer == true:
+	#	attack_delay()
 	pass
 	
 func attack() -> void:

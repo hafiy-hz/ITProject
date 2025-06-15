@@ -580,6 +580,8 @@ libraries = {
 }
 
 [node name="HurtBox" parent="." instance=ExtResource("8_s1rgi")]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 visible = false

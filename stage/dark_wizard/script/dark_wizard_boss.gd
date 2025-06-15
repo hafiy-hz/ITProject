@@ -3,8 +3,8 @@ class_name DarkWizardBoss extends Node2D
 const ENERGY_EXPLOSION_SCENE : PackedScene = preload( "res://stage/dark_wizard/energy_explosion.tscn" )
 const ENERGY_BALL_SCENE : PackedScene = preload( "res://stage/dark_wizard/energy_orb.tscn" )
 
-@export var max_hp : int = 1
-var hp : int = 1
+@export var max_hp : int = 10
+var hp : int = 10
 
 
 
@@ -36,22 +36,29 @@ var damage_count : int = 0
 
 
 func _ready() -> void:
-
-    hp = max_hp
-    
-    # Connect the HitBox's 'damaged' signal to the damage_taken function
-    if not hit_box.damaged.is_connected(damage_taken):
-        hit_box.damaged.connect(damage_taken)
-    
-    for c in $PositionTargets.get_children():
-        positions.append( c.global_position )
-    $PositionTargets.visible = false
-    
-    for b in $BeamAttack.get_children():
-        beam_attacks.append( b )
-    
-    teleport( 0 )
-    pass
+	
+	hp = max_hp
+	PlayerHud.show_boss_health( "Dark Wizard (Sir Willie)" )
+	
+	
+	# Connect the HitBox's 'damaged' signal to the damage_taken function
+	
+	hit_box.damaged.connect(damage_taken)
+	
+	# Disable boss's HurtBox monitoring so it doesn't damage player on contact
+	hurt_box.monitoring = false
+	
+	for c in $PositionTargets.get_children():
+		positions.append( c.global_position )
+	$PositionTargets.visible = false
+	
+	for b in $BeamAttack.get_children():
+		beam_attacks.append( b )
+	
+	# Give player time to get ready before boss starts attacking
+	await get_tree().create_timer( 2.0 ).timeout
+	teleport( 0 )
+	pass
 
 
 
@@ -182,17 +189,31 @@ func shoot_orb() -> void:
 
 
 func damage_taken( _hit_box : HitBox ) -> void:
+	# Only allow damage from player
+	if not _hit_box.get_parent().is_in_group("Player"):
+		return
+	
+	# Prevent damage if already playing damage animation or no damage
     if animation_player_damage.current_animation == "damaged" or _hit_box.damage == 0:
         return
+	
+	# Play hurt audio
     play_audio( audio_hurt )
-    hp = clampi( hp - _hit_box.damage, 0, max_hp )
+	
+	# Use player's actual damage value instead of fixed 1 damage
+	var damage_amount = _hit_box.damage
+    hp = clampi( hp - damage_amount, 0, max_hp )
     damage_count += 1
     
-    #Update boss health bar
+    #update boss health bar
+	PlayerHud.update_boss_health( hp, max_hp )
+	
+	# Play damage animation
     animation_player_damage.play( "damaged" )
     animation_player_damage.seek( 0 )
     animation_player_damage.queue( "default" )
     
+	# Check if boss is defeated
     if hp < 1:
         defeat()
     
@@ -222,7 +243,8 @@ func defeat() -> void:
 
 func enable_hit_boxes( _v : bool = true ) -> void:
     hit_box.set_deferred("monitorable", _v)
-    hurt_box.set_deferred("monitoring", _v)
+    # Don't enable hurt_box monitoring - boss shouldn't damage player on contact
+	# hurt_box.set_deferred("monitoring", _v)
 
 func explosion( _p : Vector2 = Vector2.ZERO ) -> void:
     var e : Node2D = ENERGY_EXPLOSION_SCENE. instantiate()
