@@ -1,7 +1,7 @@
 extends Node
 
 const PLAYER = preload("res://Player/Player.tscn")
-var INVENTORY_DATA : InventoryData = preload("res://GUI/pause_menu/inventory/player_inventory.tres")
+var INVENTORY_DATA : InventoryData = preload("res://GUI/pause_menu/inventory/player_inventory1.tres")
 
 var player : Player
 var player_spawn : bool = false
@@ -48,12 +48,8 @@ func take_damage(amount: int) -> void:
     if player:
         player.hp = max(0, player.hp - final_damage)
         print("Took %d damage (raw: %d - defense: %d), HP is now %d" % [final_damage, amount, total_defense, player.hp])
-
-
-
         player.update_hp(0)  # Triggers HP bar refresh
         player_info_updated.emit()
-
 
 func _ready() -> void:
     # Don't spawn player in main menu
