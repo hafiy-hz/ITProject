@@ -34,8 +34,8 @@ func exit() -> void:
 	pass
 
 func process( _delta : float ) -> GuardianState:
-	if state_machine.current_state is GuardianStateDestroy:
-		return null
+	if PlayerManager.player.hp <= 0:
+		return next_state
 	
 	var new_dir : Vector2 = guardian.global_position.direction_to( PlayerManager.player.global_position )
 	_direction = lerp( _direction, new_dir, turn_rate )

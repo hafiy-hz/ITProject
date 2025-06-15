@@ -46,6 +46,12 @@ func _process( _delta ):
 func _physics_process( _delta ):
 	move_and_slide()
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action("test"):
+		update_hp(-99)
+		player_damaged.emit( %AttackHurtBox )
+	pass
+
 
 func SetDirection() -> bool:
 	if direction == Vector2.ZERO:
@@ -86,10 +92,9 @@ func _take_damage(hurt_box: HurtBox) -> void:
 	PlayerManager.take_damage(hurt_box.damage)  # ✅ Use manager to reduce damage via defense
 
 	if hp > 0:
+		update_hp( -hurt_box.damage )
 		player_damaged.emit(hurt_box)
-	else:
-		player_damaged.emit(hurt_box)
-		update_hp(99)  # Temp respawn logic or debug refill
+	pass
 
 func update_hp( delta : int ) -> void:
 	hp = clampi( hp + delta, 0, max_hp )
@@ -105,3 +110,7 @@ func make_invulnerable( _duration : float = 1.0 ) -> void:
 	invulnerable = false
 	hit_box.monitoring = true
 	pass
+
+func revive_player() -> void:
+	update_hp( 99 )
+	state_machine.ChangeState($StateMachine/Idle)

@@ -4,8 +4,16 @@ extends CanvasLayer
 @onready var boss_hp_bar: TextureProgressBar = $Control/BossUI/TextureProgressBar
 @onready var boss_label: Label = $Control/BossUI/Label
 
+@export var button_focus_audio : AudioStream = preload( "res://Sounds/menu_focus.wav" )
+@export var button_select_audio : AudioStream = preload( "res://Sounds/menu_select.wav" )
+
 var hearts : Array[ HeartGUI ] = []
 
+@onready var game_over : Control = $Control/GameOver
+@onready var continue_button : Button = $Control/GameOver/VBoxContainer/ContinueButton
+@onready var title_button : Button = $Control/GameOver/VBoxContainer/TittleButton
+@onready var animation_player : AnimationPlayer = $Control/GameOver/AnimationPlayer
+@onready var audio : AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready():
 	for child in $Control/HFlowContainer.get_children():
@@ -15,6 +23,13 @@ func _ready():
 	print("HeartGUI nodes found: ", hearts.size())
 	
 	hide_boss_health()
+	
+	hide_game_over_screen()
+	continue_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
+	continue_button.pressed.connect( load_game )
+	title_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
+	title_button.pressed.connect( title_screen )
+	LevelManagers.level_load_started.connect( hide_game_over_screen )
 	
 	pass
 
@@ -55,3 +70,47 @@ func hide_boss_health() -> void:
 func update_boss_health( hp : int, max_hp : int ) -> void:
 	boss_hp_bar.value = clampf( float(hp) / float(max_hp) * 100, 0, 100 )
 	pass
+
+
+func show_game_over_screen() -> void:
+	game_over.visible = true
+	game_over.mouse_filter = Control.MOUSE_FILTER_STOP
+	
+	var can_continue: bool = SaveManager.get_save_file() != null
+	continue_button.visible = can_continue
+	
+	animation_player.play("show_game_over")
+	await animation_player.animation_finished
+	
+	if can_continue == true:
+		continue_button.grab_focus()
+	else:
+		title_button.grab_focus()
+
+
+func hide_game_over_screen() -> void:
+	game_over.visible = false
+	game_over.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	game_over.modulate = Color( 1,1,1,0 )
+
+func load_game() -> void:
+	play_audio( button_select_audio )
+	await fade_to_black()
+	SaveManager.load_game()
+
+func fade_to_black() -> bool:
+	animation_player.play("fade_to_black")
+	await animation_player.animation_finished
+	PlayerManager.player.revive_player()
+	return true
+
+func title_screen() -> void:
+	play_audio( button_select_audio )
+	await fade_to_black()
+	LevelManagers.load_new_level("res://mainmenu/Scripts,Scenes/main_menu.tscn", "", Vector2.ZERO)
+
+
+func play_audio( _a : AudioStream ) -> void:
+	audio.stream = _a
+	audio.play()
+	
