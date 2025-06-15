@@ -89,7 +89,6 @@ func get_weighted_random_item() -> ItemsData:
 
     return null
 
-
 func player_interact() -> void:
     if is_open:
         return
@@ -106,7 +105,6 @@ func player_interact() -> void:
     else:
         printerr("No items in chest!")
         push_error("No Items in Chest! Chest Name: %s" % name)
-
 
 func _on_area_enter(_a: Area2D) -> void:
     PlayerManager.interact_pressed.connect(player_interact)

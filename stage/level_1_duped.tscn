@@ -1,6 +1,8 @@
-
+<<<<<<< HEAD
 [gd_scene load_steps=38 format=4 uid="uid://fao134pngwtc"]
-
+=======
+[gd_scene load_steps=38 format=4 uid="uid://bwo2rjhd60h74"]
+>>>>>>> parent of a7929dc (Merge pull request #103 from hafiy-hz/Timer-speedrun)
 
 [ext_resource type="Script" uid="uid://bn0ytny1aej5k" path="res://00_Globals/LevelManagers.gd" id="1_65tb0"]
 [ext_resource type="Texture2D" uid="uid://dsnwwbruqik8g" path="res://art/RFCastle_1.0/mainlevbuild.png" id="2_h2y1d"]
