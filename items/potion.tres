@@ -8,7 +8,7 @@
 
 [sub_resource type="Resource" id="Resource_ncbnu"]
 script = ExtResource("3_u0y06")
-heal_amount = 1
+heal_amount = 2
 audio = ExtResource("2_hxf14")
 use_description = ""
 metadata/_custom_type_script = "uid://bul14ud7ncws7"
@@ -22,5 +22,5 @@ script = ExtResource("1_70df6")
 name = "heal potion"
 description = "Red Drink that restore a bit of player health"
 texture = SubResource("AtlasTexture_8h85v")
-effects = Array[ExtResource("1_hxf14")]([SubResource("Resource_ncbnu"), null, null])
+effects = Array[ExtResource("1_hxf14")]([SubResource("Resource_ncbnu")])
 metadata/_custom_type_script = "uid://dggj3ku5kykq"
