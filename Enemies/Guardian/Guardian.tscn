@@ -784,7 +784,8 @@ collision_layer = 258
 collision_mask = 275
 script = ExtResource("1_j5cqs")
 summoned_enemy_scene = ExtResource("10_nkhw0")
-summon_radius_min = 100.0
+summon_radius_min = 30.0
+summon_radius_max = 50.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
