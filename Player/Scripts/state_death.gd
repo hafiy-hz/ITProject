@@ -17,7 +17,7 @@ func Enter() -> void:
 	player.animation_player.play("death")
 	audio.stream = exhaust_audio
 	audio.play
-	PlayerHud.show_game_over_screen()
+	PlayerHud.show_game_over_screen(true)
 	
 	# AudioManager.play_music( null )
 	

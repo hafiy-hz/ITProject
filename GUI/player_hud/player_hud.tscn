@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://fvo5s83e7uml"]
+[gd_scene load_steps=13 format=3 uid="uid://fvo5s83e7uml"]
 
 [ext_resource type="Texture2D" uid="uid://dkc0pt0e6wwjn" path="res://GUI/player_hud/gui-health.png" id="1_alx7a"]
 [ext_resource type="Script" uid="uid://bblp7dkqvcpfl" path="res://GUI/player_hud/player_hud.gd" id="1_oghrr"]
@@ -200,10 +200,10 @@ tracks/2/path = NodePath("Label:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(2.99875, 4),
+"times": PackedFloat32Array(3, 4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(829, 552), Vector2(830, 510)]
+"values": [Vector2(334, 260), Vector2(334, 174)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -212,10 +212,10 @@ tracks/3/path = NodePath("VBoxContainer:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(3.0018, 4),
-"transitions": PackedFloat32Array(0.5, 1),
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(812, 607), Vector2(812, 652)]
+"values": [Vector2(114, 267), Vector2(114, 293)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -242,9 +242,26 @@ tracks/5/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_yhjvm"]
+resource_name = "fade_in"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeToBlack:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_scbx3"]
 _data = {
 &"RESET": SubResource("Animation_rxq5y"),
+&"fade_in": SubResource("Animation_yhjvm"),
 &"fade_to_black": SubResource("Animation_5bkpt"),
 &"show_game_over": SubResource("Animation_sysqg")
 }
@@ -263,7 +280,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
-position = Vector2(1774, 39)
+position = Vector2(853, 24)
 scale = Vector2(4, 4.603)
 texture = ExtResource("1_alx7a")
 region_enabled = true
@@ -271,14 +288,17 @@ region_rect = Rect2(29.3225, 0, 33.6775, 8.43115)
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Control"]
 custom_minimum_size = Vector2(130, 0)
-layout_mode = 0
-offset_left = 1703.0
-offset_top = 71.0
-offset_right = 1848.0
-offset_bottom = 95.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85
+anchor_top = 0.102778
+anchor_right = 0.925521
+anchor_bottom = 0.125
+grow_horizontal = 2
 theme_override_constants/h_separation = 4
 theme_override_constants/v_separation = 2
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Hearth" parent="Control/HFlowContainer" instance=ExtResource("2_oghrr")]
 layout_mode = 2
@@ -415,6 +435,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -9.0
+offset_right = -5.0
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.54902)
@@ -424,6 +448,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 7.0
+offset_right = -2.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -439,7 +467,7 @@ anchor_bottom = 0.5
 offset_left = -130.0
 offset_top = -30.0
 offset_right = 130.0
-offset_bottom = 30.0
+offset_bottom = 99.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_yhjvm")
@@ -455,8 +483,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -148.0
 offset_top = 112.0
-offset_right = 148.0
-offset_bottom = 307.0
+offset_right = 555.0
+offset_bottom = 586.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -466,7 +494,7 @@ text = "continue"
 
 [node name="TittleButton" type="Button" parent="Control/GameOver/VBoxContainer"]
 layout_mode = 2
-text = "back to title"
+text = "quit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/GameOver"]
 libraries = {

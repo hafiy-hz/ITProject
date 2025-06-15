@@ -72,20 +72,26 @@ func update_boss_health( hp : int, max_hp : int ) -> void:
 	pass
 
 
-func show_game_over_screen() -> void:
+func show_game_over_screen(can_continue: bool) -> void:
+	if not game_over or not continue_button or not title_button or not animation_player:
+		return
+
 	game_over.visible = true
 	game_over.mouse_filter = Control.MOUSE_FILTER_STOP
-	
-	var can_continue: bool = SaveManager.get_save_file() != null
+
 	continue_button.visible = can_continue
-	
-	animation_player.play("show_game_over")
-	await animation_player.animation_finished
-	
-	if can_continue == true:
+	continue_button.disabled = false
+	title_button.disabled = false
+
+	if animation_player.has_animation("show_game_over"):
+		animation_player.play("show_game_over")
+		await animation_player.animation_finished
+
+	if can_continue:
 		continue_button.grab_focus()
 	else:
 		title_button.grab_focus()
+
 
 
 func hide_game_over_screen() -> void:
@@ -95,8 +101,9 @@ func hide_game_over_screen() -> void:
 
 func load_game() -> void:
 	play_audio( button_select_audio )
-	await fade_to_black()
-	SaveManager.load_game()
+	get_tree().change_scene_to_file("res://stage/level_1.tscn")
+	hide_game_over_screen()
+	
 
 func fade_to_black() -> bool:
 	animation_player.play("fade_to_black")
@@ -107,7 +114,7 @@ func fade_to_black() -> bool:
 func title_screen() -> void:
 	play_audio( button_select_audio )
 	await fade_to_black()
-	LevelManagers.load_new_level("res://mainmenu/Scripts,Scenes/main_menu.tscn", "", Vector2.ZERO)
+	get_tree().quit()
 
 
 func play_audio( _a : AudioStream ) -> void:
