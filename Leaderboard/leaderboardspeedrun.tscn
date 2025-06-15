@@ -20,17 +20,17 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -347.0
-offset_top = -956.0
-offset_right = -242.0
-offset_bottom = -109.0
+offset_left = -338.0
+offset_top = -943.0
+offset_right = -232.999
+offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.28959, 1.5517)
 texture = ExtResource("1_2q67v")
 
 [node name="WoodenSignboardInPixelArt" type="Sprite2D" parent="."]
-position = Vector2(936, 100)
+position = Vector2(4761, 523)
 scale = Vector2(1.17271, 0.291554)
 texture = ExtResource("2_rmbua")
 
@@ -48,7 +48,7 @@ theme_override_font_sizes/font_size = 38
 text = "LEADERBOARD"
 
 [node name="PixelArtWoodenSignboardOnGreen" type="Sprite2D" parent="."]
-position = Vector2(957, 556.5)
+position = Vector2(4857, 1087)
 scale = Vector2(2.13867, 1.39355)
 texture = ExtResource("2_wpaec")
 
@@ -119,10 +119,10 @@ vertical_alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 251.0
-offset_top = 659.0
-offset_right = 1563.0
-offset_bottom = 1859.0
+offset_left = 4086.0
+offset_top = 1160.0
+offset_right = 5398.0
+offset_bottom = 2360.0
 scale = Vector2(1.18726, 0.34184)
 texture_normal = ExtResource("3_rmbua")
 texture_pressed = ExtResource("1_2q67v")

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://dyprggn6hi4ri"]
+
+[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_6e52t"]
+[ext_resource type="Script" uid="uid://e0706nrbxy3p" path="res://items/scripts/equipable_item_modifier.gd" id="2_vit82"]
+[ext_resource type="Script" uid="uid://bwlux7d3dqi4" path="res://items/scripts/equipable_item_data.gd" id="3_vlfxf"]
+[ext_resource type="Texture2D" uid="uid://c3ipkx0whd3ri" path="res://sprites/weapon/gold-weapons.png" id="4_ffsbl"]
+
+[sub_resource type="Resource" id="Resource_lxhhc"]
+script = ExtResource("2_vit82")
+type = 1
+value = 1
+metadata/_custom_type_script = "uid://e0706nrbxy3p"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejaio"]
+atlas = ExtResource("4_ffsbl")
+region = Rect2(32, 96, 16, 16)
+
+[resource]
+script = ExtResource("3_vlfxf")
+type = 0
+modifiers = Array[ExtResource("2_vit82")]([SubResource("Resource_lxhhc")])
+damage = 4
+defense = 0
+name = "Beginner Sword"
+description = ""
+texture = SubResource("AtlasTexture_ejaio")
+effects = Array[ExtResource("1_6e52t")]([])
+metadata/_custom_type_script = "uid://bwlux7d3dqi4"

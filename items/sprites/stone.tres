@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemsData" load_steps=5 format=3 uid="uid://b81r28nf2gdj6"]
+
+[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_40mu8"]
+[ext_resource type="Script" uid="uid://dggj3ku5kykq" path="res://items/scripts/item_data.gd" id="2_rht0r"]
+[ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="3_0p7qb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uj5p3"]
+atlas = ExtResource("3_0p7qb")
+region = Rect2(64, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_rht0r")
+name = "Stone"
+description = "Iam Rock :D"
+texture = SubResource("AtlasTexture_uj5p3")
+effects = Array[ExtResource("1_40mu8")]([])
+metadata/_custom_type_script = "uid://dggj3ku5kykq"

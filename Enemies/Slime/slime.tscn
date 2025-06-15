@@ -13,8 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="7_jlwhn"]
 [ext_resource type="Texture2D" uid="uid://cxqoyw8add6ip" path="res://art/DestroySmoke.png" id="10_pydiu"]
 [ext_resource type="Script" uid="uid://cgqfcrdxycsvj" path="res://Enemies/Scripts/drop_data.gd" id="10_t1krp"]
-[ext_resource type="Resource" uid="uid://bg30gd61gwqdk" path="res://items/gems.tres" id="11_nsi17"]
-[ext_resource type="Resource" uid="uid://dg4m7ytmghexm" path="res://items/apple.tres" id="12_nsi17"]
+[ext_resource type="Resource" uid="uid://bg30gd61gwqdk" path="res://items/sprites/gems.tres" id="11_nsi17"]
+[ext_resource type="Resource" uid="uid://dg4m7ytmghexm" path="res://items/sprites/apple.tres" id="12_nsi17"]
+
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwfkb"]
 radius = 4.0

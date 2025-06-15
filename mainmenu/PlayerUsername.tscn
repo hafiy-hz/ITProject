@@ -99,11 +99,7 @@ theme_override_font_sizes/font_size = 50
 text = "What should I call you?"
 horizontal_alignment = 1
 
-
-[node name="UsernameInput" type="LineEdit" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-
 [node name="LineEdit" type="LineEdit" parent="PlayerClass/CenterContainer/VBoxContainer"]
-
 layout_mode = 2
 theme_override_fonts/font = ExtResource("8_312id")
 placeholder_text = "Enter your Name"
@@ -189,18 +185,13 @@ theme_override_fonts/font = ExtResource("8_312id")
 theme_override_font_sizes/font_size = 40
 text = "Pick Your Class"
 
-
-[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/BackButton2" to="." method="_on_back_button_2_pressed"]
-[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
-[connection signal="pressed" from="CanvasLayer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[node name="CanvasLayer_CenterContainer_VBoxContainer#UsernameInput" type="LineEdit" parent="."]
+layout_mode = 0
 
 [connection signal="pressed" from="PlayerClass/BackButton2" to="." method="_on_back_button_2_pressed"]
 [connection signal="pressed" from="PlayerClass/ButtonRapier" to="." method="_on_button_rapier_pressed"]
 [connection signal="pressed" from="PlayerClass/ButtonRapier" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="PlayerClass/ButtonSword" to="." method="_on_button_sword_pressed"]
 [connection signal="pressed" from="PlayerClass/ButtonSword" to="." method="_on_texture_button_2_pressed"]
-[connection signal="pressed" from="PlayerClass/ButtonGreatSword" to="." method="_on_button_great_sword_pressed"]
 [connection signal="pressed" from="PlayerClass/ButtonGreatSword" to="." method="_on_texture_button_3_pressed"]
-
+[connection signal="pressed" from="PlayerClass/ButtonGreatSword" to="." method="_on_button_great_sword_pressed"]
