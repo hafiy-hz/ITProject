@@ -3,7 +3,7 @@ class_name InventoryData extends Resource
 @export var slots: Array[SlotData]
 
 #func _init() -> void:
-	#connect_slots()
+    #connect_slots()
 func add_item(item: ItemsData, count: int = 1) -> bool:
     # Try to stack item if already present
     for s in slots:
@@ -40,7 +40,7 @@ func connect_slots() -> void:
 
 # Utility: Get all current slots (including empty if needed)
 func get_all_items() -> Array[SlotData]:
-	return slots
+    return slots
 
 # Save the inventory to an array of dictionaries
 func get_save_data() -> Array:

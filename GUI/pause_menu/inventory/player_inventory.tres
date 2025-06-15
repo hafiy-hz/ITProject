@@ -1,19 +1,13 @@
-<<<<<<< HEAD
+
 [gd_resource type="Resource" script_class="InventoryData" load_steps=3 format=3 uid="uid://bel31xra2j8mq"]
+
+[gd_resource type="Resource" script_class="InventoryData" load_steps=3 format=3 uid="uid://piomupm18df5"]
+
 
 [ext_resource type="Script" uid="uid://b015lxw5qan1g" path="res://GUI/pause_menu/scripts/inventory_data.gd" id="1_x61lb"]
 [ext_resource type="Script" uid="uid://2cbl0bwpghl1" path="res://GUI/pause_menu/scripts/slot_data.gd" id="2_x61lb"]
 
 [resource]
 script = ExtResource("1_x61lb")
-=======
-[gd_resource type="Resource" script_class="InventoryData" load_steps=3 format=3 uid="uid://g0hv0mbg8v68"]
-
-[ext_resource type="Script" uid="uid://b015lxw5qan1g" path="res://GUI/pause_menu/scripts/inventory_data.gd" id="1_inventory_script"]
-[ext_resource type="Script" uid="uid://2cbl0bwpghl1" path="res://GUI/pause_menu/scripts/slot_data.gd" id="2_x61lb"]
-
-[resource]
-script = ExtResource("1_inventory_script")
->>>>>>> parent of a7929dc (Merge pull request #103 from hafiy-hz/Timer-speedrun)
 slots = Array[ExtResource("2_x61lb")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
 metadata/_custom_type_script = "uid://b015lxw5qan1g"
