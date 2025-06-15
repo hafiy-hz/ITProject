@@ -18,3 +18,7 @@ text = "Username: "
 [node name="PlayerClassLabel" type="Label" parent="PlayerInfoContainer"]
 layout_mode = 2
 text = "Class: "
+
+[node name="ArmorLabel" type="Label" parent="PlayerInfoContainer"]
+layout_mode = 2
+text = "Defense:"
