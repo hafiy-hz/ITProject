@@ -4,9 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="2_yiq8o"]
 [ext_resource type="Script" uid="uid://dbib2oam48ph" path="res://GUI/pause_menu/scripts/inventory_ui.gd" id="3_36pfd"]
 [ext_resource type="PackedScene" uid="uid://b8ugpemory517" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_rsqrg"]
+
 [ext_resource type="Script" path="res://GUI/pause_menu/inventory/scripts/inventory_slot_ui.gd" id="6_sn1ji"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ewgu5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsqrg"]
 atlas = ExtResource("2_yiq8o")
 region = Rect2(96, 0, 32, 32)
 
@@ -15,7 +17,7 @@ content_margin_left = 10.0
 content_margin_top = 10.0
 content_margin_right = 10.0
 content_margin_bottom = 10.0
-texture = SubResource("AtlasTexture_ewgu5")
+texture = SubResource("AtlasTexture_rsqrg")
 texture_margin_left = 14.0
 texture_margin_top = 14.0
 texture_margin_right = 14.0
@@ -38,10 +40,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -60.0
-offset_top = -38.0
-offset_right = 51.0
-offset_bottom = 73.0
+offset_left = -2.0
+offset_top = 4.0
+offset_right = -2.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0913433, 0.0962145, 0.108395, 0.396078)
@@ -69,9 +71,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -90.0
-offset_top = 125.0
+offset_top = 69.0
 offset_right = 86.0
-offset_bottom = 154.0
+offset_bottom = 98.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 9
@@ -84,10 +86,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -97.0
-offset_top = -4.0
-offset_right = 99.0
-offset_bottom = 123.0
+offset_left = -101.0
+offset_top = -111.0
+offset_right = 95.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_36pfd")
@@ -99,75 +101,37 @@ script = ExtResource("3_36pfd")
 
 [node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
-script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
-script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
-script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
-script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
-script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
-script = ExtResource("6_sn1ji")
 
 [node name="InventorySlot11" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
-script = ExtResource("6_sn1ji")
-
-[node name="InventorySlot12" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
-layout_mode = 2
-script = ExtResource("6_sn1ji")
-
-[node name="InventorySlot13" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
-layout_mode = 2
-script = ExtResource("6_sn1ji")
-
-[node name="InventorySlot14" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
-layout_mode = 2
-script = ExtResource("6_sn1ji")
-
-[node name="InventorySlot15" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
-layout_mode = 2
-script = ExtResource("6_sn1ji")
-
-[node name="InventorySlot16" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
-layout_mode = 2
-script = ExtResource("6_sn1ji")
-
-[node name="InventorySlot17" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
-layout_mode = 2
-script = ExtResource("6_sn1ji")
-
-[node name="InventorySlot18" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
-layout_mode = 2
-script = ExtResource("6_sn1ji")
-
-[node name="InventorySlot19" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
-layout_mode = 2
-script = ExtResource("6_sn1ji")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -86.0
-offset_top = -93.0
-offset_right = 86.0
-offset_bottom = -27.0
+offset_left = -89.0
+offset_top = -122.0
+offset_right = 83.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -182,3 +146,5 @@ text = "LOAD
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
 max_polyphony = 4
+
+[node name="SaveSlotUI" parent="." instance=ExtResource("7_save_slot")]
