@@ -645,7 +645,6 @@ z_index = 1
 collision_layer = 258
 collision_mask = 275
 script = ExtResource("1_r2g82")
-hp = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -5)

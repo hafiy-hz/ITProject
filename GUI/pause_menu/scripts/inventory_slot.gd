@@ -1,4 +1,4 @@
-class_name InventorySlotUI extends Button
+class_name InventorySlot extends Button
 
 
 var slot_data : SlotData : set = set_slot_data
