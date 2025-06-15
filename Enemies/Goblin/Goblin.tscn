@@ -698,6 +698,7 @@ radius = 14.0
 collision_layer = 258
 collision_mask = 275
 script = ExtResource("1_mqytk")
+hp = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -5)
@@ -745,6 +746,9 @@ next_state = NodePath("../Chase")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("9_0ge8g")
+anim_name = null
+knockback_speed = null
+decelerate_speed = null
 drops = Array[ExtResource("11_q12kk")]([SubResource("Resource_0ge8g"), SubResource("Resource_pcgih")])
 
 [node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("vision_area", "attack_area", "next_state")]
