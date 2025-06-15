@@ -19,6 +19,10 @@ func set_slot_data( value :  SlotData )-> void:
 	slot_data = value
 	if slot_data == null:
 		return
+	if slot_data.item_data == null:
+		texture_rect.texture = null
+		label.text = ""
+		return
 	texture_rect.texture = slot_data.item_data.texture
 	label.text = str( slot_data.quantity )
 
