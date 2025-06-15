@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://dx0f0ykp1hb8k"]
 
 [ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_prmw7"]
-[ext_resource type="Script" path="res://items/scripts/equipable_item_modifier.gd" id="2_g8rxc"]
-[ext_resource type="Script" path="res://items/scripts/equipable_item_data.gd" id="3_npww6"]
+[ext_resource type="Script" uid="uid://e0706nrbxy3p" path="res://items/scripts/equipable_item_modifier.gd" id="2_g8rxc"]
+[ext_resource type="Script" uid="uid://bwlux7d3dqi4" path="res://items/scripts/equipable_item_data.gd" id="3_npww6"]
 [ext_resource type="Texture2D" uid="uid://df2g35jcqgofm" path="res://sprites/weapon/iron-weapons.png" id="4_fynwb"]
 
 [sub_resource type="Resource" id="Resource_lxhhc"]
