@@ -12,17 +12,16 @@
 [ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian_state_destroy.gd" id="10_4f30b"]
 [ext_resource type="PackedScene" uid="uid://cy35jkjs7fd23" path="res://Enemies/DarkCole/Cole.tscn" id="10_nkhw0"]
 [ext_resource type="Script" uid="uid://cgqfcrdxycsvj" path="res://Enemies/Scripts/drop_data.gd" id="11_bcfxy"]
-[ext_resource type="Resource" uid="uid://b0bdmt4kaie05" path="res://items/potion.tres" id="12_1cio2"]
+[ext_resource type="Resource" uid="uid://dso3ksjj5i5k4" path="res://items/potion.tres" id="12_1cio2"]
 [ext_resource type="Resource" uid="uid://3xtfrrcbk1p0" path="res://items/gems.tres" id="13_sfiir"]
 [ext_resource type="Script" path="res://Enemies/Guardian/scripts/guardian_state_chase.gd" id="14_cv3ie"]
-[ext_resource type="Resource" uid="uid://mkk76xhkw40o" path="res://items/apple.tres" id="14_nkhw0"]
+[ext_resource type="Resource" uid="uid://cg6wk3gaqpe0i" path="res://items/apple.tres" id="14_nkhw0"]
 [ext_resource type="Texture2D" uid="uid://cxqoyw8add6ip" path="res://art/DestroySmoke.png" id="15_ef662"]
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="16_h5bxf"]
-[ext_resource type="PackedScene" uid="uid://bvqein6qibdt2" path="res://Enemies/Guardian/guardian_vision_area.tscn" id="19_nkhw0"]
-
+[ext_resource type="PackedScene" uid="uid://cjv712tqupkxm" path="res://Enemies/Guardian/guardian_vision_area.tscn" id="19_nkhw0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqytk"]
-radius = 23.0868
+radius = 15.0333
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwfkb"]
 radius = 5.0
@@ -876,6 +875,7 @@ shape = SubResource("CircleShape2D_mqytk")
 debug_color = Color(0.817287, 0.405503, 0, 0.42)
 
 [node name="GuardianVisionArea" parent="." instance=ExtResource("19_nkhw0")]
+visible = false
 collision_mask = 2147483905
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuardianVisionArea"]

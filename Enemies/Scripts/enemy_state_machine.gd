@@ -36,17 +36,6 @@ func initialize( _enemy : Enemy ) -> void:
 func change_state( new_state : EnemyState ) -> void:
 	if new_state == null || new_state == current_state:
 		return
-
-	if current_state:
-		current_state.exit()
-
-
-	prev_state = current_state
-	current_state = new_state
-	current_state.enter()
-
-	# Continue with the state change...
-	if current_state != null:
 	
 	if current_state:
 		current_state.exit()
