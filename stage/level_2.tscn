@@ -2592,7 +2592,7 @@ texture = ExtResource("2_uig1p")
 sources/0 = SubResource("TileSetAtlasSource_ikpj5")
 sources/1 = SubResource("TileSetAtlasSource_n1hxq")
 
-[node name="basement_level" type="Node2D"]
+[node name="basement_level2" type="Node2D"]
 script = ExtResource("1_4iwck")
 
 [node name="tile" type="TileMapLayer" parent="."]
