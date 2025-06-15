@@ -1,0 +1,203 @@
+[gd_scene load_steps=16 format=3 uid="uid://oqfscqppigqu"]
+
+[ext_resource type="Texture2D" uid="uid://b53a3txhsjsec" path="res://mainmenu/sprites/backgroundimage.png" id="1_fgnwx"]
+[ext_resource type="Script" uid="uid://5sgx0xu1ixtr" path="res://mainmenu/Scripts,Scenes/options.gd" id="1_rq453"]
+[ext_resource type="Script" uid="uid://dijl74cwiqr0k" path="res://mainmenu/Scripts,Scenes/canvas_layer.gd" id="2_457oe"]
+[ext_resource type="Texture2D" uid="uid://bddusuyc6ic6w" path="res://sprites/particles/leaf.webp" id="3_3pdj0"]
+[ext_resource type="Texture2D" uid="uid://bfdi4mrqgfobc" path="res://mainmenu/sprites/button_pressed.png" id="3_ndsii"]
+[ext_resource type="Texture2D" uid="uid://d2ecyrs7yfpiv" path="res://sprites/objects/Pixel Art Wooden Signboard on Green.png" id="4_3pdj0"]
+[ext_resource type="Texture2D" uid="uid://d10blkakyfdag" path="res://mainmenu/sprites/button_hover.png" id="4_hy6qy"]
+[ext_resource type="Texture2D" uid="uid://b6xj0jkae86mn" path="res://mainmenu/sprites/button_normal.png" id="4_ndsii"]
+[ext_resource type="FontFile" uid="uid://bqeud2wafhg81" path="res://mainmenu/Fontstyles/Kenney Mini Square.ttf" id="5_3pdj0"]
+[ext_resource type="FontFile" uid="uid://d1m1t468j375t" path="res://mainmenu/Fontstyles/Kenney Pixel Square.ttf" id="5_hy6qy"]
+
+[sub_resource type="Curve" id="Curve_457oe"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 36.4045), 104.783, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wvchv"]
+curve = SubResource("Curve_457oe")
+
+[sub_resource type="Curve" id="Curve_c65mc"]
+_data = [Vector2(0, 0.348315), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_k4fr1"]
+curve = SubResource("Curve_c65mc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1jmd1"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(350, 1, 1)
+angle_min = 1.07288e-05
+angle_max = 35.0
+angle_curve = SubResource("CurveTexture_wvchv")
+inherit_velocity_ratio = 15.0
+initial_velocity_min = 28.74
+initial_velocity_max = 28.74
+gravity = Vector3(20, 98, 0)
+scale_curve = SubResource("CurveTexture_k4fr1")
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 101.0
+offset_top = 51.0
+offset_right = 57.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rq453")
+
+[node name="Backgroundimage" type="Sprite2D" parent="."]
+modulate = Color(0.439049, 0.439049, 0.439049, 1)
+position = Vector2(942.335, 527.229)
+rotation = -0.0305912
+scale = Vector2(2.62909, 2.44999)
+texture = ExtResource("1_fgnwx")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Backgroundimage"]
+modulate = Color(4.87324e-06, 0.408274, 0.0483681, 1)
+position = Vector2(-65.4296, -266.585)
+amount = 7
+texture = ExtResource("3_3pdj0")
+lifetime = 5.92
+speed_scale = 0.85
+process_material = SubResource("ParticleProcessMaterial_1jmd1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_457oe")
+
+[node name="ButtonNormal" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(978, 180.5)
+scale = Vector2(1.48148, 0.800926)
+texture = ExtResource("4_ndsii")
+
+[node name="ButtonNormal" type="Sprite2D" parent="CanvasLayer/ButtonNormal"]
+position = Vector2(-1.35003, 322.2)
+texture = ExtResource("4_ndsii")
+
+[node name="PixelArtWoodenSignboardOnGreen" type="Sprite2D" parent="CanvasLayer/ButtonNormal"]
+position = Vector2(-0.675054, 760.994)
+scale = Vector2(0.880488, 0.820898)
+texture = ExtResource("4_3pdj0")
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 7.0
+offset_top = 1032.0
+offset_right = 628.0
+offset_bottom = 1248.0
+scale = Vector2(0.184991, 0.162321)
+texture_normal = ExtResource("4_ndsii")
+texture_pressed = ExtResource("3_ndsii")
+texture_hover = ExtResource("4_hy6qy")
+
+[node name="Label2" type="Label" parent="CanvasLayer/BackButton"]
+layout_mode = 0
+offset_left = 160.682
+offset_top = 32.3369
+offset_right = 460.682
+offset_bottom = 335.337
+theme_override_fonts/font = ExtResource("5_3pdj0")
+theme_override_font_sizes/font_size = 120
+text = "Back
+"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 418.0
+offset_top = 10.0
+offset_right = 1541.0
+offset_bottom = 109.0
+theme_override_constants/outline_size = -43
+theme_override_fonts/font = ExtResource("5_hy6qy")
+theme_override_font_sizes/font_size = 32
+text = "Options
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 813.0
+offset_top = 123.0
+offset_right = 1151.0
+offset_bottom = 424.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 754.0
+offset_top = 406.0
+offset_right = 1247.0
+offset_bottom = 469.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Fullscreen"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fullscreen" type="CheckBox" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Enable Fullsreen"
+
+[node name="Keybinds" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 749.0
+offset_top = 691.0
+offset_right = 1223.0
+offset_bottom = 873.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Keybinds"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -233.0
+offset_top = -41.0
+offset_right = 215.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Keybinds/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 45.0
+offset_right = -41.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Keybinds/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="toggled" from="CanvasLayer/HBoxContainer/Fullscreen" to="." method="_on_fullscreen_toggled"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SlotData" load_steps=3 format=3 uid="uid://diknh5puau6vc"]
 
-[ext_resource type="Script" uid="uid://2cbl0bwpghl1" path="res://GUI/pause_menu/inventory/scripts/slot_data.gd" id="1_o6sn5"]
+[ext_resource type="Script" uid="uid://2cbl0bwpghl1" path="res://GUI/pause_menu/scripts/slot_data.gd" id="1_o6sn5"]
 [ext_resource type="Resource" uid="uid://b0bdmt4kaie05" path="res://items/sprites/potion.tres" id="1_x61lb"]
 
 

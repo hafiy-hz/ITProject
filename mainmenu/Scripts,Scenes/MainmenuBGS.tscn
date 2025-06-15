@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo1anauf8cr8o"]
+
+[ext_resource type="AudioStream" uid="uid://lwyap7n5epq8" path="res://Sounds/mixkit-serene-view-443.mp3" id="1_db6s3"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_db6s3")
+volume_db = -40.0
+autoplay = true
