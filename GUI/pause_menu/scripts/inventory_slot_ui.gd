@@ -27,7 +27,6 @@ func set_slot_data( value :  SlotData )-> void:
     label.text = str( slot_data.quantity )
 
 
-
 func item_focused() -> void:
     if slot_data != null:
         if slot_data.item_data != null:

@@ -38,11 +38,9 @@ func show_pause_menu() -> void:
     is_paused = true
     shown.emit()
 
-
-    # Update inventory and equipment panels
-    if inventory_panel and inventory_panel.has_method("update_inventory"):
-        inventory_panel.update_inventory()
-
+	# Update inventory and equipment panels
+	if inventory_panel and inventory_panel.has_method("update_inventory"):
+		inventory_panel.update_inventory(PlayerManager.INVENTORY_DATA.get_all_items())
 
     if equipment_panel and equipment_panel.has_method("update_equipment"):
         equipment_panel.update_equipment(EquipableManager.get_equipped_items())
