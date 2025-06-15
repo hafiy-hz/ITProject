@@ -31,7 +31,7 @@ func _on_button_great_sword_pressed() -> void:
 	PlayerManager.player_class = "greatsword"
 	PlayerManager.player_damage = PlayerManager.class_damage["greatsword"]
 	PlayerManager.player_info_updated.emit()
-	get_tree().change_scene_to_file("res://stage/level_1.tscn")
+	get_tree().change_scene_to_file("res://stage/level_3.tscn")
 
 
 

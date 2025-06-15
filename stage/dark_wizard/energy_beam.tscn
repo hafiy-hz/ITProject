@@ -198,7 +198,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5l3b"]
-size = Vector2(1024, 36)
+size = Vector2(1024, 22)
 
 [node name="EnergyBeam" type="Node2D"]
 light_mask = 19
@@ -221,6 +221,8 @@ visible = false
 z_index = 1
 texture_repeat = 2
 material = ExtResource("1_8istc")
+position = Vector2(0, 2.5)
+scale = Vector2(1, 1.05208)
 texture = ExtResource("4_2htyb")
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 96)

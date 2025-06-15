@@ -14,5 +14,5 @@ func on_sword_button_pressed() -> void:
 
 
 func on_great_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://stage/level_1.tscn")
+	get_tree().change_scene_to_file("res://stage/level_3.tscn")
 	pass

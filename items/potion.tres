@@ -1,36 +1,17 @@
-[gd_resource type="Resource" script_class="ItemsData" load_steps=8 format=3 uid="uid://b0bdmt4kaie05"]
+[gd_resource type="Resource" script_class="ItemsData" load_steps=5 format=3 uid="uid://dso3ksjj5i5k4"]
 
-<<<<<<< HEAD:items/potion.tres
-[ext_resource type="Script" uid="uid://dggj3ku5kykq" path="res://items/scripts/item_data.gd" id="1_70df6"]
-[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_hxf14"]
-[ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="2_8h85v"]
-[ext_resource type="AudioStream" uid="uid://cqyf87fj4iwtv" path="res://items/item_effect/hp-up.wav" id="2_hxf14"]
-[ext_resource type="Script" uid="uid://bul14ud7ncws7" path="res://items/item_effect/item_effect_heal.gd" id="3_u0y06"]
+[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_jr48e"]
+[ext_resource type="Script" uid="uid://dggj3ku5kykq" path="res://items/scripts/item_data.gd" id="2_t1ohw"]
+[ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="3_gdjls"]
 
-[sub_resource type="Resource" id="Resource_ncbnu"]
-script = ExtResource("3_u0y06")
-heal_amount = 2
-audio = ExtResource("2_hxf14")
-use_description = ""
-metadata/_custom_type_script = "uid://bul14ud7ncws7"
-=======
-[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_q5ld4"]
-[ext_resource type="Script" uid="uid://dggj3ku5kykq" path="res://items/scripts/item_data.gd" id="2_fha4w"]
-[ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="3_7oitb"]
->>>>>>> main:items/sprites/potion.tres
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8h85v"]
-atlas = ExtResource("3_7oitb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_uj5p3"]
+atlas = ExtResource("3_gdjls")
 region = Rect2(32, 0, 32, 32)
 
 [resource]
-script = ExtResource("2_fha4w")
-name = "heal potion"
-description = "Red Drink that restore a bit of player health"
-texture = SubResource("AtlasTexture_8h85v")
-<<<<<<< HEAD:items/potion.tres
-effects = Array[ExtResource("1_hxf14")]([SubResource("Resource_ncbnu")])
-=======
-effects = Array[ExtResource("1_q5ld4")]([])
->>>>>>> main:items/sprites/potion.tres
+script = ExtResource("2_t1ohw")
+name = "Stone"
+description = "Potion that have a magical power that heal"
+texture = SubResource("AtlasTexture_uj5p3")
+effects = Array[ExtResource("1_jr48e")]([])
 metadata/_custom_type_script = "uid://dggj3ku5kykq"
