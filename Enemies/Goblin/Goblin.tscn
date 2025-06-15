@@ -701,7 +701,6 @@ radius = 54.0093
 collision_layer = 258
 collision_mask = 275
 script = ExtResource("1_mqytk")
-hp = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -5)
