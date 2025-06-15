@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcerovyuwfmy5"]
 
-[ext_resource type="Script" uid="uid://cdeq6un8l6pjx" path="res://Leaderboard/timerspeerun.gd" id="1_lx5ny"]
+[ext_resource type="Script" path="res://Leaderboard/timerspeerun.gd" id="1_lx5ny"]
 [ext_resource type="FontFile" uid="uid://dsfg1k6fs0aci" path="res://mainmenu/Fontstyles/Kenney Future Narrow.ttf" id="2_bnb27"]
 
 [node name="CanvasLayer" type="CanvasLayer"]

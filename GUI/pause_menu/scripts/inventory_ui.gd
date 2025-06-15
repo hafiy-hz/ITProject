@@ -60,4 +60,3 @@ func on_inventory_changed() -> void:
         get_child(prev_focus_index).grab_focus()
     elif get_child_count() > 0:
         get_child(0).grab_focus()
-

@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=4 uid="uid://cajf7watsucc0"]
 
-[ext_resource type="Script" uid="uid://bn0ytny1aej5k" path="res://00_Globals/LevelManagers.gd" id="1_65tb0"]
+[ext_resource type="Script" path="res://00_Globals/LevelManagers.gd" id="1_65tb0"]
 [ext_resource type="Texture2D" uid="uid://dsnwwbruqik8g" path="res://art/RFCastle_1.0/mainlevbuild.png" id="2_h2y1d"]
 [ext_resource type="Texture2D" uid="uid://da5qjysfm7oqj" path="res://art/RFCastle_1.0/decorative.png" id="3_ofusy"]
 [ext_resource type="Texture2D" uid="uid://bsqjheo13ykt8" path="res://art/RFCastle_1.0/lightA01.png" id="4_rxj7a"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ba1qudcxyewsl" path="res://art/RFCastle_1.0/lightB02.png" id="8_sm7d7"]
 [ext_resource type="Texture2D" uid="uid://beq32mxmd8xh" path="res://art/RFCastle_1.0/lightB03.png" id="9_ee5sr"]
 [ext_resource type="Texture2D" uid="uid://d26l03eluciio" path="res://art/candless.png" id="10_tftyh"]
-[ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://scripts/LevelTilemapLayer.gd" id="11_q3n4i"]
+[ext_resource type="Script" path="res://scripts/LevelTilemapLayer.gd" id="11_q3n4i"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="12_d681m"]
 [ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/Player.tscn" id="13_qub7q"]
 [ext_resource type="PackedScene" uid="uid://b66u2xr8xbbnd" path="res://Chest/chest1.tscn" id="16_gh8cs"]
