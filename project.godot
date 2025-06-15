@@ -24,23 +24,13 @@ Global="*res://00_Globals/Global.gd"
 PlayerHud="*res://GUI/player_hud/player_hud.tscn"
 SaveManager="*res://00_Globals/global_save_manager.gd"
 PlayerInfoUi="*res://00_Globals/player_info_ui.tscn"
-SceneTransition="*res://GUI/scene_transition/scene_transition.tscn"
 PauseMenu="*res://GUI/pause_menu/pause_menu.tscn"
+SceneTransition="*res://GUI/scene_transition/scene_transition.tscn"
 MainmenuBgs="*res://mainmenu/MainmenuBGS.tscn"
-
-player_username="res://mainmenu/player_username.gd"
-
-
-player_username="res://mainmenu/player_username.gd"
-Global="*res://00_Globals/Global.gd"
-PlayerInfoUi="*res://00_Globals/player_info_ui.tscn"
+player_username="*res://mainmenu/player_username.gd"
 Inventory="*res://Items/scripts/Inventory.gd"
-
-
 EquipableManager="*res://Items/scripts/EquipableManager.gd"
 LeaderboardManager="*res://Leaderboard/LeaderboardManager.gd"
-Inventory="*res://Items/scripts/Inventory.gd"
-player_username="*res://mainmenu/player_username.gd"
 
 [display]
 
