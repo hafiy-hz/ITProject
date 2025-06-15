@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://dn1thqjwiq5ot"]
+
+[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_7ghv8"]
+[ext_resource type="Script" uid="uid://e0706nrbxy3p" path="res://items/scripts/equipable_item_modifier.gd" id="2_pio2k"]
+[ext_resource type="Script" uid="uid://bwlux7d3dqi4" path="res://items/scripts/equipable_item_data.gd" id="3_2ir8q"]
+[ext_resource type="Texture2D" uid="uid://cfoxt7jaaeenf" path="res://sprites/Armory/armor_sheet_.png" id="4_nf028"]
+
+[sub_resource type="Resource" id="Resource_lxhhc"]
+script = ExtResource("2_pio2k")
+type = 1
+value = 1
+metadata/_custom_type_script = "uid://e0706nrbxy3p"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6ilr"]
+atlas = ExtResource("4_nf028")
+region = Rect2(0, 112, 16, 15)
+
+[resource]
+script = ExtResource("3_2ir8q")
+type = 2
+modifiers = Array[ExtResource("2_pio2k")]([SubResource("Resource_lxhhc")])
+damage = 0
+defense = 5
+name = "Beginner Sword"
+description = ""
+texture = SubResource("AtlasTexture_x6ilr")
+effects = Array[ExtResource("1_7ghv8")]([])
+metadata/_custom_type_script = "uid://bwlux7d3dqi4"

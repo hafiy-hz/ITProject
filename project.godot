@@ -27,6 +27,10 @@ PauseMenu="*res://GUI/pause_menu/pause_menu.tscn"
 Global="*res://00_Globals/Global.gd"
 PlayerInfoUi="*res://00_Globals/player_info_ui.tscn"
 MainmenuBgs="*res://mainmenu/MainmenuBGS.tscn"
+player_username="res://mainmenu/player_username.gd"
+Inventory="*res://Items/scripts/Inventory.gd"
+EquipableManager="*res://Items/scripts/EquipableManager.gd"
+LeaderboardManager="*res://Leaderboard/LeaderboardManager.gd"
 
 [display]
 

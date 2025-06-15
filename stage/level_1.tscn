@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://cwu1i076r35sr"]
+[gd_scene load_steps=41 format=4 uid="uid://cwu1i076r35sr"]
 
 [ext_resource type="Script" uid="uid://bn0ytny1aej5k" path="res://00_Globals/LevelManagers.gd" id="1_75bhg"]
 [ext_resource type="Texture2D" uid="uid://dsnwwbruqik8g" path="res://art/RFCastle_1.0/mainlevbuild.png" id="2_2ouwm"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://scripts/LevelTilemapLayer.gd" id="11_8prmc"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="12_qe4hl"]
 [ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/Player.tscn" id="14_oltga"]
+[ext_resource type="PackedScene" uid="uid://demle5oq8dx3y" path="res://Enemies/Goblin/Goblin.tscn" id="15_iprl0"]
+[ext_resource type="PackedScene" uid="uid://cajar7j1rs8xl" path="res://Enemies/Slime/slime.tscn" id="16_75bhg"]
 [ext_resource type="PackedScene" uid="uid://ccjltabtlvdg1" path="res://scene/next_level.tscn" id="17_75bhg"]
 [ext_resource type="PackedScene" uid="uid://b66u2xr8xbbnd" path="res://Chest/chest1.tscn" id="18_2ouwm"]
 
@@ -3516,6 +3518,28 @@ position = Vector2(118, 26)
 
 [node name="goblin" type="Node" parent="."]
 
+[node name="Goblin" parent="goblin" instance=ExtResource("15_iprl0")]
+position = Vector2(303, -194)
+
+[node name="Goblin2" parent="goblin" instance=ExtResource("15_iprl0")]
+position = Vector2(605, 43)
+
+[node name="Goblin3" parent="goblin" instance=ExtResource("15_iprl0")]
+position = Vector2(239, 411)
+
+[node name="Goblin4" parent="goblin" instance=ExtResource("15_iprl0")]
+position = Vector2(332, 430)
+
+[node name="Goblin5" parent="goblin" instance=ExtResource("15_iprl0")]
+position = Vector2(381, 527)
+
+[node name="Goblin6" parent="goblin" instance=ExtResource("15_iprl0")]
+position = Vector2(432, 443)
+
+[node name="Guardian" parent="goblin" instance=ExtResource("15_2ouwm")]
+position = Vector2(880, 333)
+scale = Vector2(1, 1.00331)
+
 [node name="chest" type="Node" parent="."]
 
 [node name="Chest" parent="chest" instance=ExtResource("18_2ouwm")]
@@ -3537,3 +3561,4 @@ position = Vector2(274, 594)
 
 [node name="NextLevel" parent="." instance=ExtResource("17_75bhg")]
 position = Vector2(833, 213)
+scale = Vector2(1.07834, 0.89914)

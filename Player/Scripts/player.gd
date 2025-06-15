@@ -6,8 +6,13 @@ const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 var direction : Vector2 = Vector2.ZERO
 
 var invulnerable : bool = false
+<<<<<<< HEAD
 var hp : int = 8
 var max_hp : int = 8
+=======
+var hp : int = 10
+var max_hp : int = 10
+>>>>>>> main
 
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
@@ -21,10 +26,9 @@ signal direction_changed( new_direction: Vector2 )
 signal player_damaged( hurt_box: HurtBox)
 
 func _ready():
+
 	PlayerManager.player = self
 	state_machine.Initialize(self)
-	# Corrected: Player's attack HitBox should not connect to _take_damage.
-	# This signal is usually emitted by a HurtBox being hit, not a HitBox.
 	hit_box.damaged.connect( _take_damage )
 	update_hp(99)
 
@@ -78,16 +82,17 @@ func AnimDirection() -> String:
 		return "side"
 		
 
-func _take_damage( hurt_box : HurtBox ) -> void:
-	if invulnerable == true:
+func _take_damage(hurt_box: HurtBox) -> void:
+	if invulnerable:
 		return
-	update_hp( -hurt_box.damage )
+
+	PlayerManager.take_damage(hurt_box.damage)  # ✅ Use manager to reduce damage via defense
+
 	if hp > 0:
-		player_damaged.emit( hurt_box )
+		player_damaged.emit(hurt_box)
 	else:
-		player_damaged.emit( hurt_box )
-		update_hp(99)
-	pass
+		player_damaged.emit(hurt_box)
+		update_hp(99)  # Temp respawn logic or debug refill
 
 func update_hp( delta : int ) -> void:
 	hp = clampi( hp + delta, 0, max_hp )

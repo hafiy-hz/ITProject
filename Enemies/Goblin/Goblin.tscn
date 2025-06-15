@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://demle5oq8dx3y"]
+[gd_scene load_steps=44 format=3 uid="uid://demle5oq8dx3y"]
 
 [ext_resource type="Script" uid="uid://b4as8uxxkct3" path="res://Enemies/Scripts/enemy.gd" id="1_mqytk"]
 [ext_resource type="Texture2D" uid="uid://dfp5td0ptg126" path="res://Enemies/Goblin/goblin.png" id="2_mvqrr"]
@@ -13,10 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://cilr23747ulye" path="res://GeneralNodes/Hitbox/hit_box.tscn" id="11_csilq"]
 [ext_resource type="Script" uid="uid://c4gn0xge6hux3" path="res://Enemies/Scripts/states/enemy_state_chase.gd" id="11_ns544"]
 [ext_resource type="Script" uid="uid://cgqfcrdxycsvj" path="res://Enemies/Scripts/drop_data.gd" id="11_q12kk"]
+
+
 [ext_resource type="Resource" uid="uid://b0bdmt4kaie05" path="res://items/potion.tres" id="12_mvdyt"]
+
 [ext_resource type="PackedScene" uid="uid://c360b1xeuepq5" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="12_oy78u"]
-[ext_resource type="Resource" uid="uid://b81r28nf2gdj6" path="res://items/stone.tres" id="13_eqe8e"]
+[ext_resource type="Resource" uid="uid://b81r28nf2gdj6" path="res://items/sprites/stone.tres" id="13_eqe8e"]
 [ext_resource type="PackedScene" uid="uid://d1c7ymtuontqg" path="res://Enemies/vision_area.tscn" id="14_dnyso"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqytk"]
 radius = 11.0
@@ -694,6 +698,9 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_dnyso"]
 radius = 14.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_q12kk"]
+radius = 54.0093
+
 [node name="Goblin" type="CharacterBody2D"]
 collision_layer = 258
 collision_mask = 275
@@ -791,8 +798,14 @@ shape = SubResource("CircleShape2D_mqytk")
 debug_color = Color(0.817287, 0.405503, 0, 0.42)
 
 [node name="VisionArea" parent="." instance=ExtResource("14_dnyso")]
+collision_mask = 2147483905
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArea"]
-position = Vector2(1, 1)
-scale = Vector2(0.585938, 0.687317)
+position = Vector2(2, -7)
+scale = Vector2(0.584106, 0.918146)
 polygon = PackedVector2Array(-16, 0, 16, 0, 128, 128, -128, 128)
+
+[node name="SenseArea" type="CollisionShape2D" parent="VisionArea"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_q12kk")
+debug_color = Color(0.407656, 0.00909072, 0, 0.42)

@@ -68,6 +68,7 @@ func _take_damage( hurt_box : HurtBox ) -> void:
 		return
 
 	hp -= hurt_box.damage
+	enemy_damaged.emit()
 
 	# Show floating damage number
 	var floating_text = preload("res://Enemies/floating_text.tscn").instantiate()
