@@ -3,8 +3,9 @@ class_name DarkWizardBoss extends Node2D
 const ENERGY_EXPLOSION_SCENE : PackedScene = preload( "res://stage/dark_wizard/energy_explosion.tscn" )
 const ENERGY_BALL_SCENE : PackedScene = preload( "res://stage/dark_wizard/energy_orb.tscn" )
 
-@export var max_hp : int = 10
-var hp : int = 10
+@export var max_hp : int = 1
+var hp : int = 1
+
 
 
 var audio_hurt : AudioStream = preload( "res://stage/dark_wizard/audio/boss_hurt.wav" )
@@ -35,23 +36,23 @@ var damage_count : int = 0
 
 
 func _ready() -> void:
-    
-    
-    
-    hp = max_hp
-    
-    hit_box.damaged.connect( damage_taken )
-    
-    for c in $PositionTargets.get_children():
-        positions.append( c.global_position )
-    $PositionTargets.visible = false
-    
-    for b in $BeamAttack.get_children():
-        beam_attacks.append( b )
-    
-    teleport( 0 )
-    
-    pass
+
+	hp = max_hp
+	
+	# Connect the HitBox's 'damaged' signal to the damage_taken function
+	if not hit_box.damaged.is_connected(damage_taken):
+		hit_box.damaged.connect(damage_taken)
+	
+	for c in $PositionTargets.get_children():
+		positions.append( c.global_position )
+	$PositionTargets.visible = false
+	
+	for b in $BeamAttack.get_children():
+		beam_attacks.append( b )
+	
+	teleport( 0 )
+	pass
+
 
 
 func _process( delta: float ) -> void:
@@ -70,45 +71,50 @@ func _process( delta: float ) -> void:
 
 
 func teleport( _location : int ) -> void:
-    animation_player.play("disappear")
-    enable_hit_boxes( false )
-    damage_count = 0
-    
-    #shoot fireball
-    if hp < max_hp:
-        shoot_orb()
-    
-    await get_tree().create_timer( 1 ).timeout
-    
-    boss_node.global_position = positions[ _location ]
-    current_position = _location
-    update_animations()
-    animation_player.play( "appear" )
-    await animation_player.animation_finished
-    idle()
-    
-    pass
+
+	animation_player.play("disappear")
+	# Only disable hit boxes during the teleport animation
+	enable_hit_boxes(false)
+	damage_count = 0
+	
+	#shoot fireball
+	if hp < max_hp:
+		shoot_orb()
+	
+	await get_tree().create_timer( 5 ).timeout
+	
+	boss_node.global_position = positions[ _location ]
+	current_position = _location
+	update_animations()
+	animation_player.play( "appear" )
+	await animation_player.animation_finished
+	# Re-enable hit boxes after appearing
+	enable_hit_boxes(true)
+	idle()
+	
+	pass
 
 
 func idle() -> void:
-    enable_hit_boxes()
-    
-    if randf() <= float(hp) / float(max_hp):
-        animation_player.play( "idle" )
-        await animation_player.animation_finished
-    
-    if damage_count < 1:
-        energy_beam_attack()
-        animation_player.play( "cast_spell" )
-        await animation_player.animation_finished
-    
-    
-    var _t : int = current_position
-    while _t == current_position:
-        _t = randf_range( 0, 3)
-    teleport( _t )
-    
-    pass
+	# Keep hit boxes enabled during idle state
+	enable_hit_boxes(true)
+	
+	if randf() <= float(hp) / float(max_hp):
+		animation_player.play( "idle" )
+		await animation_player.animation_finished
+	
+	if damage_count < 1:
+		energy_beam_attack()
+		animation_player.play( "cast_spell" )
+		await animation_player.animation_finished
+	
+	var _t : int = current_position
+	while _t == current_position:
+		_t = randi_range( 0, 3)
+	teleport( _t )
+	
+	pass
+
 
 
 func update_animations() -> void:
@@ -174,22 +180,24 @@ func shoot_orb() -> void:
     play_audio( audio_shoot )
 
 
-func damage_taken( _hurt_box : HurtBox ) -> void:
-    if animation_player_damage.current_animation == "damaged" or _hurt_box.damage == 0:
-        return
-    play_audio( audio_hurt )
-    hp = clampi( hp - _hurt_box.damage, 0, max_hp )
-    damage_count += 1
-    
-    #Update boss health bar
-    animation_player_damage.play( "damaged" )
-    animation_player_damage.seek( 0 )
-    animation_player_damage.queue( "default" )
-    
-    if hp < 1:
-        defeat()
-    
-    pass
+
+func damage_taken( _hit_box : HitBox ) -> void:
+	if animation_player_damage.current_animation == "damaged" or _hit_box.damage == 0:
+		return
+	play_audio( audio_hurt )
+	hp = clampi( hp - _hit_box.damage, 0, max_hp )
+	damage_count += 1
+	
+	#Update boss health bar
+	animation_player_damage.play( "damaged" )
+	animation_player_damage.seek( 0 )
+	animation_player_damage.queue( "default" )
+	
+	if hp < 1:
+		defeat()
+	
+	pass
+
 
 func play_audio( _a : AudioStream ) -> void:
     audio.stream = _a

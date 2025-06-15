@@ -1,14 +1,14 @@
-class_name EnemyStateChase extends EnemyState
+class_name GuardianStateChase extends GuardianState
 
 @export var anim_name : String = "chase"
 @export var chase_speed : float = 30.0
 @export var turn_rate : float = 0.25
 
 @export_category("AI")
-@export var vision_area : VisionArea
+@export var vision_area : GuardianVisionArea
 @export var attack_area : HurtBox
 @export var state_aggro_duration : float = 0.5
-@export var next_state : EnemyState
+@export var next_state : GuardianState
 
 var _timer : float = 0.0
 var _direction : Vector2
@@ -22,7 +22,7 @@ func init() -> void:
 
 func enter() -> void:
 	_timer = state_aggro_duration
-	enemy.update_animation( anim_name )
+	guardian.update_animation( anim_name )
 	if attack_area:
 		attack_area.monitoring = true 
 	pass 
@@ -33,15 +33,15 @@ func exit() -> void:
 	_can_see_player = false
 	pass
 
-func process( _delta : float ) -> EnemyState:
-	if state_machine.current_state is EnemyStateDestroy:
+func process( _delta : float ) -> GuardianState:
+	if state_machine.current_state is GuardianStateDestroy:
 		return null
 	
-	var new_dir : Vector2 = enemy.global_position.direction_to( PlayerManager.player.global_position )
+	var new_dir : Vector2 = guardian.global_position.direction_to( PlayerManager.player.global_position )
 	_direction = lerp( _direction, new_dir, turn_rate )
-	enemy.velocity = _direction * chase_speed
-	if enemy.set_direction( _direction ):
-		enemy.update_animation( anim_name )
+	guardian.velocity = _direction * chase_speed
+	if guardian.set_direction( _direction ):
+		guardian.update_animation( anim_name )
 	
 	
 	if _can_see_player == false:
@@ -52,14 +52,14 @@ func process( _delta : float ) -> EnemyState:
 		_timer = state_aggro_duration
 	return null
 
-func physics( _delta : float ) -> EnemyState:
-	if state_machine.current_state is EnemyStateDestroy:
+func physics( _delta : float ) -> GuardianState:
+	if state_machine.current_state is GuardianStateDestroy:
 		_can_see_player = false
 	return null
 
 func _on_player_enter() -> void:
 	_can_see_player = true
-	if state_machine.current_state is EnemyStateStun:
+	if state_machine.current_state is GuardianStateStun:
 		return
 	state_machine.change_state( self )
 	pass

@@ -15,11 +15,13 @@ var max_hp : int = 10
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var hit_box : HitBox = $HitBox
 @onready var state_machine: PlayerStateMachine = $StateMachine
+@onready var hurt_box : HurtBox = $HurtBox
 
 signal direction_changed( new_direction: Vector2 )
 signal player_damaged( hurt_box: HurtBox)
 
 func _ready():
+
     PlayerManager.player = self
     state_machine.Initialize(self)
     hit_box.damaged.connect( _take_damage )

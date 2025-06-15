@@ -2697,7 +2697,7 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ho3dj"]
-radius = 21.0238
+radius = 13.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oye8m"]
 radius = 25.0
@@ -3390,7 +3390,7 @@ collision_layer = 287
 collision_mask = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DarkWizardBoss/BossNode/HurtBox"]
-position = Vector2(0, -18)
+position = Vector2(0, -13)
 shape = SubResource("CircleShape2D_ho3dj")
 debug_color = Color(0.988366, 0, 0.307934, 0)
 

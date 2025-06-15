@@ -1,4 +1,6 @@
-[gd_scene load_steps=16 format=4 uid="uid://cwu1i076r35sr"]
+
+[gd_scene load_steps=15 format=4 uid="uid://cv4vfhnwer57m"]
+
 
 [ext_resource type="Script" uid="uid://bn0ytny1aej5k" path="res://00_Globals/LevelManagers.gd" id="1_4iwck"]
 [ext_resource type="Texture2D" uid="uid://cmq1uwe1vv6jx" path="res://art/RF_Catacombs_v1.0/mainlevbuild.png" id="2_uig1p"]
@@ -8,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/Player.tscn" id="14_6jkt7"]
 [ext_resource type="PackedScene" uid="uid://demle5oq8dx3y" path="res://Enemies/Goblin/Goblin.tscn" id="15_6jkt7"]
 [ext_resource type="PackedScene" uid="uid://b66u2xr8xbbnd" path="res://Chest/chest1.tscn" id="16_1xbk0"]
-[ext_resource type="PackedScene" uid="uid://cajar7j1rs8xl" path="res://Enemies/Slime/slime.tscn" id="17_o5yw0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpd13"]
 texture = ExtResource("2_uig1p")
@@ -2635,98 +2636,28 @@ position = Vector2(751, -413)
 top_level = true
 position = Vector2(143, -354)
 
-[node name="slimee" type="Node" parent="."]
-
-[node name="Slime" parent="slimee" instance=ExtResource("17_o5yw0")]
-position = Vector2(338, 194)
-
-[node name="Slime2" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(702, -159)
-
-[node name="Slime3" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(206, -292)
-
-[node name="Slime4" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(268, -388)
-
-[node name="Slime5" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(113, -346)
-
-[node name="Slime6" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(680, -328)
-
-[node name="Slime7" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(730, 60)
-
-[node name="Slime8" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(867, 89)
-
-[node name="Slime9" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(903, 188)
-
-[node name="Slime10" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(761, 156)
-
-[node name="Slime11" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(781, 221)
-
-[node name="Slime12" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(287, 162)
-
-[node name="Slime13" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(250, 135)
-
-[node name="Slime14" parent="slimee" instance=ExtResource("17_o5yw0")]
-top_level = true
-position = Vector2(312, 132)
-
 [node name="goblin" type="Node" parent="."]
 
 [node name="Goblin" parent="goblin" instance=ExtResource("15_6jkt7")]
-top_level = true
-position = Vector2(775, 100)
-rotation = 0.0258836
+position = Vector2(754, 97)
 
 [node name="Goblin2" parent="goblin" instance=ExtResource("15_6jkt7")]
-top_level = true
-position = Vector2(878, 136)
-rotation = 0.035354
+position = Vector2(911, 111)
 
 [node name="Goblin3" parent="goblin" instance=ExtResource("15_6jkt7")]
-top_level = true
-position = Vector2(690, -426)
+position = Vector2(716, -435)
 
 [node name="Goblin4" parent="goblin" instance=ExtResource("15_6jkt7")]
-top_level = true
-position = Vector2(786, -360)
-rotation = -0.0663819
+position = Vector2(804, -365)
 
 [node name="Goblin5" parent="goblin" instance=ExtResource("15_6jkt7")]
-top_level = true
-position = Vector2(280, -354)
-rotation = 0.0271635
+position = Vector2(180, -406)
 
 [node name="Goblin6" parent="goblin" instance=ExtResource("15_6jkt7")]
-top_level = true
-position = Vector2(170, -429)
-rotation = -0.0282347
+position = Vector2(268, -291)
 
 [node name="Goblin7" parent="goblin" instance=ExtResource("15_6jkt7")]
-top_level = true
-position = Vector2(138, -310)
-rotation = 0.0349165
+position = Vector2(135, -267)
 
 [node name="NextLevel" parent="." groups=["Player"] instance=ExtResource("9_h7lwi")]
 top_level = true
