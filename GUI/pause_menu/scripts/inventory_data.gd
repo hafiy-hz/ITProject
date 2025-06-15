@@ -1,9 +1,12 @@
-class_name InventoryData extends Resource
+class_name InventoryData
+extends Resource
 
 @export var slots: Array[SlotData]
 
-#func _init() -> void:
-    #connect_slots()
+func _init() -> void:
+    connect_slots()
+
+# Add item to inventory
 func add_item(item: ItemsData, count: int = 1) -> bool:
     # Try to stack item if already present
     for s in slots:
