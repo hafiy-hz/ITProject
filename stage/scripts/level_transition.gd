@@ -52,7 +52,12 @@ func _place_player() -> void:
     PlayerManager.set_player_position( global_position + LevelManagers.position_offset )
 
 func get_offset() -> Vector2:
-    var offset : Vector2 = Vector2.ZERO
+    var offset: Vector2 = Vector2.ZERO
+    
+    if PlayerManager.player == null:
+        push_error("PlayerManager.player is null in get_offset()")
+        return offset  # Return no offset safely
+    
     var player_pos = PlayerManager.player.global_position
     
     if side == SIDE.LEFT or side == SIDE.RIGHT:
@@ -65,8 +70,6 @@ func get_offset() -> Vector2:
         offset.y = 16 
         if side == SIDE.TOP:
             offset.y *= -1
-        
-    
     
     return offset
 
