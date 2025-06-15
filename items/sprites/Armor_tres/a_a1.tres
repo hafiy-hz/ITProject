@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://bayy0cmfuof48"]
 
-[ext_resource type="Script" uid="uid://540vsfu0h541" path="res://items/item_effect/item_effect.gd" id="1_txs1w"]
-[ext_resource type="Script" path="res://items/scripts/equipable_item_modifier.gd" id="2_w5m5e"]
+[ext_resource type="Script" path="res://items/item_effect/item_effect.gd" id="1_txs1w"]
+[ext_resource type="Script" uid="uid://e0706nrbxy3p" path="res://items/scripts/equipable_item_modifier.gd" id="2_w5m5e"]
 [ext_resource type="Script" path="res://items/scripts/equipable_item_data.gd" id="3_rbako"]
 [ext_resource type="Texture2D" uid="uid://cfoxt7jaaeenf" path="res://sprites/Armory/armor_sheet_.png" id="4_dldp8"]
 
