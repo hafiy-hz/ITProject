@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://cwu1i076r35sr"]
+[gd_scene load_steps=38 format=4 uid="uid://m1yma1vgo64j"]
 
 [ext_resource type="Script" uid="uid://bn0ytny1aej5k" path="res://00_Globals/LevelManagers.gd" id="1_75bhg"]
 [ext_resource type="Texture2D" uid="uid://dsnwwbruqik8g" path="res://art/RFCastle_1.0/mainlevbuild.png" id="2_2ouwm"]
@@ -12,11 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://d26l03eluciio" path="res://art/candless.png" id="10_tod3y"]
 [ext_resource type="Script" uid="uid://ccnx4kmdvle62" path="res://scripts/LevelTilemapLayer.gd" id="11_8prmc"]
 [ext_resource type="PackedScene" uid="uid://dcerovyuwfmy5" path="res://Leaderboard/timerspeerun.tscn" id="12_qe4hl"]
+[ext_resource type="PackedScene" uid="uid://b66u2xr8xbbnd" path="res://Chest/chest1.tscn" id="14_odr1k"]
 [ext_resource type="PackedScene" uid="uid://bxw4o4iulxjcp" path="res://Player/Player.tscn" id="14_oltga"]
-[ext_resource type="PackedScene" uid="uid://demle5oq8dx3y" path="res://Enemies/Goblin/Goblin.tscn" id="15_iprl0"]
-[ext_resource type="PackedScene" uid="uid://cajar7j1rs8xl" path="res://Enemies/Slime/slime.tscn" id="16_75bhg"]
-[ext_resource type="PackedScene" uid="uid://ccjltabtlvdg1" path="res://scene/next_level.tscn" id="17_75bhg"]
-[ext_resource type="PackedScene" uid="uid://b66u2xr8xbbnd" path="res://Chest/chest1.tscn" id="18_2ouwm"]
+[ext_resource type="PackedScene" uid="uid://ccjltabtlvdg1" path="res://scene/next_level.tscn" id="15_p8yn5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rpf8"]
 texture = ExtResource("2_2ouwm")
@@ -3493,7 +3491,7 @@ sources/5 = SubResource("TileSetAtlasSource_vrt6l")
 sources/6 = SubResource("TileSetAtlasSource_70rdf")
 sources/7 = SubResource("TileSetAtlasSource_h4s5g")
 
-[node name="castle_level" type="Node2D"]
+[node name="castle_level2" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(-1, 0)
 script = ExtResource("1_75bhg")
@@ -3516,49 +3514,23 @@ tile_set = SubResource("TileSet_1l5bl")
 [node name="Player" parent="." instance=ExtResource("14_oltga")]
 position = Vector2(118, 26)
 
-[node name="goblin" type="Node" parent="."]
-
-[node name="Goblin" parent="goblin" instance=ExtResource("15_iprl0")]
-position = Vector2(303, -194)
-
-[node name="Goblin2" parent="goblin" instance=ExtResource("15_iprl0")]
-position = Vector2(605, 43)
-
-[node name="Goblin3" parent="goblin" instance=ExtResource("15_iprl0")]
-position = Vector2(239, 411)
-
-[node name="Goblin4" parent="goblin" instance=ExtResource("15_iprl0")]
-position = Vector2(332, 430)
-
-[node name="Goblin5" parent="goblin" instance=ExtResource("15_iprl0")]
-position = Vector2(381, 527)
-
-[node name="Goblin6" parent="goblin" instance=ExtResource("15_iprl0")]
-position = Vector2(432, 443)
-
-[node name="Guardian" parent="goblin" instance=ExtResource("15_2ouwm")]
-position = Vector2(880, 333)
-scale = Vector2(1, 1.00331)
-
 [node name="chest" type="Node" parent="."]
 
-[node name="Chest" parent="chest" instance=ExtResource("18_2ouwm")]
+[node name="Chest" parent="chest" instance=ExtResource("14_odr1k")]
 position = Vector2(632, 62)
 
-[node name="Chest2" parent="chest" instance=ExtResource("18_2ouwm")]
+[node name="Chest2" parent="chest" instance=ExtResource("14_odr1k")]
 position = Vector2(243, -173)
 
-[node name="Chest3" parent="chest" instance=ExtResource("18_2ouwm")]
+[node name="Chest3" parent="chest" instance=ExtResource("14_odr1k")]
 position = Vector2(1203, 374)
 
-[node name="Chest4" parent="chest" instance=ExtResource("18_2ouwm")]
+[node name="Chest4" parent="chest" instance=ExtResource("14_odr1k")]
 position = Vector2(264, 538)
 
-[node name="Chest5" parent="chest" instance=ExtResource("18_2ouwm")]
+[node name="Chest5" parent="chest" instance=ExtResource("14_odr1k")]
 position = Vector2(274, 594)
 
-[node name="slime" type="Node" parent="."]
-
-[node name="NextLevel" parent="." instance=ExtResource("17_75bhg")]
+[node name="NextLevel" parent="." instance=ExtResource("15_p8yn5")]
 position = Vector2(833, 213)
 scale = Vector2(1.07834, 0.89914)
