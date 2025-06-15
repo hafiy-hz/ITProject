@@ -45,11 +45,15 @@ func take_damage(amount: int) -> void:
 	var total_defense = player_armor_defense + player_helmet_defense
 	var final_damage = max(1, amount - total_defense)
 
-	if player:
-		player.hp = max(0, player.hp - final_damage)
-		print("Took %d damage (raw: %d - defense: %d), HP is now %d" % [final_damage, amount, total_defense, player.hp])
-		player.update_hp(0)  # Triggers HP bar refresh
-		player_info_updated.emit()
+
+    if player:
+        player.hp = max(0, player.hp - final_damage)
+        print("Took %d damage (raw: %d - defense: %d), HP is now %d" % [final_damage, amount, total_defense, player.hp])
+        player.update_hp(0)  # Optional: trigger a UI update
+        player_info_updated.emit()
+
+
+    player_info_updated.emit()
 
 func _ready() -> void:
 	# Don't spawn player in main menu

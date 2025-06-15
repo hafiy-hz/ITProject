@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://c62ojbuksw5av"]
+[gd_scene load_steps=8 format=3 uid="uid://c62ojbuksw5av"]
 
 [ext_resource type="Script" uid="uid://cug6528hwxn7q" path="res://GUI/pause_menu/pause_menu.gd" id="1_4w82k"]
 [ext_resource type="Texture2D" uid="uid://dr5gy4mt64anj" path="res://items/sprites/items.png" id="2_yiq8o"]
 [ext_resource type="Script" uid="uid://dbib2oam48ph" path="res://GUI/pause_menu/scripts/inventory_ui.gd" id="3_36pfd"]
 [ext_resource type="PackedScene" uid="uid://b8ugpemory517" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_rsqrg"]
-[ext_resource type="Resource" uid="uid://g0hv0mbg8v68" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_ewgu5"]
-[ext_resource type="PackedScene" uid="uid://bh1rac53lkvx6" path="res://GUI/pause_menu/save_slot_ui.tscn" id="7_save_slot"]
+
+[ext_resource type="Script" path="res://GUI/pause_menu/inventory/scripts/inventory_slot_ui.gd" id="6_sn1ji"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsqrg"]
 atlas = ExtResource("2_yiq8o")
@@ -97,7 +98,6 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_36pfd")
 layout_mode = 2
 columns = 5
 script = ExtResource("3_36pfd")
-data = ExtResource("4_ewgu5")
 
 [node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_rsqrg")]
 layout_mode = 2
